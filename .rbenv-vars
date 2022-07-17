@@ -1,0 +1,11 @@
+# For Postgres
+DATABASE_URL=postgresql://deploy:chocolate100X@127.0.0.1/portfolio_database_rails
+
+# For MySQL
+DATABASE_URL=mysql2://deploy:$omeFancyPassword123@localhost/myapp
+
+RAILS_MASTER_KEY=85d1e048a9ff369a2334c796ddcd7f28
+SECRET_KEY_BASE=1234567890
+
+STRIPE_PUBLIC_KEY=x
+STRIPE_PRIVATE_KEY=y

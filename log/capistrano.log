@@ -1,0 +1,1208 @@
+# Logfile created on 2022-07-17 19:08:55 +0000 by logger.rb/v1.5.0
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-07-17 19:08:55 +0000 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [30154936] Running [ -d $HOME/.rbenv/versions/3.1.2 ] as deploy@1.2.3.4
+ DEBUG [30154936] Command: [ -d $HOME/.rbenv/versions/3.1.2 ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-07-17 19:12:38 +0000 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [fcd49b82] Running [ -d $HOME/.rbenv/versions/3.1.2 ] as deploy@192.168.86.12
+ DEBUG [fcd49b82] Command: [ -d $HOME/.rbenv/versions/3.1.2 ]
+ DEBUG [fcd49b82] Finished in 4.694 seconds with exit status 0 (successful).
+ DEBUG [8ee2c0e2] Running /usr/bin/env which passenger as deploy@192.168.86.12
+ DEBUG [8ee2c0e2] Command: /usr/bin/env which passenger
+ DEBUG [8ee2c0e2] 	/usr/bin/passenger
+ DEBUG [8ee2c0e2] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [d324add2] Running /usr/bin/env mkdir -p /tmp as deploy@192.168.86.12
+ DEBUG [d324add2] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env mkdir -p /tmp )
+  INFO [d324add2] Finished in 0.010 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-ae3d705f3b2249042868.sh 0.0%
+  INFO Uploading /tmp/git-ssh-ae3d705f3b2249042868.sh 100.0%
+  INFO [dc1f597a] Running /usr/bin/env chmod 700 /tmp/git-ssh-ae3d705f3b2249042868.sh as deploy@192.168.86.12
+ DEBUG [dc1f597a] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env chmod 700 /tmp/git-ssh-ae3d705f3b2249042868.sh )
+  INFO [dc1f597a] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [cc1cc099] Running /usr/bin/env git ls-remote https://github.com/bengarlock/portfolio_database_rails HEAD as deploy@192.168.86.12
+ DEBUG [cc1cc099] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-ae3d705f3b2249042868.sh" ; /usr/bin/env git ls-remote https://github.com/bengarlock/portfolio_database_rails HEAD )
+ DEBUG [cc1cc099] 	9025ffba8eca8f22fe79d3e5840dd629c3df9c5e	HEAD
+  INFO [cc1cc099] Finished in 0.162 seconds with exit status 0 (successful).
+  INFO [6239f86b] Running /usr/bin/env mkdir -p /home/deploy/portfolio_database_rails/shared /home/deploy/portfolio_database_rails/releases as deploy@192.168.86.12
+ DEBUG [6239f86b] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env mkdir -p /home/deploy/portfolio_database_rails/shared /home/deploy/portfolio_database_rails/releases )
+  INFO [6239f86b] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [189e9d46] Running /usr/bin/env mkdir -p /home/deploy/portfolio_database_rails/shared/log /home/deploy/portfolio_database_rails/shared/tmp/pids /home/deploy/portfolio_database_rails/shared/tmp/cache /home/deploy/portfolio_database_rails/shared/tmp/sockets /home/deploy/portfolio_database_rails/shared/vendor/bundle /home/deploy/portfolio_database_rails/shared/.bundle /home/deploy/portfolio_database_rails/shared/public/system /home/deploy/portfolio_database_rails/shared/public/uploads /home/deploy/portfolio_database_rails/shared/public/assets as deploy@192.168.86.12
+ DEBUG [189e9d46] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env mkdir -p /home/deploy/portfolio_database_rails/shared/log /home/deploy/portfolio_database_rails/shared/tmp/pids /home/deploy/portfolio_database_rails/shared/tmp/cache /home/deploy/portfolio_database_rails/shared/tmp/sockets /home/deploy/portfolio_database_rails/shared/vendor/bundle /home/deploy/portfolio_database_rails/shared/.bundle /home/deploy/portfolio_database_rails/shared/public/system /home/deploy/portfolio_database_rails/shared/public/uploads /home/deploy/portfolio_database_rails/shared/public/assets )
+  INFO [189e9d46] Finished in 0.007 seconds with exit status 0 (successful).
+ DEBUG [9d3782b0] Running [ -f /home/deploy/portfolio_database_rails/current/REVISION ] as deploy@192.168.86.12
+ DEBUG [9d3782b0] Command: [ -f /home/deploy/portfolio_database_rails/current/REVISION ]
+ DEBUG [9d3782b0] Finished in 0.004 seconds with exit status 1 (failed).
+ DEBUG [bb4c5df1] Running [ -f /home/deploy/portfolio_database_rails/repo/HEAD ] as deploy@192.168.86.12
+ DEBUG [bb4c5df1] Command: [ -f /home/deploy/portfolio_database_rails/repo/HEAD ]
+ DEBUG [bb4c5df1] Finished in 0.054 seconds with exit status 1 (failed).
+ DEBUG [27114a43] Running if test ! -d /home/deploy/portfolio_database_rails; then echo "Directory does not exist '/home/deploy/portfolio_database_rails'" 1>&2; false; fi as deploy@192.168.86.12
+ DEBUG [27114a43] Command: if test ! -d /home/deploy/portfolio_database_rails; then echo "Directory does not exist '/home/deploy/portfolio_database_rails'" 1>&2; false; fi
+ DEBUG [27114a43] Finished in 0.008 seconds with exit status 0 (successful).
+  INFO [763cec1c] Running /usr/bin/env git clone --mirror https://github.com/bengarlock/portfolio_database_rails /home/deploy/portfolio_database_rails/repo as deploy@192.168.86.12
+ DEBUG [763cec1c] Command: cd /home/deploy/portfolio_database_rails && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-ae3d705f3b2249042868.sh" ; /usr/bin/env git clone --mirror https://github.com/bengarlock/portfolio_database_rails /home/deploy/portfolio_database_rails/repo )
+ DEBUG [763cec1c] 	Cloning into bare repository '/home/deploy/portfolio_database_rails/repo'...
+  INFO [763cec1c] Finished in 0.246 seconds with exit status 0 (successful).
+ DEBUG [0f2bb545] Running if test ! -d /home/deploy/portfolio_database_rails/repo; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/repo'" 1>&2; false; fi as deploy@192.168.86.12
+ DEBUG [0f2bb545] Command: if test ! -d /home/deploy/portfolio_database_rails/repo; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/repo'" 1>&2; false; fi
+ DEBUG [0f2bb545] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [742a4239] Running /usr/bin/env git remote set-url origin https://github.com/bengarlock/portfolio_database_rails as deploy@192.168.86.12
+ DEBUG [742a4239] Command: cd /home/deploy/portfolio_database_rails/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-ae3d705f3b2249042868.sh" ; /usr/bin/env git remote set-url origin https://github.com/bengarlock/portfolio_database_rails )
+  INFO [742a4239] Finished in 0.007 seconds with exit status 0 (successful).
+  INFO [07b831bc] Running /usr/bin/env git remote update --prune as deploy@192.168.86.12
+ DEBUG [07b831bc] Command: cd /home/deploy/portfolio_database_rails/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-ae3d705f3b2249042868.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [07b831bc] 	Fetching origin
+  INFO [07b831bc] Finished in 0.138 seconds with exit status 0 (successful).
+ DEBUG [68bd469b] Running if test ! -d /home/deploy/portfolio_database_rails/repo; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/repo'" 1>&2; false; fi as deploy@192.168.86.12
+ DEBUG [68bd469b] Command: if test ! -d /home/deploy/portfolio_database_rails/repo; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/repo'" 1>&2; false; fi
+ DEBUG [68bd469b] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [b4e08f51] Running /usr/bin/env mkdir -p /home/deploy/portfolio_database_rails/releases/20220717191243 as deploy@192.168.86.12
+ DEBUG [b4e08f51] Command: cd /home/deploy/portfolio_database_rails/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-ae3d705f3b2249042868.sh" ; /usr/bin/env mkdir -p /home/deploy/portfolio_database_rails/releases/20220717191243 )
+  INFO [b4e08f51] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [860da641] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/portfolio_database_rails/releases/20220717191243 as deploy@192.168.86.12
+ DEBUG [860da641] Command: cd /home/deploy/portfolio_database_rails/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-ae3d705f3b2249042868.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/portfolio_database_rails/releases/20220717191243 )
+  INFO [860da641] Finished in 0.011 seconds with exit status 0 (successful).
+ DEBUG [ba80b83a] Running if test ! -d /home/deploy/portfolio_database_rails/repo; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/repo'" 1>&2; false; fi as deploy@192.168.86.12
+ DEBUG [ba80b83a] Command: if test ! -d /home/deploy/portfolio_database_rails/repo; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/repo'" 1>&2; false; fi
+ DEBUG [ba80b83a] Finished in 0.045 seconds with exit status 0 (successful).
+ DEBUG [14fa5a88] Running /usr/bin/env git rev-list --max-count=1 master as deploy@192.168.86.12
+ DEBUG [14fa5a88] Command: cd /home/deploy/portfolio_database_rails/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-ae3d705f3b2249042868.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [14fa5a88] 	9025ffba8eca8f22fe79d3e5840dd629c3df9c5e
+ DEBUG [14fa5a88] Finished in 0.007 seconds with exit status 0 (successful).
+ DEBUG [c87f8f0a] Running if test ! -d /home/deploy/portfolio_database_rails/releases/20220717191243; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/releases/20220717191243'" 1>&2; false; fi as deploy@192.168.86.12
+ DEBUG [c87f8f0a] Command: if test ! -d /home/deploy/portfolio_database_rails/releases/20220717191243; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/releases/20220717191243'" 1>&2; false; fi
+ DEBUG [c87f8f0a] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [4f2b907f] Running /usr/bin/env echo "9025ffba8eca8f22fe79d3e5840dd629c3df9c5e" > REVISION as deploy@192.168.86.12
+ DEBUG [4f2b907f] Command: cd /home/deploy/portfolio_database_rails/releases/20220717191243 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env echo "9025ffba8eca8f22fe79d3e5840dd629c3df9c5e" > REVISION )
+  INFO [4f2b907f] Finished in 0.046 seconds with exit status 0 (successful).
+  INFO [64662089] Running /usr/bin/env mkdir -p /home/deploy/portfolio_database_rails/releases/20220717191243 /home/deploy/portfolio_database_rails/releases/20220717191243/tmp /home/deploy/portfolio_database_rails/releases/20220717191243/vendor /home/deploy/portfolio_database_rails/releases/20220717191243/public as deploy@192.168.86.12
+ DEBUG [64662089] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env mkdir -p /home/deploy/portfolio_database_rails/releases/20220717191243 /home/deploy/portfolio_database_rails/releases/20220717191243/tmp /home/deploy/portfolio_database_rails/releases/20220717191243/vendor /home/deploy/portfolio_database_rails/releases/20220717191243/public )
+  INFO [64662089] Finished in 0.006 seconds with exit status 0 (successful).
+ DEBUG [1f09f11c] Running [ -L /home/deploy/portfolio_database_rails/releases/20220717191243/log ] as deploy@192.168.86.12
+ DEBUG [1f09f11c] Command: [ -L /home/deploy/portfolio_database_rails/releases/20220717191243/log ]
+ DEBUG [1f09f11c] Finished in 0.004 seconds with exit status 1 (failed).
+ DEBUG [07e7b868] Running [ -d /home/deploy/portfolio_database_rails/releases/20220717191243/log ] as deploy@192.168.86.12
+ DEBUG [07e7b868] Command: [ -d /home/deploy/portfolio_database_rails/releases/20220717191243/log ]
+ DEBUG [07e7b868] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [074e6c92] Running /usr/bin/env rm -rf /home/deploy/portfolio_database_rails/releases/20220717191243/log as deploy@192.168.86.12
+ DEBUG [074e6c92] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env rm -rf /home/deploy/portfolio_database_rails/releases/20220717191243/log )
+  INFO [074e6c92] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [777c802a] Running /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/log /home/deploy/portfolio_database_rails/releases/20220717191243/log as deploy@192.168.86.12
+ DEBUG [777c802a] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/log /home/deploy/portfolio_database_rails/releases/20220717191243/log )
+  INFO [777c802a] Finished in 0.006 seconds with exit status 0 (successful).
+ DEBUG [ca4fba48] Running [ -L /home/deploy/portfolio_database_rails/releases/20220717191243/tmp/pids ] as deploy@192.168.86.12
+ DEBUG [ca4fba48] Command: [ -L /home/deploy/portfolio_database_rails/releases/20220717191243/tmp/pids ]
+ DEBUG [ca4fba48] Finished in 0.004 seconds with exit status 1 (failed).
+ DEBUG [9f5cf20f] Running [ -d /home/deploy/portfolio_database_rails/releases/20220717191243/tmp/pids ] as deploy@192.168.86.12
+ DEBUG [9f5cf20f] Command: [ -d /home/deploy/portfolio_database_rails/releases/20220717191243/tmp/pids ]
+ DEBUG [9f5cf20f] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [9871f521] Running /usr/bin/env rm -rf /home/deploy/portfolio_database_rails/releases/20220717191243/tmp/pids as deploy@192.168.86.12
+ DEBUG [9871f521] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env rm -rf /home/deploy/portfolio_database_rails/releases/20220717191243/tmp/pids )
+  INFO [9871f521] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [e68dd944] Running /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/tmp/pids /home/deploy/portfolio_database_rails/releases/20220717191243/tmp/pids as deploy@192.168.86.12
+ DEBUG [e68dd944] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/tmp/pids /home/deploy/portfolio_database_rails/releases/20220717191243/tmp/pids )
+  INFO [e68dd944] Finished in 0.047 seconds with exit status 0 (successful).
+ DEBUG [7dc07778] Running [ -L /home/deploy/portfolio_database_rails/releases/20220717191243/tmp/cache ] as deploy@192.168.86.12
+ DEBUG [7dc07778] Command: [ -L /home/deploy/portfolio_database_rails/releases/20220717191243/tmp/cache ]
+ DEBUG [7dc07778] Finished in 0.004 seconds with exit status 1 (failed).
+ DEBUG [2c84d886] Running [ -d /home/deploy/portfolio_database_rails/releases/20220717191243/tmp/cache ] as deploy@192.168.86.12
+ DEBUG [2c84d886] Command: [ -d /home/deploy/portfolio_database_rails/releases/20220717191243/tmp/cache ]
+ DEBUG [2c84d886] Finished in 0.004 seconds with exit status 1 (failed).
+  INFO [29d93211] Running /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/tmp/cache /home/deploy/portfolio_database_rails/releases/20220717191243/tmp/cache as deploy@192.168.86.12
+ DEBUG [29d93211] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/tmp/cache /home/deploy/portfolio_database_rails/releases/20220717191243/tmp/cache )
+  INFO [29d93211] Finished in 0.006 seconds with exit status 0 (successful).
+ DEBUG [185bae68] Running [ -L /home/deploy/portfolio_database_rails/releases/20220717191243/tmp/sockets ] as deploy@192.168.86.12
+ DEBUG [185bae68] Command: [ -L /home/deploy/portfolio_database_rails/releases/20220717191243/tmp/sockets ]
+ DEBUG [185bae68] Finished in 0.004 seconds with exit status 1 (failed).
+ DEBUG [2b23b573] Running [ -d /home/deploy/portfolio_database_rails/releases/20220717191243/tmp/sockets ] as deploy@192.168.86.12
+ DEBUG [2b23b573] Command: [ -d /home/deploy/portfolio_database_rails/releases/20220717191243/tmp/sockets ]
+ DEBUG [2b23b573] Finished in 0.004 seconds with exit status 1 (failed).
+  INFO [727b73d4] Running /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/tmp/sockets /home/deploy/portfolio_database_rails/releases/20220717191243/tmp/sockets as deploy@192.168.86.12
+ DEBUG [727b73d4] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/tmp/sockets /home/deploy/portfolio_database_rails/releases/20220717191243/tmp/sockets )
+  INFO [727b73d4] Finished in 0.049 seconds with exit status 0 (successful).
+ DEBUG [d0560796] Running [ -L /home/deploy/portfolio_database_rails/releases/20220717191243/vendor/bundle ] as deploy@192.168.86.12
+ DEBUG [d0560796] Command: [ -L /home/deploy/portfolio_database_rails/releases/20220717191243/vendor/bundle ]
+ DEBUG [d0560796] Finished in 0.004 seconds with exit status 1 (failed).
+ DEBUG [65138c2a] Running [ -d /home/deploy/portfolio_database_rails/releases/20220717191243/vendor/bundle ] as deploy@192.168.86.12
+ DEBUG [65138c2a] Command: [ -d /home/deploy/portfolio_database_rails/releases/20220717191243/vendor/bundle ]
+ DEBUG [65138c2a] Finished in 0.004 seconds with exit status 1 (failed).
+  INFO [897b905d] Running /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/vendor/bundle /home/deploy/portfolio_database_rails/releases/20220717191243/vendor/bundle as deploy@192.168.86.12
+ DEBUG [897b905d] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/vendor/bundle /home/deploy/portfolio_database_rails/releases/20220717191243/vendor/bundle )
+  INFO [897b905d] Finished in 0.006 seconds with exit status 0 (successful).
+ DEBUG [004154bf] Running [ -L /home/deploy/portfolio_database_rails/releases/20220717191243/.bundle ] as deploy@192.168.86.12
+ DEBUG [004154bf] Command: [ -L /home/deploy/portfolio_database_rails/releases/20220717191243/.bundle ]
+ DEBUG [004154bf] Finished in 0.004 seconds with exit status 1 (failed).
+ DEBUG [e50052ce] Running [ -d /home/deploy/portfolio_database_rails/releases/20220717191243/.bundle ] as deploy@192.168.86.12
+ DEBUG [e50052ce] Command: [ -d /home/deploy/portfolio_database_rails/releases/20220717191243/.bundle ]
+ DEBUG [e50052ce] Finished in 0.004 seconds with exit status 1 (failed).
+  INFO [6c2e2655] Running /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/.bundle /home/deploy/portfolio_database_rails/releases/20220717191243/.bundle as deploy@192.168.86.12
+ DEBUG [6c2e2655] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/.bundle /home/deploy/portfolio_database_rails/releases/20220717191243/.bundle )
+  INFO [6c2e2655] Finished in 0.049 seconds with exit status 0 (successful).
+ DEBUG [3bc9e1ac] Running [ -L /home/deploy/portfolio_database_rails/releases/20220717191243/public/system ] as deploy@192.168.86.12
+ DEBUG [3bc9e1ac] Command: [ -L /home/deploy/portfolio_database_rails/releases/20220717191243/public/system ]
+ DEBUG [3bc9e1ac] Finished in 0.004 seconds with exit status 1 (failed).
+ DEBUG [568231a6] Running [ -d /home/deploy/portfolio_database_rails/releases/20220717191243/public/system ] as deploy@192.168.86.12
+ DEBUG [568231a6] Command: [ -d /home/deploy/portfolio_database_rails/releases/20220717191243/public/system ]
+ DEBUG [568231a6] Finished in 0.004 seconds with exit status 1 (failed).
+  INFO [665d6a2e] Running /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/public/system /home/deploy/portfolio_database_rails/releases/20220717191243/public/system as deploy@192.168.86.12
+ DEBUG [665d6a2e] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/public/system /home/deploy/portfolio_database_rails/releases/20220717191243/public/system )
+  INFO [665d6a2e] Finished in 0.006 seconds with exit status 0 (successful).
+ DEBUG [1969fa7e] Running [ -L /home/deploy/portfolio_database_rails/releases/20220717191243/public/uploads ] as deploy@192.168.86.12
+ DEBUG [1969fa7e] Command: [ -L /home/deploy/portfolio_database_rails/releases/20220717191243/public/uploads ]
+ DEBUG [1969fa7e] Finished in 0.004 seconds with exit status 1 (failed).
+ DEBUG [68e0b70e] Running [ -d /home/deploy/portfolio_database_rails/releases/20220717191243/public/uploads ] as deploy@192.168.86.12
+ DEBUG [68e0b70e] Command: [ -d /home/deploy/portfolio_database_rails/releases/20220717191243/public/uploads ]
+ DEBUG [68e0b70e] Finished in 0.004 seconds with exit status 1 (failed).
+  INFO [c7d114d8] Running /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/public/uploads /home/deploy/portfolio_database_rails/releases/20220717191243/public/uploads as deploy@192.168.86.12
+ DEBUG [c7d114d8] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/public/uploads /home/deploy/portfolio_database_rails/releases/20220717191243/public/uploads )
+  INFO [c7d114d8] Finished in 0.006 seconds with exit status 0 (successful).
+ DEBUG [e2223603] Running [ -L /home/deploy/portfolio_database_rails/releases/20220717191243/public/assets ] as deploy@192.168.86.12
+ DEBUG [e2223603] Command: [ -L /home/deploy/portfolio_database_rails/releases/20220717191243/public/assets ]
+ DEBUG [e2223603] Finished in 0.004 seconds with exit status 1 (failed).
+ DEBUG [4223fd1c] Running [ -d /home/deploy/portfolio_database_rails/releases/20220717191243/public/assets ] as deploy@192.168.86.12
+ DEBUG [4223fd1c] Command: [ -d /home/deploy/portfolio_database_rails/releases/20220717191243/public/assets ]
+ DEBUG [4223fd1c] Finished in 0.044 seconds with exit status 1 (failed).
+  INFO [6904d72f] Running /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/public/assets /home/deploy/portfolio_database_rails/releases/20220717191243/public/assets as deploy@192.168.86.12
+ DEBUG [6904d72f] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/public/assets /home/deploy/portfolio_database_rails/releases/20220717191243/public/assets )
+  INFO [6904d72f] Finished in 0.006 seconds with exit status 0 (successful).
+ DEBUG [fe5e4cca] Running if test ! -d /home/deploy/portfolio_database_rails/releases/20220717191243; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/releases/20220717191243'" 1>&2; false; fi as deploy@192.168.86.12
+ DEBUG [fe5e4cca] Command: if test ! -d /home/deploy/portfolio_database_rails/releases/20220717191243; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/releases/20220717191243'" 1>&2; false; fi
+ DEBUG [fe5e4cca] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [a6d99d28] Running $HOME/.rbenv/bin/rbenv exec bundle config --local deployment true as deploy@192.168.86.12
+ DEBUG [a6d99d28] Command: cd /home/deploy/portfolio_database_rails/releases/20220717191243 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; $HOME/.rbenv/bin/rbenv exec bundle config --local deployment true )
+  INFO [a6d99d28] Finished in 0.342 seconds with exit status 0 (successful).
+  INFO [a17a47bb] Running $HOME/.rbenv/bin/rbenv exec bundle config --local path /home/deploy/portfolio_database_rails/shared/bundle as deploy@192.168.86.12
+ DEBUG [a17a47bb] Command: cd /home/deploy/portfolio_database_rails/releases/20220717191243 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; $HOME/.rbenv/bin/rbenv exec bundle config --local path /home/deploy/portfolio_database_rails/shared/bundle )
+  INFO [a17a47bb] Finished in 0.272 seconds with exit status 0 (successful).
+  INFO [09304e8e] Running $HOME/.rbenv/bin/rbenv exec bundle config --local without development:test as deploy@192.168.86.12
+ DEBUG [09304e8e] Command: cd /home/deploy/portfolio_database_rails/releases/20220717191243 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; $HOME/.rbenv/bin/rbenv exec bundle config --local without development:test )
+  INFO [09304e8e] Finished in 0.228 seconds with exit status 0 (successful).
+ DEBUG [1de0f982] Running if test ! -d /home/deploy/portfolio_database_rails/releases/20220717191243; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/releases/20220717191243'" 1>&2; false; fi as deploy@192.168.86.12
+ DEBUG [1de0f982] Command: if test ! -d /home/deploy/portfolio_database_rails/releases/20220717191243; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/releases/20220717191243'" 1>&2; false; fi
+ DEBUG [1de0f982] Finished in 0.004 seconds with exit status 0 (successful).
+ DEBUG [dcac37d7] Running $HOME/.rbenv/bin/rbenv exec bundle check as deploy@192.168.86.12
+ DEBUG [dcac37d7] Command: cd /home/deploy/portfolio_database_rails/releases/20220717191243 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; $HOME/.rbenv/bin/rbenv exec bundle check )
+ DEBUG [dcac37d7] 	The following gems are missing
+ DEBUG [dcac37d7] 	 * rails (7.0.3.1)
+ DEBUG [dcac37d7] 	 * pg (1.4.1)
+ DEBUG [dcac37d7] 	 * puma (5.6.4)
+ DEBUG [dcac37d7] 	 * tzinfo-data (1.2022.1)
+ DEBUG [dcac37d7] 	 * bootsnap (1.12.0)
+ DEBUG [dcac37d7] 	 * capistrano (3.17.0)
+ DEBUG [dcac37d7] 	 * capistrano-bundler (2.1.0)
+ DEBUG [dcac37d7] 	 * capistrano-rails (1.6.2)
+ DEBUG [dcac37d7] 	 * actioncable (7.0.3.1)
+ DEBUG [dcac37d7] 	 * actionmailbox (7.0.3.1)
+ DEBUG [dcac37d7] 	 * actionmailer (7.0.3.1)
+ DEBUG [dcac37d7] 	 * actionpack (7.0.3.1)
+ DEBUG [dcac37d7] 	 * actiontext (7.0.3.1)
+ DEBUG [dcac37d7] 	 * actionview (7.0.3.1)
+ DEBUG [dcac37d7] 	 * activejob (7.0.3.1)
+ DEBUG [dcac37d7] 	 * activemodel (7.0.3.1)
+ DEBUG [dcac37d7] 	 * activerecord (7.0.3.1)
+ DEBUG [dcac37d7] 	 * activestorage (7.0.3.1)
+ DEBUG [dcac37d7] 	 * activesupport (7.0.3.1)
+ DEBUG [dcac37d7] 	 * railties (7.0.3.1)
+ DEBUG [dcac37d7] 	 * nio4r (2.5.8)
+ DEBUG [dcac37d7] 	 * tzinfo (2.0.4)
+ DEBUG [dcac37d7] 	 * msgpack (1.5.3)
+ DEBUG [dcac37d7] 	 * airbrussh (1.4.0)
+ DEBUG [dcac37d7] 	 * i18n (1.12.0)
+ DEBUG [dcac37d7] 	 * rake (13.0.6)
+ DEBUG [dcac37d7] 	 * sshkit (1.21.2)
+ DEBUG [dcac37d7] 	 * websocket-driver (0.7.5)
+ DEBUG [dcac37d7] 	 * mail (2.7.1)
+ DEBUG [dcac37d7] 	 * net-imap (0.2.3)
+ DEBUG [dcac37d7] 	 * net-pop (0.1.1)
+ DEBUG [dcac37d7] 	 * net-smtp (0.3.1)
+ DEBUG [dcac37d7] 	 * rails-dom-testing (2.0.3)
+ DEBUG [dcac37d7] 	 * rack (2.2.4)
+ DEBUG [dcac37d7] 	 * rack-test (2.0.2)
+ DEBUG [dcac37d7] 	 * rails-html-sanitizer (1.4.3)
+ DEBUG [dcac37d7] 	 * globalid (1.0.0)
+ DEBUG [dcac37d7] 	 * nokogiri (1.13.7)
+ DEBUG [dcac37d7] 	 * builder (3.2.4)
+ DEBUG [dcac37d7] 	 * erubi (1.10.0)
+ DEBUG [dcac37d7] 	 * marcel (1.0.2)
+ DEBUG [dcac37d7] 	 * mini_mime (1.1.2)
+ DEBUG [dcac37d7] 	 * concurrent-ruby (1.1.10)
+ DEBUG [dcac37d7] 	 * minitest (5.16.2)
+ DEBUG [dcac37d7] 	 * method_source (1.0.0)
+ DEBUG [dcac37d7] 	 * thor (1.2.1)
+ DEBUG [dcac37d7] 	 * zeitwerk (2.6.0)
+ DEBUG [dcac37d7] 	 * net-scp (1.2.1)
+ DEBUG [dcac37d7] 	 * net-ssh (7.0.1)
+ DEBUG [dcac37d7] 	 * websocket-extensions (0.1.5)
+ DEBUG [dcac37d7] 	 * net-protocol (0.1.3)
+ DEBUG [dcac37d7] 	 * strscan (3.0.3)
+ DEBUG [dcac37d7] 	 * timeout (0.3.0)
+ DEBUG [dcac37d7] 	 * loofah (2.18.0)
+ DEBUG [dcac37d7] 	 * crass (1.0.6)
+ DEBUG [dcac37d7] 	Install missing gems with `bundle install`
+ DEBUG [dcac37d7] Finished in 0.340 seconds with exit status 1 (failed).
+  INFO [4472c1f1] Running $HOME/.rbenv/bin/rbenv exec bundle install --jobs 4 --quiet as deploy@192.168.86.12
+ DEBUG [4472c1f1] Command: cd /home/deploy/portfolio_database_rails/releases/20220717191243 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; $HOME/.rbenv/bin/rbenv exec bundle install --jobs 4 --quiet )
+ DEBUG [4472c1f1] 	You are trying to install in deployment mode after changing
+your Gemfile. Run `bundle install` elsewhere and add the
+updated Gemfile.lock to version control.
+
+If this is a development machine, remove the
+/home/deploy/portfolio_database_rails/releases/20220717191243/Gemfile freeze
+by running `bundle config unset deployment`.
+
+The list of sources changed
+The dependencies in your gemfile changed
+
+You have added to the Gemfile:
+* capistrano-bundler
+* capistrano-rails
+* capistrano-passenger
+* capistrano-rbenv
+
+You have deleted from the Gemfile:
+* capistrano-rails (~> 1.6)
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-07-17 19:13:09 +0000 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [43f8682b] Running [ -d $HOME/.rbenv/versions/3.1.2 ] as deploy@192.168.86.12
+ DEBUG [43f8682b] Command: [ -d $HOME/.rbenv/versions/3.1.2 ]
+ DEBUG [43f8682b] Finished in 4.156 seconds with exit status 0 (successful).
+ DEBUG [5d5cd07e] Running /usr/bin/env which passenger as deploy@192.168.86.12
+ DEBUG [5d5cd07e] Command: /usr/bin/env which passenger
+ DEBUG [5d5cd07e] 	/usr/bin/passenger
+ DEBUG [5d5cd07e] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [35caf7d8] Running /usr/bin/env mkdir -p /tmp as deploy@192.168.86.12
+ DEBUG [35caf7d8] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env mkdir -p /tmp )
+  INFO [35caf7d8] Finished in 0.054 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-23e3c2898e2533f8ce90.sh 0.0%
+  INFO Uploading /tmp/git-ssh-23e3c2898e2533f8ce90.sh 100.0%
+  INFO [a3784be0] Running /usr/bin/env chmod 700 /tmp/git-ssh-23e3c2898e2533f8ce90.sh as deploy@192.168.86.12
+ DEBUG [a3784be0] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env chmod 700 /tmp/git-ssh-23e3c2898e2533f8ce90.sh )
+  INFO [a3784be0] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [fdef3cb9] Running /usr/bin/env git ls-remote https://github.com/bengarlock/portfolio_database_rails HEAD as deploy@192.168.86.12
+ DEBUG [fdef3cb9] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-23e3c2898e2533f8ce90.sh" ; /usr/bin/env git ls-remote https://github.com/bengarlock/portfolio_database_rails HEAD )
+ DEBUG [fdef3cb9] 	9025ffba8eca8f22fe79d3e5840dd629c3df9c5e	HEAD
+  INFO [fdef3cb9] Finished in 0.128 seconds with exit status 0 (successful).
+  INFO [3026f588] Running /usr/bin/env mkdir -p /home/deploy/portfolio_database_rails/shared /home/deploy/portfolio_database_rails/releases as deploy@192.168.86.12
+ DEBUG [3026f588] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env mkdir -p /home/deploy/portfolio_database_rails/shared /home/deploy/portfolio_database_rails/releases )
+  INFO [3026f588] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [2188340d] Running /usr/bin/env mkdir -p /home/deploy/portfolio_database_rails/shared/log /home/deploy/portfolio_database_rails/shared/tmp/pids /home/deploy/portfolio_database_rails/shared/tmp/cache /home/deploy/portfolio_database_rails/shared/tmp/sockets /home/deploy/portfolio_database_rails/shared/vendor/bundle /home/deploy/portfolio_database_rails/shared/.bundle /home/deploy/portfolio_database_rails/shared/public/system /home/deploy/portfolio_database_rails/shared/public/uploads /home/deploy/portfolio_database_rails/shared/public/assets as deploy@192.168.86.12
+ DEBUG [2188340d] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env mkdir -p /home/deploy/portfolio_database_rails/shared/log /home/deploy/portfolio_database_rails/shared/tmp/pids /home/deploy/portfolio_database_rails/shared/tmp/cache /home/deploy/portfolio_database_rails/shared/tmp/sockets /home/deploy/portfolio_database_rails/shared/vendor/bundle /home/deploy/portfolio_database_rails/shared/.bundle /home/deploy/portfolio_database_rails/shared/public/system /home/deploy/portfolio_database_rails/shared/public/uploads /home/deploy/portfolio_database_rails/shared/public/assets )
+  INFO [2188340d] Finished in 0.044 seconds with exit status 0 (successful).
+ DEBUG [f990588d] Running [ -f /home/deploy/portfolio_database_rails/current/REVISION ] as deploy@192.168.86.12
+ DEBUG [f990588d] Command: [ -f /home/deploy/portfolio_database_rails/current/REVISION ]
+ DEBUG [f990588d] Finished in 0.004 seconds with exit status 1 (failed).
+ DEBUG [d806ba86] Running [ -f /home/deploy/portfolio_database_rails/repo/HEAD ] as deploy@192.168.86.12
+ DEBUG [d806ba86] Command: [ -f /home/deploy/portfolio_database_rails/repo/HEAD ]
+ DEBUG [d806ba86] Finished in 0.016 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/deploy/portfolio_database_rails/repo
+ DEBUG [d49dff9e] Running if test ! -d /home/deploy/portfolio_database_rails/repo; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/repo'" 1>&2; false; fi as deploy@192.168.86.12
+ DEBUG [d49dff9e] Command: if test ! -d /home/deploy/portfolio_database_rails/repo; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/repo'" 1>&2; false; fi
+ DEBUG [d49dff9e] Finished in 0.041 seconds with exit status 0 (successful).
+  INFO [9a610a63] Running /usr/bin/env git remote set-url origin https://github.com/bengarlock/portfolio_database_rails as deploy@192.168.86.12
+ DEBUG [9a610a63] Command: cd /home/deploy/portfolio_database_rails/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-23e3c2898e2533f8ce90.sh" ; /usr/bin/env git remote set-url origin https://github.com/bengarlock/portfolio_database_rails )
+  INFO [9a610a63] Finished in 0.007 seconds with exit status 0 (successful).
+  INFO [417b8fda] Running /usr/bin/env git remote update --prune as deploy@192.168.86.12
+ DEBUG [417b8fda] Command: cd /home/deploy/portfolio_database_rails/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-23e3c2898e2533f8ce90.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [417b8fda] 	Fetching origin
+  INFO [417b8fda] Finished in 0.134 seconds with exit status 0 (successful).
+ DEBUG [b4bf9a64] Running if test ! -d /home/deploy/portfolio_database_rails/repo; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/repo'" 1>&2; false; fi as deploy@192.168.86.12
+ DEBUG [b4bf9a64] Command: if test ! -d /home/deploy/portfolio_database_rails/repo; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/repo'" 1>&2; false; fi
+ DEBUG [b4bf9a64] Finished in 0.045 seconds with exit status 0 (successful).
+  INFO [b10ad3da] Running /usr/bin/env mkdir -p /home/deploy/portfolio_database_rails/releases/20220717191314 as deploy@192.168.86.12
+ DEBUG [b10ad3da] Command: cd /home/deploy/portfolio_database_rails/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-23e3c2898e2533f8ce90.sh" ; /usr/bin/env mkdir -p /home/deploy/portfolio_database_rails/releases/20220717191314 )
+  INFO [b10ad3da] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [89d33296] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/portfolio_database_rails/releases/20220717191314 as deploy@192.168.86.12
+ DEBUG [89d33296] Command: cd /home/deploy/portfolio_database_rails/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-23e3c2898e2533f8ce90.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/portfolio_database_rails/releases/20220717191314 )
+  INFO [89d33296] Finished in 0.010 seconds with exit status 0 (successful).
+ DEBUG [84a0513d] Running if test ! -d /home/deploy/portfolio_database_rails/repo; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/repo'" 1>&2; false; fi as deploy@192.168.86.12
+ DEBUG [84a0513d] Command: if test ! -d /home/deploy/portfolio_database_rails/repo; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/repo'" 1>&2; false; fi
+ DEBUG [84a0513d] Finished in 0.045 seconds with exit status 0 (successful).
+ DEBUG [3e7bd55a] Running /usr/bin/env git rev-list --max-count=1 master as deploy@192.168.86.12
+ DEBUG [3e7bd55a] Command: cd /home/deploy/portfolio_database_rails/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-23e3c2898e2533f8ce90.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [3e7bd55a] 	9025ffba8eca8f22fe79d3e5840dd629c3df9c5e
+ DEBUG [3e7bd55a] Finished in 0.007 seconds with exit status 0 (successful).
+ DEBUG [41d04cc4] Running if test ! -d /home/deploy/portfolio_database_rails/releases/20220717191314; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/releases/20220717191314'" 1>&2; false; fi as deploy@192.168.86.12
+ DEBUG [41d04cc4] Command: if test ! -d /home/deploy/portfolio_database_rails/releases/20220717191314; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/releases/20220717191314'" 1>&2; false; fi
+ DEBUG [41d04cc4] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [fe962c79] Running /usr/bin/env echo "9025ffba8eca8f22fe79d3e5840dd629c3df9c5e" > REVISION as deploy@192.168.86.12
+ DEBUG [fe962c79] Command: cd /home/deploy/portfolio_database_rails/releases/20220717191314 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env echo "9025ffba8eca8f22fe79d3e5840dd629c3df9c5e" > REVISION )
+  INFO [fe962c79] Finished in 0.046 seconds with exit status 0 (successful).
+  INFO [bf53b535] Running /usr/bin/env mkdir -p /home/deploy/portfolio_database_rails/releases/20220717191314 /home/deploy/portfolio_database_rails/releases/20220717191314/tmp /home/deploy/portfolio_database_rails/releases/20220717191314/vendor /home/deploy/portfolio_database_rails/releases/20220717191314/public as deploy@192.168.86.12
+ DEBUG [bf53b535] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env mkdir -p /home/deploy/portfolio_database_rails/releases/20220717191314 /home/deploy/portfolio_database_rails/releases/20220717191314/tmp /home/deploy/portfolio_database_rails/releases/20220717191314/vendor /home/deploy/portfolio_database_rails/releases/20220717191314/public )
+  INFO [bf53b535] Finished in 0.006 seconds with exit status 0 (successful).
+ DEBUG [ab1c11ce] Running [ -L /home/deploy/portfolio_database_rails/releases/20220717191314/log ] as deploy@192.168.86.12
+ DEBUG [ab1c11ce] Command: [ -L /home/deploy/portfolio_database_rails/releases/20220717191314/log ]
+ DEBUG [ab1c11ce] Finished in 0.004 seconds with exit status 1 (failed).
+ DEBUG [778820bd] Running [ -d /home/deploy/portfolio_database_rails/releases/20220717191314/log ] as deploy@192.168.86.12
+ DEBUG [778820bd] Command: [ -d /home/deploy/portfolio_database_rails/releases/20220717191314/log ]
+ DEBUG [778820bd] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [78d1108c] Running /usr/bin/env rm -rf /home/deploy/portfolio_database_rails/releases/20220717191314/log as deploy@192.168.86.12
+ DEBUG [78d1108c] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env rm -rf /home/deploy/portfolio_database_rails/releases/20220717191314/log )
+  INFO [78d1108c] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [9d4ad7bf] Running /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/log /home/deploy/portfolio_database_rails/releases/20220717191314/log as deploy@192.168.86.12
+ DEBUG [9d4ad7bf] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/log /home/deploy/portfolio_database_rails/releases/20220717191314/log )
+  INFO [9d4ad7bf] Finished in 0.006 seconds with exit status 0 (successful).
+ DEBUG [bdf768d4] Running [ -L /home/deploy/portfolio_database_rails/releases/20220717191314/tmp/pids ] as deploy@192.168.86.12
+ DEBUG [bdf768d4] Command: [ -L /home/deploy/portfolio_database_rails/releases/20220717191314/tmp/pids ]
+ DEBUG [bdf768d4] Finished in 0.004 seconds with exit status 1 (failed).
+ DEBUG [bc82d346] Running [ -d /home/deploy/portfolio_database_rails/releases/20220717191314/tmp/pids ] as deploy@192.168.86.12
+ DEBUG [bc82d346] Command: [ -d /home/deploy/portfolio_database_rails/releases/20220717191314/tmp/pids ]
+ DEBUG [bc82d346] Finished in 0.044 seconds with exit status 0 (successful).
+  INFO [284fb643] Running /usr/bin/env rm -rf /home/deploy/portfolio_database_rails/releases/20220717191314/tmp/pids as deploy@192.168.86.12
+ DEBUG [284fb643] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env rm -rf /home/deploy/portfolio_database_rails/releases/20220717191314/tmp/pids )
+  INFO [284fb643] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [0b52b3ca] Running /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/tmp/pids /home/deploy/portfolio_database_rails/releases/20220717191314/tmp/pids as deploy@192.168.86.12
+ DEBUG [0b52b3ca] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/tmp/pids /home/deploy/portfolio_database_rails/releases/20220717191314/tmp/pids )
+  INFO [0b52b3ca] Finished in 0.006 seconds with exit status 0 (successful).
+ DEBUG [7b8b73f2] Running [ -L /home/deploy/portfolio_database_rails/releases/20220717191314/tmp/cache ] as deploy@192.168.86.12
+ DEBUG [7b8b73f2] Command: [ -L /home/deploy/portfolio_database_rails/releases/20220717191314/tmp/cache ]
+ DEBUG [7b8b73f2] Finished in 0.004 seconds with exit status 1 (failed).
+ DEBUG [8dd4ef77] Running [ -d /home/deploy/portfolio_database_rails/releases/20220717191314/tmp/cache ] as deploy@192.168.86.12
+ DEBUG [8dd4ef77] Command: [ -d /home/deploy/portfolio_database_rails/releases/20220717191314/tmp/cache ]
+ DEBUG [8dd4ef77] Finished in 0.004 seconds with exit status 1 (failed).
+  INFO [dad10315] Running /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/tmp/cache /home/deploy/portfolio_database_rails/releases/20220717191314/tmp/cache as deploy@192.168.86.12
+ DEBUG [dad10315] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/tmp/cache /home/deploy/portfolio_database_rails/releases/20220717191314/tmp/cache )
+  INFO [dad10315] Finished in 0.006 seconds with exit status 0 (successful).
+ DEBUG [cdd41406] Running [ -L /home/deploy/portfolio_database_rails/releases/20220717191314/tmp/sockets ] as deploy@192.168.86.12
+ DEBUG [cdd41406] Command: [ -L /home/deploy/portfolio_database_rails/releases/20220717191314/tmp/sockets ]
+ DEBUG [cdd41406] Finished in 0.004 seconds with exit status 1 (failed).
+ DEBUG [6a97c6d9] Running [ -d /home/deploy/portfolio_database_rails/releases/20220717191314/tmp/sockets ] as deploy@192.168.86.12
+ DEBUG [6a97c6d9] Command: [ -d /home/deploy/portfolio_database_rails/releases/20220717191314/tmp/sockets ]
+ DEBUG [6a97c6d9] Finished in 0.043 seconds with exit status 1 (failed).
+  INFO [b9aa6a43] Running /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/tmp/sockets /home/deploy/portfolio_database_rails/releases/20220717191314/tmp/sockets as deploy@192.168.86.12
+ DEBUG [b9aa6a43] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/tmp/sockets /home/deploy/portfolio_database_rails/releases/20220717191314/tmp/sockets )
+  INFO [b9aa6a43] Finished in 0.006 seconds with exit status 0 (successful).
+ DEBUG [e7df8aed] Running [ -L /home/deploy/portfolio_database_rails/releases/20220717191314/vendor/bundle ] as deploy@192.168.86.12
+ DEBUG [e7df8aed] Command: [ -L /home/deploy/portfolio_database_rails/releases/20220717191314/vendor/bundle ]
+ DEBUG [e7df8aed] Finished in 0.004 seconds with exit status 1 (failed).
+ DEBUG [ac79a5f4] Running [ -d /home/deploy/portfolio_database_rails/releases/20220717191314/vendor/bundle ] as deploy@192.168.86.12
+ DEBUG [ac79a5f4] Command: [ -d /home/deploy/portfolio_database_rails/releases/20220717191314/vendor/bundle ]
+ DEBUG [ac79a5f4] Finished in 0.004 seconds with exit status 1 (failed).
+  INFO [9ff256b4] Running /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/vendor/bundle /home/deploy/portfolio_database_rails/releases/20220717191314/vendor/bundle as deploy@192.168.86.12
+ DEBUG [9ff256b4] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/vendor/bundle /home/deploy/portfolio_database_rails/releases/20220717191314/vendor/bundle )
+  INFO [9ff256b4] Finished in 0.006 seconds with exit status 0 (successful).
+ DEBUG [9b9726af] Running [ -L /home/deploy/portfolio_database_rails/releases/20220717191314/.bundle ] as deploy@192.168.86.12
+ DEBUG [9b9726af] Command: [ -L /home/deploy/portfolio_database_rails/releases/20220717191314/.bundle ]
+ DEBUG [9b9726af] Finished in 0.004 seconds with exit status 1 (failed).
+ DEBUG [141c8c5e] Running [ -d /home/deploy/portfolio_database_rails/releases/20220717191314/.bundle ] as deploy@192.168.86.12
+ DEBUG [141c8c5e] Command: [ -d /home/deploy/portfolio_database_rails/releases/20220717191314/.bundle ]
+ DEBUG [141c8c5e] Finished in 0.004 seconds with exit status 1 (failed).
+  INFO [3aae3f0d] Running /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/.bundle /home/deploy/portfolio_database_rails/releases/20220717191314/.bundle as deploy@192.168.86.12
+ DEBUG [3aae3f0d] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/.bundle /home/deploy/portfolio_database_rails/releases/20220717191314/.bundle )
+  INFO [3aae3f0d] Finished in 0.006 seconds with exit status 0 (successful).
+ DEBUG [01a1e0ba] Running [ -L /home/deploy/portfolio_database_rails/releases/20220717191314/public/system ] as deploy@192.168.86.12
+ DEBUG [01a1e0ba] Command: [ -L /home/deploy/portfolio_database_rails/releases/20220717191314/public/system ]
+ DEBUG [01a1e0ba] Finished in 0.004 seconds with exit status 1 (failed).
+ DEBUG [3c5086e7] Running [ -d /home/deploy/portfolio_database_rails/releases/20220717191314/public/system ] as deploy@192.168.86.12
+ DEBUG [3c5086e7] Command: [ -d /home/deploy/portfolio_database_rails/releases/20220717191314/public/system ]
+ DEBUG [3c5086e7] Finished in 0.044 seconds with exit status 1 (failed).
+  INFO [7dd56b98] Running /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/public/system /home/deploy/portfolio_database_rails/releases/20220717191314/public/system as deploy@192.168.86.12
+ DEBUG [7dd56b98] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/public/system /home/deploy/portfolio_database_rails/releases/20220717191314/public/system )
+  INFO [7dd56b98] Finished in 0.007 seconds with exit status 0 (successful).
+ DEBUG [9a3ff13a] Running [ -L /home/deploy/portfolio_database_rails/releases/20220717191314/public/uploads ] as deploy@192.168.86.12
+ DEBUG [9a3ff13a] Command: [ -L /home/deploy/portfolio_database_rails/releases/20220717191314/public/uploads ]
+ DEBUG [9a3ff13a] Finished in 0.004 seconds with exit status 1 (failed).
+ DEBUG [aa2e4035] Running [ -d /home/deploy/portfolio_database_rails/releases/20220717191314/public/uploads ] as deploy@192.168.86.12
+ DEBUG [aa2e4035] Command: [ -d /home/deploy/portfolio_database_rails/releases/20220717191314/public/uploads ]
+ DEBUG [aa2e4035] Finished in 0.044 seconds with exit status 1 (failed).
+  INFO [fbeec3f1] Running /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/public/uploads /home/deploy/portfolio_database_rails/releases/20220717191314/public/uploads as deploy@192.168.86.12
+ DEBUG [fbeec3f1] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/public/uploads /home/deploy/portfolio_database_rails/releases/20220717191314/public/uploads )
+  INFO [fbeec3f1] Finished in 0.006 seconds with exit status 0 (successful).
+ DEBUG [cf817451] Running [ -L /home/deploy/portfolio_database_rails/releases/20220717191314/public/assets ] as deploy@192.168.86.12
+ DEBUG [cf817451] Command: [ -L /home/deploy/portfolio_database_rails/releases/20220717191314/public/assets ]
+ DEBUG [cf817451] Finished in 0.004 seconds with exit status 1 (failed).
+ DEBUG [7462011c] Running [ -d /home/deploy/portfolio_database_rails/releases/20220717191314/public/assets ] as deploy@192.168.86.12
+ DEBUG [7462011c] Command: [ -d /home/deploy/portfolio_database_rails/releases/20220717191314/public/assets ]
+ DEBUG [7462011c] Finished in 0.004 seconds with exit status 1 (failed).
+  INFO [3f29b150] Running /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/public/assets /home/deploy/portfolio_database_rails/releases/20220717191314/public/assets as deploy@192.168.86.12
+ DEBUG [3f29b150] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/public/assets /home/deploy/portfolio_database_rails/releases/20220717191314/public/assets )
+  INFO [3f29b150] Finished in 0.006 seconds with exit status 0 (successful).
+ DEBUG [ce376ab0] Running if test ! -d /home/deploy/portfolio_database_rails/releases/20220717191314; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/releases/20220717191314'" 1>&2; false; fi as deploy@192.168.86.12
+ DEBUG [ce376ab0] Command: if test ! -d /home/deploy/portfolio_database_rails/releases/20220717191314; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/releases/20220717191314'" 1>&2; false; fi
+ DEBUG [ce376ab0] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [39901e3a] Running $HOME/.rbenv/bin/rbenv exec bundle config --local deployment true as deploy@192.168.86.12
+ DEBUG [39901e3a] Command: cd /home/deploy/portfolio_database_rails/releases/20220717191314 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; $HOME/.rbenv/bin/rbenv exec bundle config --local deployment true )
+  INFO [39901e3a] Finished in 0.229 seconds with exit status 0 (successful).
+  INFO [79008ed2] Running $HOME/.rbenv/bin/rbenv exec bundle config --local path /home/deploy/portfolio_database_rails/shared/bundle as deploy@192.168.86.12
+ DEBUG [79008ed2] Command: cd /home/deploy/portfolio_database_rails/releases/20220717191314 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; $HOME/.rbenv/bin/rbenv exec bundle config --local path /home/deploy/portfolio_database_rails/shared/bundle )
+  INFO [79008ed2] Finished in 0.230 seconds with exit status 0 (successful).
+  INFO [21b88f33] Running $HOME/.rbenv/bin/rbenv exec bundle config --local without development:test as deploy@192.168.86.12
+ DEBUG [21b88f33] Command: cd /home/deploy/portfolio_database_rails/releases/20220717191314 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; $HOME/.rbenv/bin/rbenv exec bundle config --local without development:test )
+  INFO [21b88f33] Finished in 0.273 seconds with exit status 0 (successful).
+ DEBUG [22da3f22] Running if test ! -d /home/deploy/portfolio_database_rails/releases/20220717191314; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/releases/20220717191314'" 1>&2; false; fi as deploy@192.168.86.12
+ DEBUG [22da3f22] Command: if test ! -d /home/deploy/portfolio_database_rails/releases/20220717191314; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/releases/20220717191314'" 1>&2; false; fi
+ DEBUG [22da3f22] Finished in 0.004 seconds with exit status 0 (successful).
+ DEBUG [ab826644] Running $HOME/.rbenv/bin/rbenv exec bundle check as deploy@192.168.86.12
+ DEBUG [ab826644] Command: cd /home/deploy/portfolio_database_rails/releases/20220717191314 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; $HOME/.rbenv/bin/rbenv exec bundle check )
+ DEBUG [ab826644] 	The following gems are missing
+ DEBUG [ab826644] 	 * rails (7.0.3.1)
+ DEBUG [ab826644] 	 * pg (1.4.1)
+ DEBUG [ab826644] 	 * puma (5.6.4)
+ DEBUG [ab826644] 	 * tzinfo-data (1.2022.1)
+ DEBUG [ab826644] 	 * bootsnap (1.12.0)
+ DEBUG [ab826644] 	 * capistrano (3.17.0)
+ DEBUG [ab826644] 	 * capistrano-bundler (2.1.0)
+ DEBUG [ab826644] 	 * capistrano-rails (1.6.2)
+ DEBUG [ab826644] 	 * actioncable (7.0.3.1)
+ DEBUG [ab826644] 	 * actionmailbox (7.0.3.1)
+ DEBUG [ab826644] 	 * actionmailer (7.0.3.1)
+ DEBUG [ab826644] 	 * actionpack (7.0.3.1)
+ DEBUG [ab826644] 	 * actiontext (7.0.3.1)
+ DEBUG [ab826644] 	 * actionview (7.0.3.1)
+ DEBUG [ab826644] 	 * activejob (7.0.3.1)
+ DEBUG [ab826644] 	 * activemodel (7.0.3.1)
+ DEBUG [ab826644] 	 * activerecord (7.0.3.1)
+ DEBUG [ab826644] 	 * activestorage (7.0.3.1)
+ DEBUG [ab826644] 	 * activesupport (7.0.3.1)
+ DEBUG [ab826644] 	 * railties (7.0.3.1)
+ DEBUG [ab826644] 	 * nio4r (2.5.8)
+ DEBUG [ab826644] 	 * tzinfo (2.0.4)
+ DEBUG [ab826644] 	 * msgpack (1.5.3)
+ DEBUG [ab826644] 	 * airbrussh (1.4.0)
+ DEBUG [ab826644] 	 * i18n (1.12.0)
+ DEBUG [ab826644] 	 * rake (13.0.6)
+ DEBUG [ab826644] 	 * sshkit (1.21.2)
+ DEBUG [ab826644] 	 * websocket-driver (0.7.5)
+ DEBUG [ab826644] 	 * mail (2.7.1)
+ DEBUG [ab826644] 	 * net-imap (0.2.3)
+ DEBUG [ab826644] 	 * net-pop (0.1.1)
+ DEBUG [ab826644] 	 * net-smtp (0.3.1)
+ DEBUG [ab826644] 	 * rails-dom-testing (2.0.3)
+ DEBUG [ab826644] 	 * rack (2.2.4)
+ DEBUG [ab826644] 	 * rack-test (2.0.2)
+ DEBUG [ab826644] 	 * rails-html-sanitizer (1.4.3)
+ DEBUG [ab826644] 	 * globalid (1.0.0)
+ DEBUG [ab826644] 	 * nokogiri (1.13.7)
+ DEBUG [ab826644] 	 * builder (3.2.4)
+ DEBUG [ab826644] 	 * erubi (1.10.0)
+ DEBUG [ab826644] 	 * marcel (1.0.2)
+ DEBUG [ab826644] 	 * mini_mime (1.1.2)
+ DEBUG [ab826644] 	 * concurrent-ruby (1.1.10)
+ DEBUG [ab826644] 	 * minitest (5.16.2)
+ DEBUG [ab826644] 	 * method_source (1.0.0)
+ DEBUG [ab826644] 	 * thor (1.2.1)
+ DEBUG [ab826644] 	 * zeitwerk (2.6.0)
+ DEBUG [ab826644] 	 * net-scp (1.2.1)
+ DEBUG [ab826644] 	 * net-ssh (7.0.1)
+ DEBUG [ab826644] 	 * websocket-extensions (0.1.5)
+ DEBUG [ab826644] 	 * net-protocol (0.1.3)
+ DEBUG [ab826644] 	 * strscan (3.0.3)
+ DEBUG [ab826644] 	 * timeout (0.3.0)
+ DEBUG [ab826644] 	 * loofah (2.18.0)
+ DEBUG [ab826644] 	 * crass (1.0.6)
+ DEBUG [ab826644] 	Install missing gems with `bundle install`
+ DEBUG [ab826644] Finished in 0.316 seconds with exit status 1 (failed).
+  INFO [f691a821] Running $HOME/.rbenv/bin/rbenv exec bundle install --jobs 4 --quiet as deploy@192.168.86.12
+ DEBUG [f691a821] Command: cd /home/deploy/portfolio_database_rails/releases/20220717191314 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; $HOME/.rbenv/bin/rbenv exec bundle install --jobs 4 --quiet )
+ DEBUG [f691a821] 	You are trying to install in deployment mode after changing
+your Gemfile. Run `bundle install` elsewhere and add the
+updated Gemfile.lock to version control.
+
+If this is a development machine, remove the
+/home/deploy/portfolio_database_rails/releases/20220717191314/Gemfile freeze
+by running `bundle config unset deployment`.
+
+The list of sources changed
+The dependencies in your gemfile changed
+
+You have added to the Gemfile:
+* capistrano-bundler
+* capistrano-rails
+* capistrano-passenger
+* capistrano-rbenv
+
+You have deleted from the Gemfile:
+* capistrano-rails (~> 1.6)
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-07-17 19:13:56 +0000 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [c802e750] Running [ -d $HOME/.rbenv/versions/3.1.2 ] as deploy@192.168.86.12
+ DEBUG [c802e750] Command: [ -d $HOME/.rbenv/versions/3.1.2 ]
+ DEBUG [c802e750] Finished in 3.294 seconds with exit status 0 (successful).
+ DEBUG [52d8e7c2] Running /usr/bin/env which passenger as deploy@192.168.86.12
+ DEBUG [52d8e7c2] Command: /usr/bin/env which passenger
+ DEBUG [52d8e7c2] 	/usr/bin/passenger
+ DEBUG [52d8e7c2] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO [25ea2e37] Running /usr/bin/env mkdir -p /tmp as deploy@192.168.86.12
+ DEBUG [25ea2e37] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env mkdir -p /tmp )
+  INFO [25ea2e37] Finished in 0.006 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-d025e32e833a4cf87a9c.sh 0.0%
+  INFO Uploading /tmp/git-ssh-d025e32e833a4cf87a9c.sh 100.0%
+  INFO [fea0ebf5] Running /usr/bin/env chmod 700 /tmp/git-ssh-d025e32e833a4cf87a9c.sh as deploy@192.168.86.12
+ DEBUG [fea0ebf5] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env chmod 700 /tmp/git-ssh-d025e32e833a4cf87a9c.sh )
+  INFO [fea0ebf5] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [ba123d44] Running /usr/bin/env git ls-remote https://github.com/bengarlock/portfolio_database_rails HEAD as deploy@192.168.86.12
+ DEBUG [ba123d44] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-d025e32e833a4cf87a9c.sh" ; /usr/bin/env git ls-remote https://github.com/bengarlock/portfolio_database_rails HEAD )
+ DEBUG [ba123d44] 	9025ffba8eca8f22fe79d3e5840dd629c3df9c5e	HEAD
+  INFO [ba123d44] Finished in 0.139 seconds with exit status 0 (successful).
+  INFO [4e608042] Running /usr/bin/env mkdir -p /home/deploy/portfolio_database_rails/shared /home/deploy/portfolio_database_rails/releases as deploy@192.168.86.12
+ DEBUG [4e608042] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env mkdir -p /home/deploy/portfolio_database_rails/shared /home/deploy/portfolio_database_rails/releases )
+  INFO [4e608042] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [6e3f1490] Running /usr/bin/env mkdir -p /home/deploy/portfolio_database_rails/shared/log /home/deploy/portfolio_database_rails/shared/tmp/pids /home/deploy/portfolio_database_rails/shared/tmp/cache /home/deploy/portfolio_database_rails/shared/tmp/sockets /home/deploy/portfolio_database_rails/shared/vendor/bundle /home/deploy/portfolio_database_rails/shared/.bundle /home/deploy/portfolio_database_rails/shared/public/system /home/deploy/portfolio_database_rails/shared/public/uploads /home/deploy/portfolio_database_rails/shared/public/assets as deploy@192.168.86.12
+ DEBUG [6e3f1490] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env mkdir -p /home/deploy/portfolio_database_rails/shared/log /home/deploy/portfolio_database_rails/shared/tmp/pids /home/deploy/portfolio_database_rails/shared/tmp/cache /home/deploy/portfolio_database_rails/shared/tmp/sockets /home/deploy/portfolio_database_rails/shared/vendor/bundle /home/deploy/portfolio_database_rails/shared/.bundle /home/deploy/portfolio_database_rails/shared/public/system /home/deploy/portfolio_database_rails/shared/public/uploads /home/deploy/portfolio_database_rails/shared/public/assets )
+  INFO [6e3f1490] Finished in 0.044 seconds with exit status 0 (successful).
+ DEBUG [3ed55415] Running [ -f /home/deploy/portfolio_database_rails/current/REVISION ] as deploy@192.168.86.12
+ DEBUG [3ed55415] Command: [ -f /home/deploy/portfolio_database_rails/current/REVISION ]
+ DEBUG [3ed55415] Finished in 0.004 seconds with exit status 1 (failed).
+ DEBUG [7c344ad8] Running [ -f /home/deploy/portfolio_database_rails/repo/HEAD ] as deploy@192.168.86.12
+ DEBUG [7c344ad8] Command: [ -f /home/deploy/portfolio_database_rails/repo/HEAD ]
+ DEBUG [7c344ad8] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/deploy/portfolio_database_rails/repo
+ DEBUG [3d417720] Running if test ! -d /home/deploy/portfolio_database_rails/repo; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/repo'" 1>&2; false; fi as deploy@192.168.86.12
+ DEBUG [3d417720] Command: if test ! -d /home/deploy/portfolio_database_rails/repo; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/repo'" 1>&2; false; fi
+ DEBUG [3d417720] Finished in 0.008 seconds with exit status 0 (successful).
+  INFO [95e27387] Running /usr/bin/env git remote set-url origin https://github.com/bengarlock/portfolio_database_rails as deploy@192.168.86.12
+ DEBUG [95e27387] Command: cd /home/deploy/portfolio_database_rails/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-d025e32e833a4cf87a9c.sh" ; /usr/bin/env git remote set-url origin https://github.com/bengarlock/portfolio_database_rails )
+  INFO [95e27387] Finished in 0.053 seconds with exit status 0 (successful).
+  INFO [1ddeb0bf] Running /usr/bin/env git remote update --prune as deploy@192.168.86.12
+ DEBUG [1ddeb0bf] Command: cd /home/deploy/portfolio_database_rails/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-d025e32e833a4cf87a9c.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [1ddeb0bf] 	Fetching origin
+  INFO [1ddeb0bf] Finished in 0.129 seconds with exit status 0 (successful).
+ DEBUG [2166c830] Running if test ! -d /home/deploy/portfolio_database_rails/repo; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/repo'" 1>&2; false; fi as deploy@192.168.86.12
+ DEBUG [2166c830] Command: if test ! -d /home/deploy/portfolio_database_rails/repo; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/repo'" 1>&2; false; fi
+ DEBUG [2166c830] Finished in 0.046 seconds with exit status 0 (successful).
+  INFO [9bff5677] Running /usr/bin/env mkdir -p /home/deploy/portfolio_database_rails/releases/20220717191359 as deploy@192.168.86.12
+ DEBUG [9bff5677] Command: cd /home/deploy/portfolio_database_rails/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-d025e32e833a4cf87a9c.sh" ; /usr/bin/env mkdir -p /home/deploy/portfolio_database_rails/releases/20220717191359 )
+  INFO [9bff5677] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [9525a5d2] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/portfolio_database_rails/releases/20220717191359 as deploy@192.168.86.12
+ DEBUG [9525a5d2] Command: cd /home/deploy/portfolio_database_rails/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-d025e32e833a4cf87a9c.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/portfolio_database_rails/releases/20220717191359 )
+  INFO [9525a5d2] Finished in 0.010 seconds with exit status 0 (successful).
+ DEBUG [4e0320c5] Running if test ! -d /home/deploy/portfolio_database_rails/repo; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/repo'" 1>&2; false; fi as deploy@192.168.86.12
+ DEBUG [4e0320c5] Command: if test ! -d /home/deploy/portfolio_database_rails/repo; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/repo'" 1>&2; false; fi
+ DEBUG [4e0320c5] Finished in 0.045 seconds with exit status 0 (successful).
+ DEBUG [d552438b] Running /usr/bin/env git rev-list --max-count=1 master as deploy@192.168.86.12
+ DEBUG [d552438b] Command: cd /home/deploy/portfolio_database_rails/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-d025e32e833a4cf87a9c.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [d552438b] 	9025ffba8eca8f22fe79d3e5840dd629c3df9c5e
+ DEBUG [d552438b] Finished in 0.007 seconds with exit status 0 (successful).
+ DEBUG [34f4bedd] Running if test ! -d /home/deploy/portfolio_database_rails/releases/20220717191359; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/releases/20220717191359'" 1>&2; false; fi as deploy@192.168.86.12
+ DEBUG [34f4bedd] Command: if test ! -d /home/deploy/portfolio_database_rails/releases/20220717191359; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/releases/20220717191359'" 1>&2; false; fi
+ DEBUG [34f4bedd] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [a5224cc3] Running /usr/bin/env echo "9025ffba8eca8f22fe79d3e5840dd629c3df9c5e" > REVISION as deploy@192.168.86.12
+ DEBUG [a5224cc3] Command: cd /home/deploy/portfolio_database_rails/releases/20220717191359 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env echo "9025ffba8eca8f22fe79d3e5840dd629c3df9c5e" > REVISION )
+  INFO [a5224cc3] Finished in 0.046 seconds with exit status 0 (successful).
+  INFO [997a3a46] Running /usr/bin/env mkdir -p /home/deploy/portfolio_database_rails/releases/20220717191359 /home/deploy/portfolio_database_rails/releases/20220717191359/tmp /home/deploy/portfolio_database_rails/releases/20220717191359/vendor /home/deploy/portfolio_database_rails/releases/20220717191359/public as deploy@192.168.86.12
+ DEBUG [997a3a46] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env mkdir -p /home/deploy/portfolio_database_rails/releases/20220717191359 /home/deploy/portfolio_database_rails/releases/20220717191359/tmp /home/deploy/portfolio_database_rails/releases/20220717191359/vendor /home/deploy/portfolio_database_rails/releases/20220717191359/public )
+  INFO [997a3a46] Finished in 0.006 seconds with exit status 0 (successful).
+ DEBUG [3ef5754e] Running [ -L /home/deploy/portfolio_database_rails/releases/20220717191359/log ] as deploy@192.168.86.12
+ DEBUG [3ef5754e] Command: [ -L /home/deploy/portfolio_database_rails/releases/20220717191359/log ]
+ DEBUG [3ef5754e] Finished in 0.004 seconds with exit status 1 (failed).
+ DEBUG [37a7c21f] Running [ -d /home/deploy/portfolio_database_rails/releases/20220717191359/log ] as deploy@192.168.86.12
+ DEBUG [37a7c21f] Command: [ -d /home/deploy/portfolio_database_rails/releases/20220717191359/log ]
+ DEBUG [37a7c21f] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [7c588a10] Running /usr/bin/env rm -rf /home/deploy/portfolio_database_rails/releases/20220717191359/log as deploy@192.168.86.12
+ DEBUG [7c588a10] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env rm -rf /home/deploy/portfolio_database_rails/releases/20220717191359/log )
+  INFO [7c588a10] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [62090fa1] Running /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/log /home/deploy/portfolio_database_rails/releases/20220717191359/log as deploy@192.168.86.12
+ DEBUG [62090fa1] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/log /home/deploy/portfolio_database_rails/releases/20220717191359/log )
+  INFO [62090fa1] Finished in 0.006 seconds with exit status 0 (successful).
+ DEBUG [5a60ef4d] Running [ -L /home/deploy/portfolio_database_rails/releases/20220717191359/tmp/pids ] as deploy@192.168.86.12
+ DEBUG [5a60ef4d] Command: [ -L /home/deploy/portfolio_database_rails/releases/20220717191359/tmp/pids ]
+ DEBUG [5a60ef4d] Finished in 0.004 seconds with exit status 1 (failed).
+ DEBUG [1985d181] Running [ -d /home/deploy/portfolio_database_rails/releases/20220717191359/tmp/pids ] as deploy@192.168.86.12
+ DEBUG [1985d181] Command: [ -d /home/deploy/portfolio_database_rails/releases/20220717191359/tmp/pids ]
+ DEBUG [1985d181] Finished in 0.044 seconds with exit status 0 (successful).
+  INFO [3fffa3f3] Running /usr/bin/env rm -rf /home/deploy/portfolio_database_rails/releases/20220717191359/tmp/pids as deploy@192.168.86.12
+ DEBUG [3fffa3f3] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env rm -rf /home/deploy/portfolio_database_rails/releases/20220717191359/tmp/pids )
+  INFO [3fffa3f3] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [6ef796ef] Running /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/tmp/pids /home/deploy/portfolio_database_rails/releases/20220717191359/tmp/pids as deploy@192.168.86.12
+ DEBUG [6ef796ef] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/tmp/pids /home/deploy/portfolio_database_rails/releases/20220717191359/tmp/pids )
+  INFO [6ef796ef] Finished in 0.006 seconds with exit status 0 (successful).
+ DEBUG [f3eda643] Running [ -L /home/deploy/portfolio_database_rails/releases/20220717191359/tmp/cache ] as deploy@192.168.86.12
+ DEBUG [f3eda643] Command: [ -L /home/deploy/portfolio_database_rails/releases/20220717191359/tmp/cache ]
+ DEBUG [f3eda643] Finished in 0.004 seconds with exit status 1 (failed).
+ DEBUG [41ae4ffe] Running [ -d /home/deploy/portfolio_database_rails/releases/20220717191359/tmp/cache ] as deploy@192.168.86.12
+ DEBUG [41ae4ffe] Command: [ -d /home/deploy/portfolio_database_rails/releases/20220717191359/tmp/cache ]
+ DEBUG [41ae4ffe] Finished in 0.047 seconds with exit status 1 (failed).
+  INFO [dd2acacd] Running /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/tmp/cache /home/deploy/portfolio_database_rails/releases/20220717191359/tmp/cache as deploy@192.168.86.12
+ DEBUG [dd2acacd] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/tmp/cache /home/deploy/portfolio_database_rails/releases/20220717191359/tmp/cache )
+  INFO [dd2acacd] Finished in 0.007 seconds with exit status 0 (successful).
+ DEBUG [730e1b35] Running [ -L /home/deploy/portfolio_database_rails/releases/20220717191359/tmp/sockets ] as deploy@192.168.86.12
+ DEBUG [730e1b35] Command: [ -L /home/deploy/portfolio_database_rails/releases/20220717191359/tmp/sockets ]
+ DEBUG [730e1b35] Finished in 0.004 seconds with exit status 1 (failed).
+ DEBUG [4d55af77] Running [ -d /home/deploy/portfolio_database_rails/releases/20220717191359/tmp/sockets ] as deploy@192.168.86.12
+ DEBUG [4d55af77] Command: [ -d /home/deploy/portfolio_database_rails/releases/20220717191359/tmp/sockets ]
+ DEBUG [4d55af77] Finished in 0.044 seconds with exit status 1 (failed).
+  INFO [95570eea] Running /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/tmp/sockets /home/deploy/portfolio_database_rails/releases/20220717191359/tmp/sockets as deploy@192.168.86.12
+ DEBUG [95570eea] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/tmp/sockets /home/deploy/portfolio_database_rails/releases/20220717191359/tmp/sockets )
+  INFO [95570eea] Finished in 0.006 seconds with exit status 0 (successful).
+ DEBUG [0e10b6eb] Running [ -L /home/deploy/portfolio_database_rails/releases/20220717191359/vendor/bundle ] as deploy@192.168.86.12
+ DEBUG [0e10b6eb] Command: [ -L /home/deploy/portfolio_database_rails/releases/20220717191359/vendor/bundle ]
+ DEBUG [0e10b6eb] Finished in 0.004 seconds with exit status 1 (failed).
+ DEBUG [2ab30dc9] Running [ -d /home/deploy/portfolio_database_rails/releases/20220717191359/vendor/bundle ] as deploy@192.168.86.12
+ DEBUG [2ab30dc9] Command: [ -d /home/deploy/portfolio_database_rails/releases/20220717191359/vendor/bundle ]
+ DEBUG [2ab30dc9] Finished in 0.004 seconds with exit status 1 (failed).
+  INFO [28b48abf] Running /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/vendor/bundle /home/deploy/portfolio_database_rails/releases/20220717191359/vendor/bundle as deploy@192.168.86.12
+ DEBUG [28b48abf] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/vendor/bundle /home/deploy/portfolio_database_rails/releases/20220717191359/vendor/bundle )
+  INFO [28b48abf] Finished in 0.006 seconds with exit status 0 (successful).
+ DEBUG [7231476a] Running [ -L /home/deploy/portfolio_database_rails/releases/20220717191359/.bundle ] as deploy@192.168.86.12
+ DEBUG [7231476a] Command: [ -L /home/deploy/portfolio_database_rails/releases/20220717191359/.bundle ]
+ DEBUG [7231476a] Finished in 0.004 seconds with exit status 1 (failed).
+ DEBUG [3a34c6fa] Running [ -d /home/deploy/portfolio_database_rails/releases/20220717191359/.bundle ] as deploy@192.168.86.12
+ DEBUG [3a34c6fa] Command: [ -d /home/deploy/portfolio_database_rails/releases/20220717191359/.bundle ]
+ DEBUG [3a34c6fa] Finished in 0.047 seconds with exit status 1 (failed).
+  INFO [274affcb] Running /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/.bundle /home/deploy/portfolio_database_rails/releases/20220717191359/.bundle as deploy@192.168.86.12
+ DEBUG [274affcb] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/.bundle /home/deploy/portfolio_database_rails/releases/20220717191359/.bundle )
+  INFO [274affcb] Finished in 0.006 seconds with exit status 0 (successful).
+ DEBUG [47b0d834] Running [ -L /home/deploy/portfolio_database_rails/releases/20220717191359/public/system ] as deploy@192.168.86.12
+ DEBUG [47b0d834] Command: [ -L /home/deploy/portfolio_database_rails/releases/20220717191359/public/system ]
+ DEBUG [47b0d834] Finished in 0.004 seconds with exit status 1 (failed).
+ DEBUG [2db32499] Running [ -d /home/deploy/portfolio_database_rails/releases/20220717191359/public/system ] as deploy@192.168.86.12
+ DEBUG [2db32499] Command: [ -d /home/deploy/portfolio_database_rails/releases/20220717191359/public/system ]
+ DEBUG [2db32499] Finished in 0.004 seconds with exit status 1 (failed).
+  INFO [4020724e] Running /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/public/system /home/deploy/portfolio_database_rails/releases/20220717191359/public/system as deploy@192.168.86.12
+ DEBUG [4020724e] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/public/system /home/deploy/portfolio_database_rails/releases/20220717191359/public/system )
+  INFO [4020724e] Finished in 0.006 seconds with exit status 0 (successful).
+ DEBUG [0c77726d] Running [ -L /home/deploy/portfolio_database_rails/releases/20220717191359/public/uploads ] as deploy@192.168.86.12
+ DEBUG [0c77726d] Command: [ -L /home/deploy/portfolio_database_rails/releases/20220717191359/public/uploads ]
+ DEBUG [0c77726d] Finished in 0.004 seconds with exit status 1 (failed).
+ DEBUG [4a2a2e25] Running [ -d /home/deploy/portfolio_database_rails/releases/20220717191359/public/uploads ] as deploy@192.168.86.12
+ DEBUG [4a2a2e25] Command: [ -d /home/deploy/portfolio_database_rails/releases/20220717191359/public/uploads ]
+ DEBUG [4a2a2e25] Finished in 0.004 seconds with exit status 1 (failed).
+  INFO [bf68d008] Running /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/public/uploads /home/deploy/portfolio_database_rails/releases/20220717191359/public/uploads as deploy@192.168.86.12
+ DEBUG [bf68d008] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/public/uploads /home/deploy/portfolio_database_rails/releases/20220717191359/public/uploads )
+  INFO [bf68d008] Finished in 0.006 seconds with exit status 0 (successful).
+ DEBUG [a48f8702] Running [ -L /home/deploy/portfolio_database_rails/releases/20220717191359/public/assets ] as deploy@192.168.86.12
+ DEBUG [a48f8702] Command: [ -L /home/deploy/portfolio_database_rails/releases/20220717191359/public/assets ]
+ DEBUG [a48f8702] Finished in 0.004 seconds with exit status 1 (failed).
+ DEBUG [082c5ee7] Running [ -d /home/deploy/portfolio_database_rails/releases/20220717191359/public/assets ] as deploy@192.168.86.12
+ DEBUG [082c5ee7] Command: [ -d /home/deploy/portfolio_database_rails/releases/20220717191359/public/assets ]
+ DEBUG [082c5ee7] Finished in 0.047 seconds with exit status 1 (failed).
+  INFO [f047a540] Running /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/public/assets /home/deploy/portfolio_database_rails/releases/20220717191359/public/assets as deploy@192.168.86.12
+ DEBUG [f047a540] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/public/assets /home/deploy/portfolio_database_rails/releases/20220717191359/public/assets )
+  INFO [f047a540] Finished in 0.006 seconds with exit status 0 (successful).
+ DEBUG [80e16475] Running if test ! -d /home/deploy/portfolio_database_rails/releases/20220717191359; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/releases/20220717191359'" 1>&2; false; fi as deploy@192.168.86.12
+ DEBUG [80e16475] Command: if test ! -d /home/deploy/portfolio_database_rails/releases/20220717191359; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/releases/20220717191359'" 1>&2; false; fi
+ DEBUG [80e16475] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [af641f83] Running $HOME/.rbenv/bin/rbenv exec bundle config --local deployment true as deploy@192.168.86.12
+ DEBUG [af641f83] Command: cd /home/deploy/portfolio_database_rails/releases/20220717191359 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; $HOME/.rbenv/bin/rbenv exec bundle config --local deployment true )
+  INFO [af641f83] Finished in 0.230 seconds with exit status 0 (successful).
+  INFO [509dd042] Running $HOME/.rbenv/bin/rbenv exec bundle config --local path /home/deploy/portfolio_database_rails/shared/bundle as deploy@192.168.86.12
+ DEBUG [509dd042] Command: cd /home/deploy/portfolio_database_rails/releases/20220717191359 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; $HOME/.rbenv/bin/rbenv exec bundle config --local path /home/deploy/portfolio_database_rails/shared/bundle )
+  INFO [509dd042] Finished in 0.235 seconds with exit status 0 (successful).
+  INFO [19f83c3c] Running $HOME/.rbenv/bin/rbenv exec bundle config --local without development:test as deploy@192.168.86.12
+ DEBUG [19f83c3c] Command: cd /home/deploy/portfolio_database_rails/releases/20220717191359 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; $HOME/.rbenv/bin/rbenv exec bundle config --local without development:test )
+  INFO [19f83c3c] Finished in 0.238 seconds with exit status 0 (successful).
+ DEBUG [4870b1e0] Running if test ! -d /home/deploy/portfolio_database_rails/releases/20220717191359; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/releases/20220717191359'" 1>&2; false; fi as deploy@192.168.86.12
+ DEBUG [4870b1e0] Command: if test ! -d /home/deploy/portfolio_database_rails/releases/20220717191359; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/releases/20220717191359'" 1>&2; false; fi
+ DEBUG [4870b1e0] Finished in 0.004 seconds with exit status 0 (successful).
+ DEBUG [6f716eb8] Running $HOME/.rbenv/bin/rbenv exec bundle check as deploy@192.168.86.12
+ DEBUG [6f716eb8] Command: cd /home/deploy/portfolio_database_rails/releases/20220717191359 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; $HOME/.rbenv/bin/rbenv exec bundle check )
+ DEBUG [6f716eb8] 	The following gems are missing
+ * rails (7.0.3.1)
+ * pg (1.4.1)
+ * puma (5.6.4)
+ * tzinfo-data (1.2022.1)
+ * bootsnap (1.12.0)
+ * capistrano (3.17.0)
+ * capistrano-bundler (2.1.0)
+ * capistrano-rails (1.6.2)
+ * actioncable (7.0.3.1)
+ * actionmailbox (7.0.3.1)
+ * actionmailer (7.0.3.1)
+ DEBUG [6f716eb8] 	 * actionpack (7.0.3.1)
+ * actiontext (7.0.3.1)
+ * actionview (7.0.3.1)
+ * activejob (7.0.3.1)
+ * activemodel (7.0.3.1)
+ * activerecord (7.0.3.1)
+ DEBUG [6f716eb8] 	 * activestorage (7.0.3.1)
+ * activesupport (7.0.3.1)
+ * railties (7.0.3.1)
+ * nio4r (2.5.8)
+ * tzinfo (2.0.4)
+ * msgpack (1.5.3)
+ DEBUG [6f716eb8] 	 * airbrussh (1.4.0)
+ * i18n (1.12.0)
+ * rake (13.0.6)
+ DEBUG [6f716eb8] 	 * sshkit (1.21.2)
+ * websocket-driver (0.7.5)
+ DEBUG [6f716eb8] 	 * mail (2.7.1)
+ * net-imap (0.2.3)
+ DEBUG [6f716eb8] 	 * net-pop (0.1.1)
+ * net-smtp (0.3.1)
+ DEBUG [6f716eb8] 	 * rails-dom-testing (2.0.3)
+ * rack (2.2.4)
+ DEBUG [6f716eb8] 	 * rack-test (2.0.2)
+ * rails-html-sanitizer (1.4.3)
+ DEBUG [6f716eb8] 	 * globalid (1.0.0)
+ * nokogiri (1.13.7)
+ DEBUG [6f716eb8] 	 * builder (3.2.4)
+ * erubi (1.10.0)
+ DEBUG [6f716eb8] 	 * marcel (1.0.2)
+ * mini_mime (1.1.2)
+ DEBUG [6f716eb8] 	 * concurrent-ruby (1.1.10)
+ DEBUG [6f716eb8] 	 * minitest (5.16.2)
+ * method_source (1.0.0)
+ DEBUG [6f716eb8] 	 * thor (1.2.1)
+ * zeitwerk (2.6.0)
+ DEBUG [6f716eb8] 	 * net-scp (1.2.1)
+ * net-ssh (7.0.1)
+ DEBUG [6f716eb8] 	 * websocket-extensions (0.1.5)
+ * net-protocol (0.1.3)
+ DEBUG [6f716eb8] 	 * strscan (3.0.3)
+ * timeout (0.3.0)
+ DEBUG [6f716eb8] 	 * loofah (2.18.0)
+ * crass (1.0.6)
+ DEBUG [6f716eb8] 	Install missing gems with `bundle install`
+ DEBUG [6f716eb8] Finished in 0.353 seconds with exit status 1 (failed).
+  INFO [3d841659] Running $HOME/.rbenv/bin/rbenv exec bundle install --jobs 4 --quiet as deploy@192.168.86.12
+ DEBUG [3d841659] Command: cd /home/deploy/portfolio_database_rails/releases/20220717191359 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; $HOME/.rbenv/bin/rbenv exec bundle install --jobs 4 --quiet )
+ DEBUG [3d841659] 	You are trying to install in deployment mode after changing
+your Gemfile. Run `bundle install` elsewhere and add the
+updated Gemfile.lock to version control.
+
+If this is a development machine, remove the
+/home/deploy/portfolio_database_rails/releases/20220717191359/Gemfile freeze
+by running `bundle config unset deployment`.
+
+The list of sources changed
+The dependencies in your gemfile changed
+
+You have added to the Gemfile:
+* capistrano-bundler
+* capistrano-rails
+* capistrano-passenger
+* capistrano-rbenv
+
+You have deleted from the Gemfile:
+* capistrano-rails (~> 1.6)
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-07-17 19:14:50 +0000 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [aa52622b] Running [ -d $HOME/.rbenv/versions/3.1.2 ] as deploy@192.168.86.12
+ DEBUG [aa52622b] Command: [ -d $HOME/.rbenv/versions/3.1.2 ]
+ DEBUG [aa52622b] Finished in 3.405 seconds with exit status 0 (successful).
+ DEBUG [d80d96af] Running /usr/bin/env which passenger as deploy@192.168.86.12
+ DEBUG [d80d96af] Command: /usr/bin/env which passenger
+ DEBUG [d80d96af] 	/usr/bin/passenger
+ DEBUG [d80d96af] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO [5680a166] Running /usr/bin/env mkdir -p /tmp as deploy@192.168.86.12
+ DEBUG [5680a166] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env mkdir -p /tmp )
+  INFO [5680a166] Finished in 0.007 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-462f4a8a2384b682803a.sh 0.0%
+  INFO Uploading /tmp/git-ssh-462f4a8a2384b682803a.sh 100.0%
+  INFO [7994fb4a] Running /usr/bin/env chmod 700 /tmp/git-ssh-462f4a8a2384b682803a.sh as deploy@192.168.86.12
+ DEBUG [7994fb4a] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env chmod 700 /tmp/git-ssh-462f4a8a2384b682803a.sh )
+  INFO [7994fb4a] Finished in 0.047 seconds with exit status 0 (successful).
+  INFO [12d651dc] Running /usr/bin/env git ls-remote https://github.com/bengarlock/portfolio_database_rails HEAD as deploy@192.168.86.12
+ DEBUG [12d651dc] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-462f4a8a2384b682803a.sh" ; /usr/bin/env git ls-remote https://github.com/bengarlock/portfolio_database_rails HEAD )
+ DEBUG [12d651dc] 	9025ffba8eca8f22fe79d3e5840dd629c3df9c5e	HEAD
+  INFO [12d651dc] Finished in 0.147 seconds with exit status 0 (successful).
+  INFO [bf8cb84d] Running /usr/bin/env mkdir -p /home/deploy/portfolio_database_rails/shared /home/deploy/portfolio_database_rails/releases as deploy@192.168.86.12
+ DEBUG [bf8cb84d] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env mkdir -p /home/deploy/portfolio_database_rails/shared /home/deploy/portfolio_database_rails/releases )
+  INFO [bf8cb84d] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [ad442b3c] Running /usr/bin/env mkdir -p /home/deploy/portfolio_database_rails/shared/log /home/deploy/portfolio_database_rails/shared/tmp/pids /home/deploy/portfolio_database_rails/shared/tmp/cache /home/deploy/portfolio_database_rails/shared/tmp/sockets /home/deploy/portfolio_database_rails/shared/vendor/bundle /home/deploy/portfolio_database_rails/shared/.bundle /home/deploy/portfolio_database_rails/shared/public/system /home/deploy/portfolio_database_rails/shared/public/uploads /home/deploy/portfolio_database_rails/shared/public/assets as deploy@192.168.86.12
+ DEBUG [ad442b3c] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env mkdir -p /home/deploy/portfolio_database_rails/shared/log /home/deploy/portfolio_database_rails/shared/tmp/pids /home/deploy/portfolio_database_rails/shared/tmp/cache /home/deploy/portfolio_database_rails/shared/tmp/sockets /home/deploy/portfolio_database_rails/shared/vendor/bundle /home/deploy/portfolio_database_rails/shared/.bundle /home/deploy/portfolio_database_rails/shared/public/system /home/deploy/portfolio_database_rails/shared/public/uploads /home/deploy/portfolio_database_rails/shared/public/assets )
+  INFO [ad442b3c] Finished in 0.044 seconds with exit status 0 (successful).
+ DEBUG [a077a5e1] Running [ -f /home/deploy/portfolio_database_rails/current/REVISION ] as deploy@192.168.86.12
+ DEBUG [a077a5e1] Command: [ -f /home/deploy/portfolio_database_rails/current/REVISION ]
+ DEBUG [a077a5e1] Finished in 0.004 seconds with exit status 1 (failed).
+ DEBUG [51f05dd9] Running [ -f /home/deploy/portfolio_database_rails/repo/HEAD ] as deploy@192.168.86.12
+ DEBUG [51f05dd9] Command: [ -f /home/deploy/portfolio_database_rails/repo/HEAD ]
+ DEBUG [51f05dd9] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/deploy/portfolio_database_rails/repo
+ DEBUG [1b0218e5] Running if test ! -d /home/deploy/portfolio_database_rails/repo; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/repo'" 1>&2; false; fi as deploy@192.168.86.12
+ DEBUG [1b0218e5] Command: if test ! -d /home/deploy/portfolio_database_rails/repo; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/repo'" 1>&2; false; fi
+ DEBUG [1b0218e5] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [c1551887] Running /usr/bin/env git remote set-url origin https://github.com/bengarlock/portfolio_database_rails as deploy@192.168.86.12
+ DEBUG [c1551887] Command: cd /home/deploy/portfolio_database_rails/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-462f4a8a2384b682803a.sh" ; /usr/bin/env git remote set-url origin https://github.com/bengarlock/portfolio_database_rails )
+  INFO [c1551887] Finished in 0.061 seconds with exit status 0 (successful).
+  INFO [c3939013] Running /usr/bin/env git remote update --prune as deploy@192.168.86.12
+ DEBUG [c3939013] Command: cd /home/deploy/portfolio_database_rails/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-462f4a8a2384b682803a.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [c3939013] 	Fetching origin
+  INFO [c3939013] Finished in 0.129 seconds with exit status 0 (successful).
+ DEBUG [53df73ce] Running if test ! -d /home/deploy/portfolio_database_rails/repo; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/repo'" 1>&2; false; fi as deploy@192.168.86.12
+ DEBUG [53df73ce] Command: if test ! -d /home/deploy/portfolio_database_rails/repo; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/repo'" 1>&2; false; fi
+ DEBUG [53df73ce] Finished in 0.047 seconds with exit status 0 (successful).
+  INFO [060a976c] Running /usr/bin/env mkdir -p /home/deploy/portfolio_database_rails/releases/20220717191453 as deploy@192.168.86.12
+ DEBUG [060a976c] Command: cd /home/deploy/portfolio_database_rails/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-462f4a8a2384b682803a.sh" ; /usr/bin/env mkdir -p /home/deploy/portfolio_database_rails/releases/20220717191453 )
+  INFO [060a976c] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [fc4f2cee] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/portfolio_database_rails/releases/20220717191453 as deploy@192.168.86.12
+ DEBUG [fc4f2cee] Command: cd /home/deploy/portfolio_database_rails/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-462f4a8a2384b682803a.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/portfolio_database_rails/releases/20220717191453 )
+  INFO [fc4f2cee] Finished in 0.011 seconds with exit status 0 (successful).
+ DEBUG [dcdd226d] Running if test ! -d /home/deploy/portfolio_database_rails/repo; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/repo'" 1>&2; false; fi as deploy@192.168.86.12
+ DEBUG [dcdd226d] Command: if test ! -d /home/deploy/portfolio_database_rails/repo; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/repo'" 1>&2; false; fi
+ DEBUG [dcdd226d] Finished in 0.045 seconds with exit status 0 (successful).
+ DEBUG [f22e9f44] Running /usr/bin/env git rev-list --max-count=1 master as deploy@192.168.86.12
+ DEBUG [f22e9f44] Command: cd /home/deploy/portfolio_database_rails/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-462f4a8a2384b682803a.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [f22e9f44] 	9025ffba8eca8f22fe79d3e5840dd629c3df9c5e
+ DEBUG [f22e9f44] Finished in 0.007 seconds with exit status 0 (successful).
+ DEBUG [e8ce83e6] Running if test ! -d /home/deploy/portfolio_database_rails/releases/20220717191453; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/releases/20220717191453'" 1>&2; false; fi as deploy@192.168.86.12
+ DEBUG [e8ce83e6] Command: if test ! -d /home/deploy/portfolio_database_rails/releases/20220717191453; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/releases/20220717191453'" 1>&2; false; fi
+ DEBUG [e8ce83e6] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [99dc0c95] Running /usr/bin/env echo "9025ffba8eca8f22fe79d3e5840dd629c3df9c5e" > REVISION as deploy@192.168.86.12
+ DEBUG [99dc0c95] Command: cd /home/deploy/portfolio_database_rails/releases/20220717191453 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env echo "9025ffba8eca8f22fe79d3e5840dd629c3df9c5e" > REVISION )
+  INFO [99dc0c95] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [36f5823f] Running /usr/bin/env mkdir -p /home/deploy/portfolio_database_rails/releases/20220717191453 /home/deploy/portfolio_database_rails/releases/20220717191453/tmp /home/deploy/portfolio_database_rails/releases/20220717191453/vendor /home/deploy/portfolio_database_rails/releases/20220717191453/public as deploy@192.168.86.12
+ DEBUG [36f5823f] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env mkdir -p /home/deploy/portfolio_database_rails/releases/20220717191453 /home/deploy/portfolio_database_rails/releases/20220717191453/tmp /home/deploy/portfolio_database_rails/releases/20220717191453/vendor /home/deploy/portfolio_database_rails/releases/20220717191453/public )
+  INFO [36f5823f] Finished in 0.047 seconds with exit status 0 (successful).
+ DEBUG [8862e02b] Running [ -L /home/deploy/portfolio_database_rails/releases/20220717191453/log ] as deploy@192.168.86.12
+ DEBUG [8862e02b] Command: [ -L /home/deploy/portfolio_database_rails/releases/20220717191453/log ]
+ DEBUG [8862e02b] Finished in 0.004 seconds with exit status 1 (failed).
+ DEBUG [733926b8] Running [ -d /home/deploy/portfolio_database_rails/releases/20220717191453/log ] as deploy@192.168.86.12
+ DEBUG [733926b8] Command: [ -d /home/deploy/portfolio_database_rails/releases/20220717191453/log ]
+ DEBUG [733926b8] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [370d2437] Running /usr/bin/env rm -rf /home/deploy/portfolio_database_rails/releases/20220717191453/log as deploy@192.168.86.12
+ DEBUG [370d2437] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env rm -rf /home/deploy/portfolio_database_rails/releases/20220717191453/log )
+  INFO [370d2437] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [a53d3de5] Running /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/log /home/deploy/portfolio_database_rails/releases/20220717191453/log as deploy@192.168.86.12
+ DEBUG [a53d3de5] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/log /home/deploy/portfolio_database_rails/releases/20220717191453/log )
+  INFO [a53d3de5] Finished in 0.006 seconds with exit status 0 (successful).
+ DEBUG [8fe70667] Running [ -L /home/deploy/portfolio_database_rails/releases/20220717191453/tmp/pids ] as deploy@192.168.86.12
+ DEBUG [8fe70667] Command: [ -L /home/deploy/portfolio_database_rails/releases/20220717191453/tmp/pids ]
+ DEBUG [8fe70667] Finished in 0.004 seconds with exit status 1 (failed).
+ DEBUG [2b9b2c25] Running [ -d /home/deploy/portfolio_database_rails/releases/20220717191453/tmp/pids ] as deploy@192.168.86.12
+ DEBUG [2b9b2c25] Command: [ -d /home/deploy/portfolio_database_rails/releases/20220717191453/tmp/pids ]
+ DEBUG [2b9b2c25] Finished in 0.044 seconds with exit status 0 (successful).
+  INFO [a62caca5] Running /usr/bin/env rm -rf /home/deploy/portfolio_database_rails/releases/20220717191453/tmp/pids as deploy@192.168.86.12
+ DEBUG [a62caca5] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env rm -rf /home/deploy/portfolio_database_rails/releases/20220717191453/tmp/pids )
+  INFO [a62caca5] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [08c3f7f2] Running /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/tmp/pids /home/deploy/portfolio_database_rails/releases/20220717191453/tmp/pids as deploy@192.168.86.12
+ DEBUG [08c3f7f2] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/tmp/pids /home/deploy/portfolio_database_rails/releases/20220717191453/tmp/pids )
+  INFO [08c3f7f2] Finished in 0.006 seconds with exit status 0 (successful).
+ DEBUG [b78e9644] Running [ -L /home/deploy/portfolio_database_rails/releases/20220717191453/tmp/cache ] as deploy@192.168.86.12
+ DEBUG [b78e9644] Command: [ -L /home/deploy/portfolio_database_rails/releases/20220717191453/tmp/cache ]
+ DEBUG [b78e9644] Finished in 0.004 seconds with exit status 1 (failed).
+ DEBUG [ed640e4d] Running [ -d /home/deploy/portfolio_database_rails/releases/20220717191453/tmp/cache ] as deploy@192.168.86.12
+ DEBUG [ed640e4d] Command: [ -d /home/deploy/portfolio_database_rails/releases/20220717191453/tmp/cache ]
+ DEBUG [ed640e4d] Finished in 0.047 seconds with exit status 1 (failed).
+  INFO [7aa99d7e] Running /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/tmp/cache /home/deploy/portfolio_database_rails/releases/20220717191453/tmp/cache as deploy@192.168.86.12
+ DEBUG [7aa99d7e] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/tmp/cache /home/deploy/portfolio_database_rails/releases/20220717191453/tmp/cache )
+  INFO [7aa99d7e] Finished in 0.006 seconds with exit status 0 (successful).
+ DEBUG [549f47b4] Running [ -L /home/deploy/portfolio_database_rails/releases/20220717191453/tmp/sockets ] as deploy@192.168.86.12
+ DEBUG [549f47b4] Command: [ -L /home/deploy/portfolio_database_rails/releases/20220717191453/tmp/sockets ]
+ DEBUG [549f47b4] Finished in 0.004 seconds with exit status 1 (failed).
+ DEBUG [ce680184] Running [ -d /home/deploy/portfolio_database_rails/releases/20220717191453/tmp/sockets ] as deploy@192.168.86.12
+ DEBUG [ce680184] Command: [ -d /home/deploy/portfolio_database_rails/releases/20220717191453/tmp/sockets ]
+ DEBUG [ce680184] Finished in 0.004 seconds with exit status 1 (failed).
+  INFO [2a551ca9] Running /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/tmp/sockets /home/deploy/portfolio_database_rails/releases/20220717191453/tmp/sockets as deploy@192.168.86.12
+ DEBUG [2a551ca9] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/tmp/sockets /home/deploy/portfolio_database_rails/releases/20220717191453/tmp/sockets )
+  INFO [2a551ca9] Finished in 0.006 seconds with exit status 0 (successful).
+ DEBUG [67c73f94] Running [ -L /home/deploy/portfolio_database_rails/releases/20220717191453/vendor/bundle ] as deploy@192.168.86.12
+ DEBUG [67c73f94] Command: [ -L /home/deploy/portfolio_database_rails/releases/20220717191453/vendor/bundle ]
+ DEBUG [67c73f94] Finished in 0.004 seconds with exit status 1 (failed).
+ DEBUG [4dacec8d] Running [ -d /home/deploy/portfolio_database_rails/releases/20220717191453/vendor/bundle ] as deploy@192.168.86.12
+ DEBUG [4dacec8d] Command: [ -d /home/deploy/portfolio_database_rails/releases/20220717191453/vendor/bundle ]
+ DEBUG [4dacec8d] Finished in 0.047 seconds with exit status 1 (failed).
+  INFO [7452f131] Running /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/vendor/bundle /home/deploy/portfolio_database_rails/releases/20220717191453/vendor/bundle as deploy@192.168.86.12
+ DEBUG [7452f131] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/vendor/bundle /home/deploy/portfolio_database_rails/releases/20220717191453/vendor/bundle )
+  INFO [7452f131] Finished in 0.006 seconds with exit status 0 (successful).
+ DEBUG [f1393c99] Running [ -L /home/deploy/portfolio_database_rails/releases/20220717191453/.bundle ] as deploy@192.168.86.12
+ DEBUG [f1393c99] Command: [ -L /home/deploy/portfolio_database_rails/releases/20220717191453/.bundle ]
+ DEBUG [f1393c99] Finished in 0.004 seconds with exit status 1 (failed).
+ DEBUG [e957ace7] Running [ -d /home/deploy/portfolio_database_rails/releases/20220717191453/.bundle ] as deploy@192.168.86.12
+ DEBUG [e957ace7] Command: [ -d /home/deploy/portfolio_database_rails/releases/20220717191453/.bundle ]
+ DEBUG [e957ace7] Finished in 0.004 seconds with exit status 1 (failed).
+  INFO [10ad0827] Running /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/.bundle /home/deploy/portfolio_database_rails/releases/20220717191453/.bundle as deploy@192.168.86.12
+ DEBUG [10ad0827] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/.bundle /home/deploy/portfolio_database_rails/releases/20220717191453/.bundle )
+  INFO [10ad0827] Finished in 0.006 seconds with exit status 0 (successful).
+ DEBUG [3c7bc7a7] Running [ -L /home/deploy/portfolio_database_rails/releases/20220717191453/public/system ] as deploy@192.168.86.12
+ DEBUG [3c7bc7a7] Command: [ -L /home/deploy/portfolio_database_rails/releases/20220717191453/public/system ]
+ DEBUG [3c7bc7a7] Finished in 0.004 seconds with exit status 1 (failed).
+ DEBUG [f9da7de2] Running [ -d /home/deploy/portfolio_database_rails/releases/20220717191453/public/system ] as deploy@192.168.86.12
+ DEBUG [f9da7de2] Command: [ -d /home/deploy/portfolio_database_rails/releases/20220717191453/public/system ]
+ DEBUG [f9da7de2] Finished in 0.047 seconds with exit status 1 (failed).
+  INFO [8a3af9b8] Running /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/public/system /home/deploy/portfolio_database_rails/releases/20220717191453/public/system as deploy@192.168.86.12
+ DEBUG [8a3af9b8] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/public/system /home/deploy/portfolio_database_rails/releases/20220717191453/public/system )
+  INFO [8a3af9b8] Finished in 0.006 seconds with exit status 0 (successful).
+ DEBUG [c4a666ca] Running [ -L /home/deploy/portfolio_database_rails/releases/20220717191453/public/uploads ] as deploy@192.168.86.12
+ DEBUG [c4a666ca] Command: [ -L /home/deploy/portfolio_database_rails/releases/20220717191453/public/uploads ]
+ DEBUG [c4a666ca] Finished in 0.004 seconds with exit status 1 (failed).
+ DEBUG [3146a37e] Running [ -d /home/deploy/portfolio_database_rails/releases/20220717191453/public/uploads ] as deploy@192.168.86.12
+ DEBUG [3146a37e] Command: [ -d /home/deploy/portfolio_database_rails/releases/20220717191453/public/uploads ]
+ DEBUG [3146a37e] Finished in 0.004 seconds with exit status 1 (failed).
+  INFO [fe2672f5] Running /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/public/uploads /home/deploy/portfolio_database_rails/releases/20220717191453/public/uploads as deploy@192.168.86.12
+ DEBUG [fe2672f5] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/public/uploads /home/deploy/portfolio_database_rails/releases/20220717191453/public/uploads )
+  INFO [fe2672f5] Finished in 0.006 seconds with exit status 0 (successful).
+ DEBUG [8748e260] Running [ -L /home/deploy/portfolio_database_rails/releases/20220717191453/public/assets ] as deploy@192.168.86.12
+ DEBUG [8748e260] Command: [ -L /home/deploy/portfolio_database_rails/releases/20220717191453/public/assets ]
+ DEBUG [8748e260] Finished in 0.004 seconds with exit status 1 (failed).
+ DEBUG [42930465] Running [ -d /home/deploy/portfolio_database_rails/releases/20220717191453/public/assets ] as deploy@192.168.86.12
+ DEBUG [42930465] Command: [ -d /home/deploy/portfolio_database_rails/releases/20220717191453/public/assets ]
+ DEBUG [42930465] Finished in 0.004 seconds with exit status 1 (failed).
+  INFO [7b0dad54] Running /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/public/assets /home/deploy/portfolio_database_rails/releases/20220717191453/public/assets as deploy@192.168.86.12
+ DEBUG [7b0dad54] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/public/assets /home/deploy/portfolio_database_rails/releases/20220717191453/public/assets )
+  INFO [7b0dad54] Finished in 0.006 seconds with exit status 0 (successful).
+ DEBUG [26fbf43f] Running if test ! -d /home/deploy/portfolio_database_rails/releases/20220717191453; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/releases/20220717191453'" 1>&2; false; fi as deploy@192.168.86.12
+ DEBUG [26fbf43f] Command: if test ! -d /home/deploy/portfolio_database_rails/releases/20220717191453; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/releases/20220717191453'" 1>&2; false; fi
+ DEBUG [26fbf43f] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [caef9ac9] Running $HOME/.rbenv/bin/rbenv exec bundle config --local deployment true as deploy@192.168.86.12
+ DEBUG [caef9ac9] Command: cd /home/deploy/portfolio_database_rails/releases/20220717191453 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; $HOME/.rbenv/bin/rbenv exec bundle config --local deployment true )
+  INFO [caef9ac9] Finished in 0.274 seconds with exit status 0 (successful).
+  INFO [6af8aa60] Running $HOME/.rbenv/bin/rbenv exec bundle config --local path /home/deploy/portfolio_database_rails/shared/bundle as deploy@192.168.86.12
+ DEBUG [6af8aa60] Command: cd /home/deploy/portfolio_database_rails/releases/20220717191453 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; $HOME/.rbenv/bin/rbenv exec bundle config --local path /home/deploy/portfolio_database_rails/shared/bundle )
+  INFO [6af8aa60] Finished in 0.227 seconds with exit status 0 (successful).
+  INFO [72669226] Running $HOME/.rbenv/bin/rbenv exec bundle config --local without development:test as deploy@192.168.86.12
+ DEBUG [72669226] Command: cd /home/deploy/portfolio_database_rails/releases/20220717191453 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; $HOME/.rbenv/bin/rbenv exec bundle config --local without development:test )
+  INFO [72669226] Finished in 0.227 seconds with exit status 0 (successful).
+ DEBUG [8c5b8de4] Running if test ! -d /home/deploy/portfolio_database_rails/releases/20220717191453; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/releases/20220717191453'" 1>&2; false; fi as deploy@192.168.86.12
+ DEBUG [8c5b8de4] Command: if test ! -d /home/deploy/portfolio_database_rails/releases/20220717191453; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/releases/20220717191453'" 1>&2; false; fi
+ DEBUG [8c5b8de4] Finished in 0.004 seconds with exit status 0 (successful).
+ DEBUG [78d9ac03] Running $HOME/.rbenv/bin/rbenv exec bundle check as deploy@192.168.86.12
+ DEBUG [78d9ac03] Command: cd /home/deploy/portfolio_database_rails/releases/20220717191453 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; $HOME/.rbenv/bin/rbenv exec bundle check )
+ DEBUG [78d9ac03] 	The following gems are missing
+ * rails (7.0.3.1)
+ * pg (1.4.1)
+ * puma (5.6.4)
+ * tzinfo-data (1.2022.1)
+ * bootsnap (1.12.0)
+ * capistrano (3.17.0)
+ * capistrano-bundler (2.1.0)
+ * capistrano-rails (1.6.2)
+ DEBUG [78d9ac03] 	 * actioncable (7.0.3.1)
+ * actionmailbox (7.0.3.1)
+ * actionmailer (7.0.3.1)
+ * actionpack (7.0.3.1)
+ DEBUG [78d9ac03] 	 * actiontext (7.0.3.1)
+ * actionview (7.0.3.1)
+ * activejob (7.0.3.1)
+ * activemodel (7.0.3.1)
+ DEBUG [78d9ac03] 	 * activerecord (7.0.3.1)
+ * activestorage (7.0.3.1)
+ * activesupport (7.0.3.1)
+ * railties (7.0.3.1)
+ * nio4r (2.5.8)
+ * tzinfo (2.0.4)
+ * msgpack (1.5.3)
+ * airbrussh (1.4.0)
+ * i18n (1.12.0)
+ * rake (13.0.6)
+ DEBUG [78d9ac03] 	 * sshkit (1.21.2)
+ * websocket-driver (0.7.5)
+ * mail (2.7.1)
+ DEBUG [78d9ac03] 	 * net-imap (0.2.3)
+ * net-pop (0.1.1)
+ * net-smtp (0.3.1)
+ DEBUG [78d9ac03] 	 * rails-dom-testing (2.0.3)
+ * rack (2.2.4)
+ DEBUG [78d9ac03] 	 * rack-test (2.0.2)
+ DEBUG [78d9ac03] 	 * rails-html-sanitizer (1.4.3)
+ * globalid (1.0.0)
+ DEBUG [78d9ac03] 	 * nokogiri (1.13.7)
+ DEBUG [78d9ac03] 	 * builder (3.2.4)
+ DEBUG [78d9ac03] 	 * erubi (1.10.0)
+ DEBUG [78d9ac03] 	 * marcel (1.0.2)
+ DEBUG [78d9ac03] 	 * mini_mime (1.1.2)
+ DEBUG [78d9ac03] 	 * concurrent-ruby (1.1.10)
+ * minitest (5.16.2)
+ DEBUG [78d9ac03] 	 * method_source (1.0.0)
+ * thor (1.2.1)
+ DEBUG [78d9ac03] 	 * zeitwerk (2.6.0)
+ * net-scp (1.2.1)
+ DEBUG [78d9ac03] 	 * net-ssh (7.0.1)
+ * websocket-extensions (0.1.5)
+ DEBUG [78d9ac03] 	 * net-protocol (0.1.3)
+ * strscan (3.0.3)
+ * timeout (0.3.0)
+ * loofah (2.18.0)
+ * crass (1.0.6)
+ DEBUG [78d9ac03] 	Install missing gems with `bundle install`
+ DEBUG [78d9ac03] Finished in 0.318 seconds with exit status 1 (failed).
+  INFO [0b2c91e9] Running $HOME/.rbenv/bin/rbenv exec bundle install --jobs 4 --quiet as deploy@192.168.86.12
+ DEBUG [0b2c91e9] Command: cd /home/deploy/portfolio_database_rails/releases/20220717191453 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; $HOME/.rbenv/bin/rbenv exec bundle install --jobs 4 --quiet )
+ DEBUG [0b2c91e9] 	You are trying to install in deployment mode after changing
+your Gemfile. Run `bundle install` elsewhere and add the
+updated Gemfile.lock to version control.
+
+If this is a development machine, remove the
+/home/deploy/portfolio_database_rails/releases/20220717191453/Gemfile freeze
+by running `bundle config unset deployment`.
+
+The list of sources changed
+The dependencies in your gemfile changed
+
+You have added to the Gemfile:
+* capistrano-bundler
+* capistrano-rails
+* capistrano-passenger
+* capistrano-rbenv
+
+You have deleted from the Gemfile:
+* capistrano-rails (~> 1.6)
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-07-17 19:16:36 +0000 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [1865451f] Running [ -d $HOME/.rbenv/versions/3.1.2 ] as deploy@192.168.86.12
+ DEBUG [1865451f] Command: [ -d $HOME/.rbenv/versions/3.1.2 ]
+ DEBUG [1865451f] Finished in 3.573 seconds with exit status 0 (successful).
+ DEBUG [07cfa691] Running /usr/bin/env which passenger as deploy@192.168.86.12
+ DEBUG [07cfa691] Command: /usr/bin/env which passenger
+ DEBUG [07cfa691] 	/usr/bin/passenger
+ DEBUG [07cfa691] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [0e658166] Running /usr/bin/env mkdir -p /tmp as deploy@192.168.86.12
+ DEBUG [0e658166] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env mkdir -p /tmp )
+  INFO [0e658166] Finished in 0.007 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-69929cf600224f397ef3.sh 0.0%
+  INFO Uploading /tmp/git-ssh-69929cf600224f397ef3.sh 100.0%
+  INFO [9c819ffc] Running /usr/bin/env chmod 700 /tmp/git-ssh-69929cf600224f397ef3.sh as deploy@192.168.86.12
+ DEBUG [9c819ffc] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env chmod 700 /tmp/git-ssh-69929cf600224f397ef3.sh )
+  INFO [9c819ffc] Finished in 0.048 seconds with exit status 0 (successful).
+  INFO [11547e29] Running /usr/bin/env git ls-remote https://github.com/bengarlock/portfolio_database_rails HEAD as deploy@192.168.86.12
+ DEBUG [11547e29] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-69929cf600224f397ef3.sh" ; /usr/bin/env git ls-remote https://github.com/bengarlock/portfolio_database_rails HEAD )
+ DEBUG [11547e29] 	e6d8fa87dd64ebb22a8b0fc21a93a875a559cbd3	HEAD
+  INFO [11547e29] Finished in 0.135 seconds with exit status 0 (successful).
+  INFO [afc78f97] Running /usr/bin/env mkdir -p /home/deploy/portfolio_database_rails/shared /home/deploy/portfolio_database_rails/releases as deploy@192.168.86.12
+ DEBUG [afc78f97] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env mkdir -p /home/deploy/portfolio_database_rails/shared /home/deploy/portfolio_database_rails/releases )
+  INFO [afc78f97] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [ce103c26] Running /usr/bin/env mkdir -p /home/deploy/portfolio_database_rails/shared/log /home/deploy/portfolio_database_rails/shared/tmp/pids /home/deploy/portfolio_database_rails/shared/tmp/cache /home/deploy/portfolio_database_rails/shared/tmp/sockets /home/deploy/portfolio_database_rails/shared/vendor/bundle /home/deploy/portfolio_database_rails/shared/.bundle /home/deploy/portfolio_database_rails/shared/public/system /home/deploy/portfolio_database_rails/shared/public/uploads /home/deploy/portfolio_database_rails/shared/public/assets as deploy@192.168.86.12
+ DEBUG [ce103c26] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env mkdir -p /home/deploy/portfolio_database_rails/shared/log /home/deploy/portfolio_database_rails/shared/tmp/pids /home/deploy/portfolio_database_rails/shared/tmp/cache /home/deploy/portfolio_database_rails/shared/tmp/sockets /home/deploy/portfolio_database_rails/shared/vendor/bundle /home/deploy/portfolio_database_rails/shared/.bundle /home/deploy/portfolio_database_rails/shared/public/system /home/deploy/portfolio_database_rails/shared/public/uploads /home/deploy/portfolio_database_rails/shared/public/assets )
+  INFO [ce103c26] Finished in 0.006 seconds with exit status 0 (successful).
+ DEBUG [5437cfab] Running [ -f /home/deploy/portfolio_database_rails/current/REVISION ] as deploy@192.168.86.12
+ DEBUG [5437cfab] Command: [ -f /home/deploy/portfolio_database_rails/current/REVISION ]
+ DEBUG [5437cfab] Finished in 0.044 seconds with exit status 1 (failed).
+ DEBUG [02c13c95] Running [ -f /home/deploy/portfolio_database_rails/repo/HEAD ] as deploy@192.168.86.12
+ DEBUG [02c13c95] Command: [ -f /home/deploy/portfolio_database_rails/repo/HEAD ]
+ DEBUG [02c13c95] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/deploy/portfolio_database_rails/repo
+ DEBUG [efb3a1fc] Running if test ! -d /home/deploy/portfolio_database_rails/repo; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/repo'" 1>&2; false; fi as deploy@192.168.86.12
+ DEBUG [efb3a1fc] Command: if test ! -d /home/deploy/portfolio_database_rails/repo; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/repo'" 1>&2; false; fi
+ DEBUG [efb3a1fc] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [8c2642da] Running /usr/bin/env git remote set-url origin https://github.com/bengarlock/portfolio_database_rails as deploy@192.168.86.12
+ DEBUG [8c2642da] Command: cd /home/deploy/portfolio_database_rails/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-69929cf600224f397ef3.sh" ; /usr/bin/env git remote set-url origin https://github.com/bengarlock/portfolio_database_rails )
+  INFO [8c2642da] Finished in 0.007 seconds with exit status 0 (successful).
+  INFO [7a43b478] Running /usr/bin/env git remote update --prune as deploy@192.168.86.12
+ DEBUG [7a43b478] Command: cd /home/deploy/portfolio_database_rails/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-69929cf600224f397ef3.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [7a43b478] 	Fetching origin
+ DEBUG [7a43b478] 	From https://github.com/bengarlock/portfolio_database_rails
+   9025ffb..e6d8fa8  master     -> master
+  INFO [7a43b478] Finished in 0.191 seconds with exit status 0 (successful).
+ DEBUG [23cc7cd3] Running if test ! -d /home/deploy/portfolio_database_rails/repo; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/repo'" 1>&2; false; fi as deploy@192.168.86.12
+ DEBUG [23cc7cd3] Command: if test ! -d /home/deploy/portfolio_database_rails/repo; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/repo'" 1>&2; false; fi
+ DEBUG [23cc7cd3] Finished in 0.009 seconds with exit status 0 (successful).
+  INFO [e4ccd451] Running /usr/bin/env mkdir -p /home/deploy/portfolio_database_rails/releases/20220717191640 as deploy@192.168.86.12
+ DEBUG [e4ccd451] Command: cd /home/deploy/portfolio_database_rails/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-69929cf600224f397ef3.sh" ; /usr/bin/env mkdir -p /home/deploy/portfolio_database_rails/releases/20220717191640 )
+  INFO [e4ccd451] Finished in 0.048 seconds with exit status 0 (successful).
+  INFO [b4634a86] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/portfolio_database_rails/releases/20220717191640 as deploy@192.168.86.12
+ DEBUG [b4634a86] Command: cd /home/deploy/portfolio_database_rails/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-69929cf600224f397ef3.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/portfolio_database_rails/releases/20220717191640 )
+  INFO [b4634a86] Finished in 0.010 seconds with exit status 0 (successful).
+ DEBUG [dd72e0ea] Running if test ! -d /home/deploy/portfolio_database_rails/repo; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/repo'" 1>&2; false; fi as deploy@192.168.86.12
+ DEBUG [dd72e0ea] Command: if test ! -d /home/deploy/portfolio_database_rails/repo; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/repo'" 1>&2; false; fi
+ DEBUG [dd72e0ea] Finished in 0.004 seconds with exit status 0 (successful).
+ DEBUG [c36a3280] Running /usr/bin/env git rev-list --max-count=1 master as deploy@192.168.86.12
+ DEBUG [c36a3280] Command: cd /home/deploy/portfolio_database_rails/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-69929cf600224f397ef3.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [c36a3280] 	e6d8fa87dd64ebb22a8b0fc21a93a875a559cbd3
+ DEBUG [c36a3280] Finished in 0.007 seconds with exit status 0 (successful).
+ DEBUG [9dc3f2ab] Running if test ! -d /home/deploy/portfolio_database_rails/releases/20220717191640; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/releases/20220717191640'" 1>&2; false; fi as deploy@192.168.86.12
+ DEBUG [9dc3f2ab] Command: if test ! -d /home/deploy/portfolio_database_rails/releases/20220717191640; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/releases/20220717191640'" 1>&2; false; fi
+ DEBUG [9dc3f2ab] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [a2442d0e] Running /usr/bin/env echo "e6d8fa87dd64ebb22a8b0fc21a93a875a559cbd3" > REVISION as deploy@192.168.86.12
+ DEBUG [a2442d0e] Command: cd /home/deploy/portfolio_database_rails/releases/20220717191640 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env echo "e6d8fa87dd64ebb22a8b0fc21a93a875a559cbd3" > REVISION )
+  INFO [a2442d0e] Finished in 0.045 seconds with exit status 0 (successful).
+  INFO [fd58648a] Running /usr/bin/env mkdir -p /home/deploy/portfolio_database_rails/releases/20220717191640 /home/deploy/portfolio_database_rails/releases/20220717191640/tmp /home/deploy/portfolio_database_rails/releases/20220717191640/vendor /home/deploy/portfolio_database_rails/releases/20220717191640/public as deploy@192.168.86.12
+ DEBUG [fd58648a] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env mkdir -p /home/deploy/portfolio_database_rails/releases/20220717191640 /home/deploy/portfolio_database_rails/releases/20220717191640/tmp /home/deploy/portfolio_database_rails/releases/20220717191640/vendor /home/deploy/portfolio_database_rails/releases/20220717191640/public )
+  INFO [fd58648a] Finished in 0.006 seconds with exit status 0 (successful).
+ DEBUG [2515f2ca] Running [ -L /home/deploy/portfolio_database_rails/releases/20220717191640/log ] as deploy@192.168.86.12
+ DEBUG [2515f2ca] Command: [ -L /home/deploy/portfolio_database_rails/releases/20220717191640/log ]
+ DEBUG [2515f2ca] Finished in 0.004 seconds with exit status 1 (failed).
+ DEBUG [433a0318] Running [ -d /home/deploy/portfolio_database_rails/releases/20220717191640/log ] as deploy@192.168.86.12
+ DEBUG [433a0318] Command: [ -d /home/deploy/portfolio_database_rails/releases/20220717191640/log ]
+ DEBUG [433a0318] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [1f757034] Running /usr/bin/env rm -rf /home/deploy/portfolio_database_rails/releases/20220717191640/log as deploy@192.168.86.12
+ DEBUG [1f757034] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env rm -rf /home/deploy/portfolio_database_rails/releases/20220717191640/log )
+  INFO [1f757034] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [b6ee9584] Running /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/log /home/deploy/portfolio_database_rails/releases/20220717191640/log as deploy@192.168.86.12
+ DEBUG [b6ee9584] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/log /home/deploy/portfolio_database_rails/releases/20220717191640/log )
+  INFO [b6ee9584] Finished in 0.006 seconds with exit status 0 (successful).
+ DEBUG [f69e268a] Running [ -L /home/deploy/portfolio_database_rails/releases/20220717191640/tmp/pids ] as deploy@192.168.86.12
+ DEBUG [f69e268a] Command: [ -L /home/deploy/portfolio_database_rails/releases/20220717191640/tmp/pids ]
+ DEBUG [f69e268a] Finished in 0.045 seconds with exit status 1 (failed).
+ DEBUG [dadd7c29] Running [ -d /home/deploy/portfolio_database_rails/releases/20220717191640/tmp/pids ] as deploy@192.168.86.12
+ DEBUG [dadd7c29] Command: [ -d /home/deploy/portfolio_database_rails/releases/20220717191640/tmp/pids ]
+ DEBUG [dadd7c29] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [a34b16e9] Running /usr/bin/env rm -rf /home/deploy/portfolio_database_rails/releases/20220717191640/tmp/pids as deploy@192.168.86.12
+ DEBUG [a34b16e9] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env rm -rf /home/deploy/portfolio_database_rails/releases/20220717191640/tmp/pids )
+  INFO [a34b16e9] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [99c5d954] Running /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/tmp/pids /home/deploy/portfolio_database_rails/releases/20220717191640/tmp/pids as deploy@192.168.86.12
+ DEBUG [99c5d954] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/tmp/pids /home/deploy/portfolio_database_rails/releases/20220717191640/tmp/pids )
+  INFO [99c5d954] Finished in 0.006 seconds with exit status 0 (successful).
+ DEBUG [a64d616f] Running [ -L /home/deploy/portfolio_database_rails/releases/20220717191640/tmp/cache ] as deploy@192.168.86.12
+ DEBUG [a64d616f] Command: [ -L /home/deploy/portfolio_database_rails/releases/20220717191640/tmp/cache ]
+ DEBUG [a64d616f] Finished in 0.004 seconds with exit status 1 (failed).
+ DEBUG [69d17d9a] Running [ -d /home/deploy/portfolio_database_rails/releases/20220717191640/tmp/cache ] as deploy@192.168.86.12
+ DEBUG [69d17d9a] Command: [ -d /home/deploy/portfolio_database_rails/releases/20220717191640/tmp/cache ]
+ DEBUG [69d17d9a] Finished in 0.004 seconds with exit status 1 (failed).
+  INFO [e25e9a85] Running /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/tmp/cache /home/deploy/portfolio_database_rails/releases/20220717191640/tmp/cache as deploy@192.168.86.12
+ DEBUG [e25e9a85] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/tmp/cache /home/deploy/portfolio_database_rails/releases/20220717191640/tmp/cache )
+  INFO [e25e9a85] Finished in 0.052 seconds with exit status 0 (successful).
+ DEBUG [9794de4f] Running [ -L /home/deploy/portfolio_database_rails/releases/20220717191640/tmp/sockets ] as deploy@192.168.86.12
+ DEBUG [9794de4f] Command: [ -L /home/deploy/portfolio_database_rails/releases/20220717191640/tmp/sockets ]
+ DEBUG [9794de4f] Finished in 0.007 seconds with exit status 1 (failed).
+ DEBUG [14d2cdda] Running [ -d /home/deploy/portfolio_database_rails/releases/20220717191640/tmp/sockets ] as deploy@192.168.86.12
+ DEBUG [14d2cdda] Command: [ -d /home/deploy/portfolio_database_rails/releases/20220717191640/tmp/sockets ]
+ DEBUG [14d2cdda] Finished in 0.004 seconds with exit status 1 (failed).
+  INFO [1163b2e9] Running /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/tmp/sockets /home/deploy/portfolio_database_rails/releases/20220717191640/tmp/sockets as deploy@192.168.86.12
+ DEBUG [1163b2e9] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/tmp/sockets /home/deploy/portfolio_database_rails/releases/20220717191640/tmp/sockets )
+  INFO [1163b2e9] Finished in 0.006 seconds with exit status 0 (successful).
+ DEBUG [b2380486] Running [ -L /home/deploy/portfolio_database_rails/releases/20220717191640/vendor/bundle ] as deploy@192.168.86.12
+ DEBUG [b2380486] Command: [ -L /home/deploy/portfolio_database_rails/releases/20220717191640/vendor/bundle ]
+ DEBUG [b2380486] Finished in 0.046 seconds with exit status 1 (failed).
+ DEBUG [7f3ac2ca] Running [ -d /home/deploy/portfolio_database_rails/releases/20220717191640/vendor/bundle ] as deploy@192.168.86.12
+ DEBUG [7f3ac2ca] Command: [ -d /home/deploy/portfolio_database_rails/releases/20220717191640/vendor/bundle ]
+ DEBUG [7f3ac2ca] Finished in 0.004 seconds with exit status 1 (failed).
+  INFO [f07abc08] Running /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/vendor/bundle /home/deploy/portfolio_database_rails/releases/20220717191640/vendor/bundle as deploy@192.168.86.12
+ DEBUG [f07abc08] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/vendor/bundle /home/deploy/portfolio_database_rails/releases/20220717191640/vendor/bundle )
+  INFO [f07abc08] Finished in 0.006 seconds with exit status 0 (successful).
+ DEBUG [8cb2f0a0] Running [ -L /home/deploy/portfolio_database_rails/releases/20220717191640/.bundle ] as deploy@192.168.86.12
+ DEBUG [8cb2f0a0] Command: [ -L /home/deploy/portfolio_database_rails/releases/20220717191640/.bundle ]
+ DEBUG [8cb2f0a0] Finished in 0.046 seconds with exit status 1 (failed).
+ DEBUG [4f1e41ef] Running [ -d /home/deploy/portfolio_database_rails/releases/20220717191640/.bundle ] as deploy@192.168.86.12
+ DEBUG [4f1e41ef] Command: [ -d /home/deploy/portfolio_database_rails/releases/20220717191640/.bundle ]
+ DEBUG [4f1e41ef] Finished in 0.004 seconds with exit status 1 (failed).
+  INFO [4e8752f8] Running /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/.bundle /home/deploy/portfolio_database_rails/releases/20220717191640/.bundle as deploy@192.168.86.12
+ DEBUG [4e8752f8] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/.bundle /home/deploy/portfolio_database_rails/releases/20220717191640/.bundle )
+  INFO [4e8752f8] Finished in 0.006 seconds with exit status 0 (successful).
+ DEBUG [83dc990d] Running [ -L /home/deploy/portfolio_database_rails/releases/20220717191640/public/system ] as deploy@192.168.86.12
+ DEBUG [83dc990d] Command: [ -L /home/deploy/portfolio_database_rails/releases/20220717191640/public/system ]
+ DEBUG [83dc990d] Finished in 0.046 seconds with exit status 1 (failed).
+ DEBUG [821eb451] Running [ -d /home/deploy/portfolio_database_rails/releases/20220717191640/public/system ] as deploy@192.168.86.12
+ DEBUG [821eb451] Command: [ -d /home/deploy/portfolio_database_rails/releases/20220717191640/public/system ]
+ DEBUG [821eb451] Finished in 0.004 seconds with exit status 1 (failed).
+  INFO [74193e5b] Running /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/public/system /home/deploy/portfolio_database_rails/releases/20220717191640/public/system as deploy@192.168.86.12
+ DEBUG [74193e5b] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/public/system /home/deploy/portfolio_database_rails/releases/20220717191640/public/system )
+  INFO [74193e5b] Finished in 0.006 seconds with exit status 0 (successful).
+ DEBUG [40cc5bba] Running [ -L /home/deploy/portfolio_database_rails/releases/20220717191640/public/uploads ] as deploy@192.168.86.12
+ DEBUG [40cc5bba] Command: [ -L /home/deploy/portfolio_database_rails/releases/20220717191640/public/uploads ]
+ DEBUG [40cc5bba] Finished in 0.045 seconds with exit status 1 (failed).
+ DEBUG [ebae9d7b] Running [ -d /home/deploy/portfolio_database_rails/releases/20220717191640/public/uploads ] as deploy@192.168.86.12
+ DEBUG [ebae9d7b] Command: [ -d /home/deploy/portfolio_database_rails/releases/20220717191640/public/uploads ]
+ DEBUG [ebae9d7b] Finished in 0.004 seconds with exit status 1 (failed).
+  INFO [ca30a62a] Running /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/public/uploads /home/deploy/portfolio_database_rails/releases/20220717191640/public/uploads as deploy@192.168.86.12
+ DEBUG [ca30a62a] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/public/uploads /home/deploy/portfolio_database_rails/releases/20220717191640/public/uploads )
+  INFO [ca30a62a] Finished in 0.006 seconds with exit status 0 (successful).
+ DEBUG [a2639af4] Running [ -L /home/deploy/portfolio_database_rails/releases/20220717191640/public/assets ] as deploy@192.168.86.12
+ DEBUG [a2639af4] Command: [ -L /home/deploy/portfolio_database_rails/releases/20220717191640/public/assets ]
+ DEBUG [a2639af4] Finished in 0.044 seconds with exit status 1 (failed).
+ DEBUG [c2a4b8f7] Running [ -d /home/deploy/portfolio_database_rails/releases/20220717191640/public/assets ] as deploy@192.168.86.12
+ DEBUG [c2a4b8f7] Command: [ -d /home/deploy/portfolio_database_rails/releases/20220717191640/public/assets ]
+ DEBUG [c2a4b8f7] Finished in 0.004 seconds with exit status 1 (failed).
+  INFO [c78dd41a] Running /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/public/assets /home/deploy/portfolio_database_rails/releases/20220717191640/public/assets as deploy@192.168.86.12
+ DEBUG [c78dd41a] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/public/assets /home/deploy/portfolio_database_rails/releases/20220717191640/public/assets )
+  INFO [c78dd41a] Finished in 0.006 seconds with exit status 0 (successful).
+ DEBUG [8ce0050a] Running if test ! -d /home/deploy/portfolio_database_rails/releases/20220717191640; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/releases/20220717191640'" 1>&2; false; fi as deploy@192.168.86.12
+ DEBUG [8ce0050a] Command: if test ! -d /home/deploy/portfolio_database_rails/releases/20220717191640; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/releases/20220717191640'" 1>&2; false; fi
+ DEBUG [8ce0050a] Finished in 0.045 seconds with exit status 0 (successful).
+  INFO [96e07adc] Running $HOME/.rbenv/bin/rbenv exec bundle config --local deployment true as deploy@192.168.86.12
+ DEBUG [96e07adc] Command: cd /home/deploy/portfolio_database_rails/releases/20220717191640 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; $HOME/.rbenv/bin/rbenv exec bundle config --local deployment true )
+  INFO [96e07adc] Finished in 0.226 seconds with exit status 0 (successful).
+  INFO [09f05c6d] Running $HOME/.rbenv/bin/rbenv exec bundle config --local path /home/deploy/portfolio_database_rails/shared/bundle as deploy@192.168.86.12
+ DEBUG [09f05c6d] Command: cd /home/deploy/portfolio_database_rails/releases/20220717191640 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; $HOME/.rbenv/bin/rbenv exec bundle config --local path /home/deploy/portfolio_database_rails/shared/bundle )
+  INFO [09f05c6d] Finished in 0.224 seconds with exit status 0 (successful).
+  INFO [1d3f442f] Running $HOME/.rbenv/bin/rbenv exec bundle config --local without development:test as deploy@192.168.86.12
+ DEBUG [1d3f442f] Command: cd /home/deploy/portfolio_database_rails/releases/20220717191640 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; $HOME/.rbenv/bin/rbenv exec bundle config --local without development:test )
+  INFO [1d3f442f] Finished in 0.264 seconds with exit status 0 (successful).
+ DEBUG [83fcd7a2] Running if test ! -d /home/deploy/portfolio_database_rails/releases/20220717191640; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/releases/20220717191640'" 1>&2; false; fi as deploy@192.168.86.12
+ DEBUG [83fcd7a2] Command: if test ! -d /home/deploy/portfolio_database_rails/releases/20220717191640; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/releases/20220717191640'" 1>&2; false; fi
+ DEBUG [83fcd7a2] Finished in 0.004 seconds with exit status 0 (successful).
+ DEBUG [f49621a0] Running $HOME/.rbenv/bin/rbenv exec bundle check as deploy@192.168.86.12
+ DEBUG [f49621a0] Command: cd /home/deploy/portfolio_database_rails/releases/20220717191640 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; $HOME/.rbenv/bin/rbenv exec bundle check )
+ DEBUG [f49621a0] 	Your bundle only supports platforms [] but your local platform is x86_64-linux.
+Add the current platform to the lockfile with `bundle lock --add-platform
+x86_64-linux` and try again.
+ DEBUG [f49621a0] Finished in 0.259 seconds with exit status 16 (failed).
+  INFO [1f86a0e5] Running $HOME/.rbenv/bin/rbenv exec bundle install --jobs 4 --quiet as deploy@192.168.86.12
+ DEBUG [1f86a0e5] Command: cd /home/deploy/portfolio_database_rails/releases/20220717191640 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; $HOME/.rbenv/bin/rbenv exec bundle install --jobs 4 --quiet )
+ DEBUG [1f86a0e5] 	The deployment setting requires a Gemfile.lock. Please make sure you have
+checked your Gemfile.lock into version control before deploying.
