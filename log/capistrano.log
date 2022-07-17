@@ -1206,3 +1206,651 @@ x86_64-linux` and try again.
  DEBUG [1f86a0e5] Command: cd /home/deploy/portfolio_database_rails/releases/20220717191640 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; $HOME/.rbenv/bin/rbenv exec bundle install --jobs 4 --quiet )
  DEBUG [1f86a0e5] 	The deployment setting requires a Gemfile.lock. Please make sure you have
 checked your Gemfile.lock into version control before deploying.
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-07-17 19:49:53 +0000 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [bd71106e] Running [ -d ~/.rvm ] as deploy@192.168.86.12
+ DEBUG [bd71106e] Command: [ -d ~/.rvm ]
+ DEBUG [bd71106e] Finished in 3.606 seconds with exit status 0 (successful).
+ DEBUG [86be9510] Running ~/.rvm/bin/rvm version as deploy@192.168.86.12
+ DEBUG [86be9510] Command: ~/.rvm/bin/rvm version
+ DEBUG [86be9510] 	rvm 1.29.12 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [86be9510] Finished in 0.215 seconds with exit status 0 (successful).
+ DEBUG [4a42d59c] Running ~/.rvm/bin/rvm current as deploy@192.168.86.12
+ DEBUG [4a42d59c] Command: ~/.rvm/bin/rvm current
+ DEBUG [4a42d59c] 	ruby-3.1.2
+ DEBUG [4a42d59c] Finished in 0.205 seconds with exit status 0 (successful).
+ DEBUG [39514df4] Running ~/.rvm/bin/rvm default do ruby --version as deploy@192.168.86.12
+ DEBUG [39514df4] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [39514df4] 	ruby 3.1.2p20 (2022-04-12 revision 4491bb740a) [x86_64-linux]
+ DEBUG [39514df4] Finished in 0.393 seconds with exit status 0 (successful).
+  INFO [6c9c4b36] Running /usr/bin/env mkdir -p /tmp as deploy@192.168.86.12
+ DEBUG [6c9c4b36] Command: /usr/bin/env mkdir -p /tmp
+  INFO [6c9c4b36] Finished in 0.006 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-fa8eb5bed3f2927ce312.sh 0.0%
+  INFO Uploading /tmp/git-ssh-fa8eb5bed3f2927ce312.sh 100.0%
+  INFO [194ff00b] Running /usr/bin/env chmod 700 /tmp/git-ssh-fa8eb5bed3f2927ce312.sh as deploy@192.168.86.12
+ DEBUG [194ff00b] Command: /usr/bin/env chmod 700 /tmp/git-ssh-fa8eb5bed3f2927ce312.sh
+  INFO [194ff00b] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO [862c6078] Running /usr/bin/env git ls-remote https://github.com/bengarlock/portfolio_database_rails HEAD as deploy@192.168.86.12
+ DEBUG [862c6078] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-fa8eb5bed3f2927ce312.sh" ; /usr/bin/env git ls-remote https://github.com/bengarlock/portfolio_database_rails HEAD )
+ DEBUG [862c6078] 	16c1e85c4e3d527a39660cee3d8fcdc52c72b30c	HEAD
+  INFO [862c6078] Finished in 0.130 seconds with exit status 0 (successful).
+  INFO [bc3f1fad] Running /usr/bin/env mkdir -p /home/deploy/portfolio_database_rails/shared /home/deploy/portfolio_database_rails/releases as deploy@192.168.86.12
+ DEBUG [bc3f1fad] Command: /usr/bin/env mkdir -p /home/deploy/portfolio_database_rails/shared /home/deploy/portfolio_database_rails/releases
+  INFO [bc3f1fad] Finished in 0.045 seconds with exit status 0 (successful).
+  INFO [67c1341a] Running /usr/bin/env mkdir -p /home/deploy/portfolio_database_rails/shared/log /home/deploy/portfolio_database_rails/shared/tmp/pids /home/deploy/portfolio_database_rails/shared/tmp/cache /home/deploy/portfolio_database_rails/shared/tmp/sockets /home/deploy/portfolio_database_rails/shared/vendor/bundle /home/deploy/portfolio_database_rails/shared/.bundle /home/deploy/portfolio_database_rails/shared/public/system /home/deploy/portfolio_database_rails/shared/public/uploads as deploy@192.168.86.12
+ DEBUG [67c1341a] Command: /usr/bin/env mkdir -p /home/deploy/portfolio_database_rails/shared/log /home/deploy/portfolio_database_rails/shared/tmp/pids /home/deploy/portfolio_database_rails/shared/tmp/cache /home/deploy/portfolio_database_rails/shared/tmp/sockets /home/deploy/portfolio_database_rails/shared/vendor/bundle /home/deploy/portfolio_database_rails/shared/.bundle /home/deploy/portfolio_database_rails/shared/public/system /home/deploy/portfolio_database_rails/shared/public/uploads
+  INFO [67c1341a] Finished in 0.006 seconds with exit status 0 (successful).
+ DEBUG [5b85e25f] Running [ -f /home/deploy/portfolio_database_rails/current/REVISION ] as deploy@192.168.86.12
+ DEBUG [5b85e25f] Command: [ -f /home/deploy/portfolio_database_rails/current/REVISION ]
+ DEBUG [5b85e25f] Finished in 0.004 seconds with exit status 1 (failed).
+ DEBUG [bddd650a] Running [ -f /home/deploy/portfolio_database_rails/repo/HEAD ] as deploy@192.168.86.12
+ DEBUG [bddd650a] Command: [ -f /home/deploy/portfolio_database_rails/repo/HEAD ]
+ DEBUG [bddd650a] Finished in 0.044 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/deploy/portfolio_database_rails/repo
+ DEBUG [e10bc768] Running if test ! -d /home/deploy/portfolio_database_rails/repo; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/repo'" 1>&2; false; fi as deploy@192.168.86.12
+ DEBUG [e10bc768] Command: if test ! -d /home/deploy/portfolio_database_rails/repo; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/repo'" 1>&2; false; fi
+ DEBUG [e10bc768] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [176cdf4e] Running /usr/bin/env git remote set-url origin https://github.com/bengarlock/portfolio_database_rails as deploy@192.168.86.12
+ DEBUG [176cdf4e] Command: cd /home/deploy/portfolio_database_rails/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-fa8eb5bed3f2927ce312.sh" ; /usr/bin/env git remote set-url origin https://github.com/bengarlock/portfolio_database_rails )
+  INFO [176cdf4e] Finished in 0.007 seconds with exit status 0 (successful).
+  INFO [1e35085d] Running /usr/bin/env git remote update --prune as deploy@192.168.86.12
+ DEBUG [1e35085d] Command: cd /home/deploy/portfolio_database_rails/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-fa8eb5bed3f2927ce312.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [1e35085d] 	Fetching origin
+ DEBUG [1e35085d] 	From https://github.com/bengarlock/portfolio_database_rails
+   890a267..16c1e85  master     -> master
+  INFO [1e35085d] Finished in 0.195 seconds with exit status 0 (successful).
+ DEBUG [0457124f] Running if test ! -d /home/deploy/portfolio_database_rails/repo; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/repo'" 1>&2; false; fi as deploy@192.168.86.12
+ DEBUG [0457124f] Command: if test ! -d /home/deploy/portfolio_database_rails/repo; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/repo'" 1>&2; false; fi
+ DEBUG [0457124f] Finished in 0.055 seconds with exit status 0 (successful).
+  INFO [c3ab1c71] Running /usr/bin/env mkdir -p /home/deploy/portfolio_database_rails/releases/20220717194958 as deploy@192.168.86.12
+ DEBUG [c3ab1c71] Command: cd /home/deploy/portfolio_database_rails/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-fa8eb5bed3f2927ce312.sh" ; /usr/bin/env mkdir -p /home/deploy/portfolio_database_rails/releases/20220717194958 )
+  INFO [c3ab1c71] Finished in 0.015 seconds with exit status 0 (successful).
+  INFO [339533d2] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/portfolio_database_rails/releases/20220717194958 as deploy@192.168.86.12
+ DEBUG [339533d2] Command: cd /home/deploy/portfolio_database_rails/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-fa8eb5bed3f2927ce312.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/portfolio_database_rails/releases/20220717194958 )
+  INFO [339533d2] Finished in 0.053 seconds with exit status 0 (successful).
+ DEBUG [55e4cc6f] Running if test ! -d /home/deploy/portfolio_database_rails/repo; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/repo'" 1>&2; false; fi as deploy@192.168.86.12
+ DEBUG [55e4cc6f] Command: if test ! -d /home/deploy/portfolio_database_rails/repo; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/repo'" 1>&2; false; fi
+ DEBUG [55e4cc6f] Finished in 0.004 seconds with exit status 0 (successful).
+ DEBUG [f105514f] Running /usr/bin/env git rev-list --max-count=1 master as deploy@192.168.86.12
+ DEBUG [f105514f] Command: cd /home/deploy/portfolio_database_rails/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-fa8eb5bed3f2927ce312.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [f105514f] 	16c1e85c4e3d527a39660cee3d8fcdc52c72b30c
+ DEBUG [f105514f] Finished in 0.007 seconds with exit status 0 (successful).
+ DEBUG [b1e8e640] Running if test ! -d /home/deploy/portfolio_database_rails/releases/20220717194958; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/releases/20220717194958'" 1>&2; false; fi as deploy@192.168.86.12
+ DEBUG [b1e8e640] Command: if test ! -d /home/deploy/portfolio_database_rails/releases/20220717194958; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/releases/20220717194958'" 1>&2; false; fi
+ DEBUG [b1e8e640] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [0af87d5d] Running /usr/bin/env echo "16c1e85c4e3d527a39660cee3d8fcdc52c72b30c" > REVISION as deploy@192.168.86.12
+ DEBUG [0af87d5d] Command: cd /home/deploy/portfolio_database_rails/releases/20220717194958 && /usr/bin/env echo "16c1e85c4e3d527a39660cee3d8fcdc52c72b30c" > REVISION
+  INFO [0af87d5d] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO [10e4aca1] Running /usr/bin/env mkdir -p /home/deploy/portfolio_database_rails/releases/20220717194958 /home/deploy/portfolio_database_rails/releases/20220717194958/tmp /home/deploy/portfolio_database_rails/releases/20220717194958/vendor /home/deploy/portfolio_database_rails/releases/20220717194958/public as deploy@192.168.86.12
+ DEBUG [10e4aca1] Command: /usr/bin/env mkdir -p /home/deploy/portfolio_database_rails/releases/20220717194958 /home/deploy/portfolio_database_rails/releases/20220717194958/tmp /home/deploy/portfolio_database_rails/releases/20220717194958/vendor /home/deploy/portfolio_database_rails/releases/20220717194958/public
+  INFO [10e4aca1] Finished in 0.005 seconds with exit status 0 (successful).
+ DEBUG [c7a6e692] Running [ -L /home/deploy/portfolio_database_rails/releases/20220717194958/log ] as deploy@192.168.86.12
+ DEBUG [c7a6e692] Command: [ -L /home/deploy/portfolio_database_rails/releases/20220717194958/log ]
+ DEBUG [c7a6e692] Finished in 0.004 seconds with exit status 1 (failed).
+ DEBUG [16a36920] Running [ -d /home/deploy/portfolio_database_rails/releases/20220717194958/log ] as deploy@192.168.86.12
+ DEBUG [16a36920] Command: [ -d /home/deploy/portfolio_database_rails/releases/20220717194958/log ]
+ DEBUG [16a36920] Finished in 0.047 seconds with exit status 0 (successful).
+  INFO [3a623efd] Running /usr/bin/env rm -rf /home/deploy/portfolio_database_rails/releases/20220717194958/log as deploy@192.168.86.12
+ DEBUG [3a623efd] Command: /usr/bin/env rm -rf /home/deploy/portfolio_database_rails/releases/20220717194958/log
+  INFO [3a623efd] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO [f90412e0] Running /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/log /home/deploy/portfolio_database_rails/releases/20220717194958/log as deploy@192.168.86.12
+ DEBUG [f90412e0] Command: /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/log /home/deploy/portfolio_database_rails/releases/20220717194958/log
+  INFO [f90412e0] Finished in 0.005 seconds with exit status 0 (successful).
+ DEBUG [1e98e2d4] Running [ -L /home/deploy/portfolio_database_rails/releases/20220717194958/tmp/pids ] as deploy@192.168.86.12
+ DEBUG [1e98e2d4] Command: [ -L /home/deploy/portfolio_database_rails/releases/20220717194958/tmp/pids ]
+ DEBUG [1e98e2d4] Finished in 0.004 seconds with exit status 1 (failed).
+ DEBUG [f77a97ed] Running [ -d /home/deploy/portfolio_database_rails/releases/20220717194958/tmp/pids ] as deploy@192.168.86.12
+ DEBUG [f77a97ed] Command: [ -d /home/deploy/portfolio_database_rails/releases/20220717194958/tmp/pids ]
+ DEBUG [f77a97ed] Finished in 0.044 seconds with exit status 0 (successful).
+  INFO [4f9dcae7] Running /usr/bin/env rm -rf /home/deploy/portfolio_database_rails/releases/20220717194958/tmp/pids as deploy@192.168.86.12
+ DEBUG [4f9dcae7] Command: /usr/bin/env rm -rf /home/deploy/portfolio_database_rails/releases/20220717194958/tmp/pids
+  INFO [4f9dcae7] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO [563c47ed] Running /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/tmp/pids /home/deploy/portfolio_database_rails/releases/20220717194958/tmp/pids as deploy@192.168.86.12
+ DEBUG [563c47ed] Command: /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/tmp/pids /home/deploy/portfolio_database_rails/releases/20220717194958/tmp/pids
+  INFO [563c47ed] Finished in 0.005 seconds with exit status 0 (successful).
+ DEBUG [2798d188] Running [ -L /home/deploy/portfolio_database_rails/releases/20220717194958/tmp/cache ] as deploy@192.168.86.12
+ DEBUG [2798d188] Command: [ -L /home/deploy/portfolio_database_rails/releases/20220717194958/tmp/cache ]
+ DEBUG [2798d188] Finished in 0.004 seconds with exit status 1 (failed).
+ DEBUG [ad98b9e0] Running [ -d /home/deploy/portfolio_database_rails/releases/20220717194958/tmp/cache ] as deploy@192.168.86.12
+ DEBUG [ad98b9e0] Command: [ -d /home/deploy/portfolio_database_rails/releases/20220717194958/tmp/cache ]
+ DEBUG [ad98b9e0] Finished in 0.044 seconds with exit status 1 (failed).
+  INFO [76b5a785] Running /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/tmp/cache /home/deploy/portfolio_database_rails/releases/20220717194958/tmp/cache as deploy@192.168.86.12
+ DEBUG [76b5a785] Command: /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/tmp/cache /home/deploy/portfolio_database_rails/releases/20220717194958/tmp/cache
+  INFO [76b5a785] Finished in 0.005 seconds with exit status 0 (successful).
+ DEBUG [91177687] Running [ -L /home/deploy/portfolio_database_rails/releases/20220717194958/tmp/sockets ] as deploy@192.168.86.12
+ DEBUG [91177687] Command: [ -L /home/deploy/portfolio_database_rails/releases/20220717194958/tmp/sockets ]
+ DEBUG [91177687] Finished in 0.004 seconds with exit status 1 (failed).
+ DEBUG [e6becda4] Running [ -d /home/deploy/portfolio_database_rails/releases/20220717194958/tmp/sockets ] as deploy@192.168.86.12
+ DEBUG [e6becda4] Command: [ -d /home/deploy/portfolio_database_rails/releases/20220717194958/tmp/sockets ]
+ DEBUG [e6becda4] Finished in 0.004 seconds with exit status 1 (failed).
+  INFO [8f21a7dc] Running /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/tmp/sockets /home/deploy/portfolio_database_rails/releases/20220717194958/tmp/sockets as deploy@192.168.86.12
+ DEBUG [8f21a7dc] Command: /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/tmp/sockets /home/deploy/portfolio_database_rails/releases/20220717194958/tmp/sockets
+  INFO [8f21a7dc] Finished in 0.005 seconds with exit status 0 (successful).
+ DEBUG [79ff02e5] Running [ -L /home/deploy/portfolio_database_rails/releases/20220717194958/vendor/bundle ] as deploy@192.168.86.12
+ DEBUG [79ff02e5] Command: [ -L /home/deploy/portfolio_database_rails/releases/20220717194958/vendor/bundle ]
+ DEBUG [79ff02e5] Finished in 0.004 seconds with exit status 1 (failed).
+ DEBUG [03523e3f] Running [ -d /home/deploy/portfolio_database_rails/releases/20220717194958/vendor/bundle ] as deploy@192.168.86.12
+ DEBUG [03523e3f] Command: [ -d /home/deploy/portfolio_database_rails/releases/20220717194958/vendor/bundle ]
+ DEBUG [03523e3f] Finished in 0.044 seconds with exit status 1 (failed).
+  INFO [decd37d5] Running /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/vendor/bundle /home/deploy/portfolio_database_rails/releases/20220717194958/vendor/bundle as deploy@192.168.86.12
+ DEBUG [decd37d5] Command: /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/vendor/bundle /home/deploy/portfolio_database_rails/releases/20220717194958/vendor/bundle
+  INFO [decd37d5] Finished in 0.005 seconds with exit status 0 (successful).
+ DEBUG [085b0686] Running [ -L /home/deploy/portfolio_database_rails/releases/20220717194958/.bundle ] as deploy@192.168.86.12
+ DEBUG [085b0686] Command: [ -L /home/deploy/portfolio_database_rails/releases/20220717194958/.bundle ]
+ DEBUG [085b0686] Finished in 0.004 seconds with exit status 1 (failed).
+ DEBUG [13070f11] Running [ -d /home/deploy/portfolio_database_rails/releases/20220717194958/.bundle ] as deploy@192.168.86.12
+ DEBUG [13070f11] Command: [ -d /home/deploy/portfolio_database_rails/releases/20220717194958/.bundle ]
+ DEBUG [13070f11] Finished in 0.004 seconds with exit status 1 (failed).
+  INFO [811f7da5] Running /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/.bundle /home/deploy/portfolio_database_rails/releases/20220717194958/.bundle as deploy@192.168.86.12
+ DEBUG [811f7da5] Command: /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/.bundle /home/deploy/portfolio_database_rails/releases/20220717194958/.bundle
+  INFO [811f7da5] Finished in 0.005 seconds with exit status 0 (successful).
+ DEBUG [9a790688] Running [ -L /home/deploy/portfolio_database_rails/releases/20220717194958/public/system ] as deploy@192.168.86.12
+ DEBUG [9a790688] Command: [ -L /home/deploy/portfolio_database_rails/releases/20220717194958/public/system ]
+ DEBUG [9a790688] Finished in 0.004 seconds with exit status 1 (failed).
+ DEBUG [67dc1b58] Running [ -d /home/deploy/portfolio_database_rails/releases/20220717194958/public/system ] as deploy@192.168.86.12
+ DEBUG [67dc1b58] Command: [ -d /home/deploy/portfolio_database_rails/releases/20220717194958/public/system ]
+ DEBUG [67dc1b58] Finished in 0.044 seconds with exit status 1 (failed).
+  INFO [42ae17f3] Running /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/public/system /home/deploy/portfolio_database_rails/releases/20220717194958/public/system as deploy@192.168.86.12
+ DEBUG [42ae17f3] Command: /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/public/system /home/deploy/portfolio_database_rails/releases/20220717194958/public/system
+  INFO [42ae17f3] Finished in 0.005 seconds with exit status 0 (successful).
+ DEBUG [702d43f2] Running [ -L /home/deploy/portfolio_database_rails/releases/20220717194958/public/uploads ] as deploy@192.168.86.12
+ DEBUG [702d43f2] Command: [ -L /home/deploy/portfolio_database_rails/releases/20220717194958/public/uploads ]
+ DEBUG [702d43f2] Finished in 0.004 seconds with exit status 1 (failed).
+ DEBUG [3be99c47] Running [ -d /home/deploy/portfolio_database_rails/releases/20220717194958/public/uploads ] as deploy@192.168.86.12
+ DEBUG [3be99c47] Command: [ -d /home/deploy/portfolio_database_rails/releases/20220717194958/public/uploads ]
+ DEBUG [3be99c47] Finished in 0.004 seconds with exit status 1 (failed).
+  INFO [3d14ab74] Running /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/public/uploads /home/deploy/portfolio_database_rails/releases/20220717194958/public/uploads as deploy@192.168.86.12
+ DEBUG [3d14ab74] Command: /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/public/uploads /home/deploy/portfolio_database_rails/releases/20220717194958/public/uploads
+  INFO [3d14ab74] Finished in 0.005 seconds with exit status 0 (successful).
+ DEBUG [e59e9c98] Running if test ! -d /home/deploy/portfolio_database_rails/releases/20220717194958; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/releases/20220717194958'" 1>&2; false; fi as deploy@192.168.86.12
+ DEBUG [e59e9c98] Command: if test ! -d /home/deploy/portfolio_database_rails/releases/20220717194958; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/releases/20220717194958'" 1>&2; false; fi
+ DEBUG [e59e9c98] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [550b5f4b] Running ~/.rvm/bin/rvm default do bundle config --local deployment true as deploy@192.168.86.12
+ DEBUG [550b5f4b] Command: cd /home/deploy/portfolio_database_rails/releases/20220717194958 && ~/.rvm/bin/rvm default do bundle config --local deployment true
+  INFO [550b5f4b] Finished in 0.658 seconds with exit status 0 (successful).
+  INFO [314400d9] Running ~/.rvm/bin/rvm default do bundle config --local path /home/deploy/portfolio_database_rails/shared/bundle as deploy@192.168.86.12
+ DEBUG [314400d9] Command: cd /home/deploy/portfolio_database_rails/releases/20220717194958 && ~/.rvm/bin/rvm default do bundle config --local path /home/deploy/portfolio_database_rails/shared/bundle
+  INFO [314400d9] Finished in 0.614 seconds with exit status 0 (successful).
+  INFO [89b5bf6d] Running ~/.rvm/bin/rvm default do bundle config --local without development:test as deploy@192.168.86.12
+ DEBUG [89b5bf6d] Command: cd /home/deploy/portfolio_database_rails/releases/20220717194958 && ~/.rvm/bin/rvm default do bundle config --local without development:test
+  INFO [89b5bf6d] Finished in 0.615 seconds with exit status 0 (successful).
+ DEBUG [306edb2b] Running if test ! -d /home/deploy/portfolio_database_rails/releases/20220717194958; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/releases/20220717194958'" 1>&2; false; fi as deploy@192.168.86.12
+ DEBUG [306edb2b] Command: if test ! -d /home/deploy/portfolio_database_rails/releases/20220717194958; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/releases/20220717194958'" 1>&2; false; fi
+ DEBUG [306edb2b] Finished in 0.004 seconds with exit status 0 (successful).
+ DEBUG [1385a91b] Running ~/.rvm/bin/rvm default do bundle check as deploy@192.168.86.12
+ DEBUG [1385a91b] Command: cd /home/deploy/portfolio_database_rails/releases/20220717194958 && ~/.rvm/bin/rvm default do bundle check
+ DEBUG [1385a91b] 	The following gems are missing
+ DEBUG [1385a91b] 	 * capistrano-rvm (0.1.2)
+ DEBUG [1385a91b] 	Install missing gems with `bundle install`
+ DEBUG [1385a91b] Finished in 0.722 seconds with exit status 1 (failed).
+  INFO [0edc49d9] Running ~/.rvm/bin/rvm default do bundle install --jobs 4 --quiet as deploy@192.168.86.12
+ DEBUG [0edc49d9] Command: cd /home/deploy/portfolio_database_rails/releases/20220717194958 && ~/.rvm/bin/rvm default do bundle install --jobs 4 --quiet
+  INFO [0edc49d9] Finished in 2.559 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [ee52683f] Running if test ! -d /home/deploy/portfolio_database_rails/releases/20220717194958; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/releases/20220717194958'" 1>&2; false; fi as deploy@192.168.86.12
+ DEBUG [ee52683f] Command: if test ! -d /home/deploy/portfolio_database_rails/releases/20220717194958; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/releases/20220717194958'" 1>&2; false; fi
+ DEBUG [ee52683f] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [5a598846] Running ~/.rvm/bin/rvm default do bundle exec rake db:migrate as deploy@192.168.86.12
+ DEBUG [5a598846] Command: cd /home/deploy/portfolio_database_rails/releases/20220717194958 && ( export RAILS_ENV="production" ; ~/.rvm/bin/rvm default do bundle exec rake db:migrate )
+ DEBUG [5a598846] 	rake aborted!
+ DEBUG [5a598846] 	ArgumentError: Missing `secret_key_base` for 'production' environment, set this string with `bin/rails credentials:edit`
+ DEBUG [5a598846] 	/home/deploy/portfolio_database_rails/shared/bundle/ruby/3.1.0/gems/railties-7.0.3.1/lib/rails/application.rb:581:in `validate_secret_key_base'
+/home/deploy/portfolio_database_rails/shared/bundle/ruby/3.1.0/gems/railties-7.0.3.1/lib/rails/application.rb:419:in `secret_key_base'
+/home/deploy/portfolio_database_rails/shared/bundle/ruby/3.1.0/gems/railties-7.0.3.1/lib/rails/application.rb:157:in `key_generator'
+/home/deploy/portfolio_database_rails/shared/bundle/ruby/3.1.0/gems/railties-7.0.3.1/lib/rails/application.rb:181:in `message_verifier'
+/home/deploy/portfolio_database_rails/shared/bundle/ruby/3.1.0/gems/activestorage-7.0.3.1/lib/active_storage/engine.rb:137:in `block (2 levels) in <class:Engine>'
+/home/deploy/portfolio_database_rails/shared/bundle/ruby/3.1.0/gems/activesupport-7.0.3.1/lib/active_support/lazy_load_hooks.rb:79:in `block in execute_hook'
+/home/deploy/portfolio_database_rails/shared/bundle/ruby/3.1.0/gems/activesupport-7.0.3.1/lib/active_support/lazy_load_hooks.rb:72:in `with_execution_control'
+/home/deploy/portfolio_database_rails/shared/bundle/ruby/3.1.0/gems/activesupport-7.0.3.1/lib/active_support/lazy_load_hooks.rb:77:in `execute_hook'
+/home/deploy/portfolio_database_rails/shared/bundle/ruby/3.1.0/gems/activesupport-7.0.3.1/lib/active_support/lazy_load_hooks.rb:63:in `block in run_load_hooks'
+/home/deploy/portfolio_database_rails/shared/bundle/ruby/3.1.0/gems/activesupport-7.0.3.1/lib/active_support/lazy_load_hooks.rb:62:in `each'
+/home/deploy/portfolio_database_rails/shared/bundle/ruby/3.1.0/gems/activesupport-7.0.3.1/lib/active_support/lazy_load_hooks.rb:62:in `run_load_hooks'
+/home/deploy/portfolio_database_rails/shared/bundle/ruby/3.1.0/gems/railties-7.0.3.1/lib/rails/application/finisher.rb:87:in `block in <module:Finisher>'
+/home/deploy/portfolio_database_rails/shared/bundle/ruby/3.1.0/gems/railties-7.0.3.1/lib/rails/initializable.rb:32:in `instance_exec'
+/home/deploy/portfolio_database_rails/shared/bundle/ruby/3.1.0/gems/railties-7.0.3.1/lib/rails/initializable.rb:32:in `run'
+/home/deploy/portfolio_database_rails/shared/bundle/ruby/3.1.0/gems/railties-7.0.3.1/lib/rails/initializable.rb:61:in `block in run_initializers'
+/home/deploy/portfolio_database_rails/shared/bundle/ruby/3.1.0/gems/railties-7.0.3.1/lib/rails/initializable.rb:60:in `run_initializers'
+/home/deploy/portfolio_database_rails/shared/bundle/ruby/3.1.0/gems/railties-7.0.3.1/lib/rails/application.rb:372:in `initialize!'
+/home/deploy/portfolio_database_rails/releases/20220717194958/config/environment.rb:5:in `<main>'
+/home/deploy/portfolio_database_rails/shared/bundle/ruby/3.1.0/gems/bootsnap-1.12.0/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:30:in `require'
+/home/deploy/portfolio_database_rails/shared/bundle/ruby/3.1.0/gems/bootsnap-1.12.0/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:30:in `require'
+/home/deploy/portfolio_database_rails/shared/bundle/ruby/3.1.0/gems/zeitwerk-2.6.0/lib/zeitwerk/kernel.rb:35:in `require'
+/home/deploy/portfolio_database_rails/shared/bundle/ruby/3.1.0/gems/railties-7.0.3.1/lib/rails/application.rb:348:in `require_environment!'
+/home/deploy/portfolio_database_rails/shared/bundle/ruby/3.1.0/gems/railties-7.0.3.1/lib/rails/application.rb:511:in `block in run_tasks_blocks'
+/home/deploy/portfolio_database_rails/shared/bundle/ruby/3.1.0/gems/rake-13.0.6/exe/rake:27:in `<top (required)>'
+/home/deploy/.rvm/rubies/ruby-3.1.2/bin/bundle:31:in `load'
+/home/deploy/.rvm/rubies/ruby-3.1.2/bin/bundle:31:in `<main>'
+/home/deploy/.rvm/gems/ruby-3.1.2/bin/ruby_executable_hooks:22:in `eval'
+/home/deploy/.rvm/gems/ruby-3.1.2/bin/ruby_executable_hooks:22:in `<main>'
+ DEBUG [5a598846] 	Tasks: TOP => db:migrate => db:load_config => environment
+ DEBUG [5a598846] 	(See full trace by running task with --trace)
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-07-17 19:51:05 +0000 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [5411a278] Running [ -d ~/.rvm ] as deploy@192.168.86.12
+ DEBUG [5411a278] Command: [ -d ~/.rvm ]
+ DEBUG [5411a278] Finished in 3.307 seconds with exit status 0 (successful).
+ DEBUG [2e3e30ed] Running ~/.rvm/bin/rvm version as deploy@192.168.86.12
+ DEBUG [2e3e30ed] Command: ~/.rvm/bin/rvm version
+ DEBUG [2e3e30ed] 	rvm 1.29.12 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [2e3e30ed] Finished in 0.215 seconds with exit status 0 (successful).
+ DEBUG [12219d93] Running ~/.rvm/bin/rvm current as deploy@192.168.86.12
+ DEBUG [12219d93] Command: ~/.rvm/bin/rvm current
+ DEBUG [12219d93] 	ruby-3.1.2
+ DEBUG [12219d93] Finished in 0.207 seconds with exit status 0 (successful).
+ DEBUG [50c64030] Running ~/.rvm/bin/rvm default do ruby --version as deploy@192.168.86.12
+ DEBUG [50c64030] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [50c64030] 	ruby 3.1.2p20 (2022-04-12 revision 4491bb740a) [x86_64-linux]
+ DEBUG [50c64030] Finished in 0.353 seconds with exit status 0 (successful).
+  INFO [38258b2b] Running /usr/bin/env mkdir -p /tmp as deploy@192.168.86.12
+ DEBUG [38258b2b] Command: /usr/bin/env mkdir -p /tmp
+  INFO [38258b2b] Finished in 0.047 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-f3a23f87e143f004e4e4.sh 0.0%
+  INFO Uploading /tmp/git-ssh-f3a23f87e143f004e4e4.sh 100.0%
+  INFO [4eb704be] Running /usr/bin/env chmod 700 /tmp/git-ssh-f3a23f87e143f004e4e4.sh as deploy@192.168.86.12
+ DEBUG [4eb704be] Command: /usr/bin/env chmod 700 /tmp/git-ssh-f3a23f87e143f004e4e4.sh
+  INFO [4eb704be] Finished in 0.047 seconds with exit status 0 (successful).
+  INFO [d1cb1d13] Running /usr/bin/env git ls-remote https://github.com/bengarlock/portfolio_database_rails HEAD as deploy@192.168.86.12
+ DEBUG [d1cb1d13] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-f3a23f87e143f004e4e4.sh" ; /usr/bin/env git ls-remote https://github.com/bengarlock/portfolio_database_rails HEAD )
+ DEBUG [d1cb1d13] 	16c1e85c4e3d527a39660cee3d8fcdc52c72b30c	HEAD
+  INFO [d1cb1d13] Finished in 0.144 seconds with exit status 0 (successful).
+  INFO [9f141436] Running /usr/bin/env mkdir -p /home/deploy/portfolio_database_rails/shared /home/deploy/portfolio_database_rails/releases as deploy@192.168.86.12
+ DEBUG [9f141436] Command: /usr/bin/env mkdir -p /home/deploy/portfolio_database_rails/shared /home/deploy/portfolio_database_rails/releases
+  INFO [9f141436] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [44f50fd1] Running /usr/bin/env mkdir -p /home/deploy/portfolio_database_rails/shared/log /home/deploy/portfolio_database_rails/shared/tmp/pids /home/deploy/portfolio_database_rails/shared/tmp/cache /home/deploy/portfolio_database_rails/shared/tmp/sockets /home/deploy/portfolio_database_rails/shared/vendor/bundle /home/deploy/portfolio_database_rails/shared/.bundle /home/deploy/portfolio_database_rails/shared/public/system /home/deploy/portfolio_database_rails/shared/public/uploads as deploy@192.168.86.12
+ DEBUG [44f50fd1] Command: /usr/bin/env mkdir -p /home/deploy/portfolio_database_rails/shared/log /home/deploy/portfolio_database_rails/shared/tmp/pids /home/deploy/portfolio_database_rails/shared/tmp/cache /home/deploy/portfolio_database_rails/shared/tmp/sockets /home/deploy/portfolio_database_rails/shared/vendor/bundle /home/deploy/portfolio_database_rails/shared/.bundle /home/deploy/portfolio_database_rails/shared/public/system /home/deploy/portfolio_database_rails/shared/public/uploads
+  INFO [44f50fd1] Finished in 0.044 seconds with exit status 0 (successful).
+ DEBUG [a578dec9] Running [ -f /home/deploy/portfolio_database_rails/current/REVISION ] as deploy@192.168.86.12
+ DEBUG [a578dec9] Command: [ -f /home/deploy/portfolio_database_rails/current/REVISION ]
+ DEBUG [a578dec9] Finished in 0.004 seconds with exit status 1 (failed).
+ DEBUG [3ca7bb5a] Running [ -f /home/deploy/portfolio_database_rails/repo/HEAD ] as deploy@192.168.86.12
+ DEBUG [3ca7bb5a] Command: [ -f /home/deploy/portfolio_database_rails/repo/HEAD ]
+ DEBUG [3ca7bb5a] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/deploy/portfolio_database_rails/repo
+ DEBUG [37b763b8] Running if test ! -d /home/deploy/portfolio_database_rails/repo; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/repo'" 1>&2; false; fi as deploy@192.168.86.12
+ DEBUG [37b763b8] Command: if test ! -d /home/deploy/portfolio_database_rails/repo; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/repo'" 1>&2; false; fi
+ DEBUG [37b763b8] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [60ee4108] Running /usr/bin/env git remote set-url origin https://github.com/bengarlock/portfolio_database_rails as deploy@192.168.86.12
+ DEBUG [60ee4108] Command: cd /home/deploy/portfolio_database_rails/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-f3a23f87e143f004e4e4.sh" ; /usr/bin/env git remote set-url origin https://github.com/bengarlock/portfolio_database_rails )
+  INFO [60ee4108] Finished in 0.019 seconds with exit status 0 (successful).
+  INFO [59b85f83] Running /usr/bin/env git remote update --prune as deploy@192.168.86.12
+ DEBUG [59b85f83] Command: cd /home/deploy/portfolio_database_rails/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-f3a23f87e143f004e4e4.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [59b85f83] 	Fetching origin
+  INFO [59b85f83] Finished in 0.177 seconds with exit status 0 (successful).
+ DEBUG [f1c8746e] Running if test ! -d /home/deploy/portfolio_database_rails/repo; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/repo'" 1>&2; false; fi as deploy@192.168.86.12
+ DEBUG [f1c8746e] Command: if test ! -d /home/deploy/portfolio_database_rails/repo; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/repo'" 1>&2; false; fi
+ DEBUG [f1c8746e] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [cd5d1a2e] Running /usr/bin/env mkdir -p /home/deploy/portfolio_database_rails/releases/20220717195109 as deploy@192.168.86.12
+ DEBUG [cd5d1a2e] Command: cd /home/deploy/portfolio_database_rails/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-f3a23f87e143f004e4e4.sh" ; /usr/bin/env mkdir -p /home/deploy/portfolio_database_rails/releases/20220717195109 )
+  INFO [cd5d1a2e] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [86c0695d] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/portfolio_database_rails/releases/20220717195109 as deploy@192.168.86.12
+ DEBUG [86c0695d] Command: cd /home/deploy/portfolio_database_rails/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-f3a23f87e143f004e4e4.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/portfolio_database_rails/releases/20220717195109 )
+  INFO [86c0695d] Finished in 0.013 seconds with exit status 0 (successful).
+ DEBUG [694cef26] Running if test ! -d /home/deploy/portfolio_database_rails/repo; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/repo'" 1>&2; false; fi as deploy@192.168.86.12
+ DEBUG [694cef26] Command: if test ! -d /home/deploy/portfolio_database_rails/repo; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/repo'" 1>&2; false; fi
+ DEBUG [694cef26] Finished in 0.004 seconds with exit status 0 (successful).
+ DEBUG [874ce75c] Running /usr/bin/env git rev-list --max-count=1 master as deploy@192.168.86.12
+ DEBUG [874ce75c] Command: cd /home/deploy/portfolio_database_rails/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-f3a23f87e143f004e4e4.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [874ce75c] 	16c1e85c4e3d527a39660cee3d8fcdc52c72b30c
+ DEBUG [874ce75c] Finished in 0.007 seconds with exit status 0 (successful).
+ DEBUG [2032dbfc] Running if test ! -d /home/deploy/portfolio_database_rails/releases/20220717195109; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/releases/20220717195109'" 1>&2; false; fi as deploy@192.168.86.12
+ DEBUG [2032dbfc] Command: if test ! -d /home/deploy/portfolio_database_rails/releases/20220717195109; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/releases/20220717195109'" 1>&2; false; fi
+ DEBUG [2032dbfc] Finished in 0.044 seconds with exit status 0 (successful).
+  INFO [1717d528] Running /usr/bin/env echo "16c1e85c4e3d527a39660cee3d8fcdc52c72b30c" > REVISION as deploy@192.168.86.12
+ DEBUG [1717d528] Command: cd /home/deploy/portfolio_database_rails/releases/20220717195109 && /usr/bin/env echo "16c1e85c4e3d527a39660cee3d8fcdc52c72b30c" > REVISION
+  INFO [1717d528] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [81d97894] Running /usr/bin/env mkdir -p /home/deploy/portfolio_database_rails/releases/20220717195109 /home/deploy/portfolio_database_rails/releases/20220717195109/tmp /home/deploy/portfolio_database_rails/releases/20220717195109/vendor /home/deploy/portfolio_database_rails/releases/20220717195109/public as deploy@192.168.86.12
+ DEBUG [81d97894] Command: /usr/bin/env mkdir -p /home/deploy/portfolio_database_rails/releases/20220717195109 /home/deploy/portfolio_database_rails/releases/20220717195109/tmp /home/deploy/portfolio_database_rails/releases/20220717195109/vendor /home/deploy/portfolio_database_rails/releases/20220717195109/public
+  INFO [81d97894] Finished in 0.005 seconds with exit status 0 (successful).
+ DEBUG [c948ac42] Running [ -L /home/deploy/portfolio_database_rails/releases/20220717195109/log ] as deploy@192.168.86.12
+ DEBUG [c948ac42] Command: [ -L /home/deploy/portfolio_database_rails/releases/20220717195109/log ]
+ DEBUG [c948ac42] Finished in 0.046 seconds with exit status 1 (failed).
+ DEBUG [1e4851de] Running [ -d /home/deploy/portfolio_database_rails/releases/20220717195109/log ] as deploy@192.168.86.12
+ DEBUG [1e4851de] Command: [ -d /home/deploy/portfolio_database_rails/releases/20220717195109/log ]
+ DEBUG [1e4851de] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [e12787fc] Running /usr/bin/env rm -rf /home/deploy/portfolio_database_rails/releases/20220717195109/log as deploy@192.168.86.12
+ DEBUG [e12787fc] Command: /usr/bin/env rm -rf /home/deploy/portfolio_database_rails/releases/20220717195109/log
+  INFO [e12787fc] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO [051984e8] Running /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/log /home/deploy/portfolio_database_rails/releases/20220717195109/log as deploy@192.168.86.12
+ DEBUG [051984e8] Command: /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/log /home/deploy/portfolio_database_rails/releases/20220717195109/log
+  INFO [051984e8] Finished in 0.047 seconds with exit status 0 (successful).
+ DEBUG [af321680] Running [ -L /home/deploy/portfolio_database_rails/releases/20220717195109/tmp/pids ] as deploy@192.168.86.12
+ DEBUG [af321680] Command: [ -L /home/deploy/portfolio_database_rails/releases/20220717195109/tmp/pids ]
+ DEBUG [af321680] Finished in 0.004 seconds with exit status 1 (failed).
+ DEBUG [a87ca2f3] Running [ -d /home/deploy/portfolio_database_rails/releases/20220717195109/tmp/pids ] as deploy@192.168.86.12
+ DEBUG [a87ca2f3] Command: [ -d /home/deploy/portfolio_database_rails/releases/20220717195109/tmp/pids ]
+ DEBUG [a87ca2f3] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [01b305cf] Running /usr/bin/env rm -rf /home/deploy/portfolio_database_rails/releases/20220717195109/tmp/pids as deploy@192.168.86.12
+ DEBUG [01b305cf] Command: /usr/bin/env rm -rf /home/deploy/portfolio_database_rails/releases/20220717195109/tmp/pids
+  INFO [01b305cf] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO [5ab3f9c2] Running /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/tmp/pids /home/deploy/portfolio_database_rails/releases/20220717195109/tmp/pids as deploy@192.168.86.12
+ DEBUG [5ab3f9c2] Command: /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/tmp/pids /home/deploy/portfolio_database_rails/releases/20220717195109/tmp/pids
+  INFO [5ab3f9c2] Finished in 0.005 seconds with exit status 0 (successful).
+ DEBUG [f62ec9d9] Running [ -L /home/deploy/portfolio_database_rails/releases/20220717195109/tmp/cache ] as deploy@192.168.86.12
+ DEBUG [f62ec9d9] Command: [ -L /home/deploy/portfolio_database_rails/releases/20220717195109/tmp/cache ]
+ DEBUG [f62ec9d9] Finished in 0.004 seconds with exit status 1 (failed).
+ DEBUG [b696b4e5] Running [ -d /home/deploy/portfolio_database_rails/releases/20220717195109/tmp/cache ] as deploy@192.168.86.12
+ DEBUG [b696b4e5] Command: [ -d /home/deploy/portfolio_database_rails/releases/20220717195109/tmp/cache ]
+ DEBUG [b696b4e5] Finished in 0.004 seconds with exit status 1 (failed).
+  INFO [ca1172d7] Running /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/tmp/cache /home/deploy/portfolio_database_rails/releases/20220717195109/tmp/cache as deploy@192.168.86.12
+ DEBUG [ca1172d7] Command: /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/tmp/cache /home/deploy/portfolio_database_rails/releases/20220717195109/tmp/cache
+  INFO [ca1172d7] Finished in 0.005 seconds with exit status 0 (successful).
+ DEBUG [54375ddf] Running [ -L /home/deploy/portfolio_database_rails/releases/20220717195109/tmp/sockets ] as deploy@192.168.86.12
+ DEBUG [54375ddf] Command: [ -L /home/deploy/portfolio_database_rails/releases/20220717195109/tmp/sockets ]
+ DEBUG [54375ddf] Finished in 0.004 seconds with exit status 1 (failed).
+ DEBUG [0ecd7add] Running [ -d /home/deploy/portfolio_database_rails/releases/20220717195109/tmp/sockets ] as deploy@192.168.86.12
+ DEBUG [0ecd7add] Command: [ -d /home/deploy/portfolio_database_rails/releases/20220717195109/tmp/sockets ]
+ DEBUG [0ecd7add] Finished in 0.004 seconds with exit status 1 (failed).
+  INFO [3d4970ed] Running /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/tmp/sockets /home/deploy/portfolio_database_rails/releases/20220717195109/tmp/sockets as deploy@192.168.86.12
+ DEBUG [3d4970ed] Command: /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/tmp/sockets /home/deploy/portfolio_database_rails/releases/20220717195109/tmp/sockets
+  INFO [3d4970ed] Finished in 0.005 seconds with exit status 0 (successful).
+ DEBUG [1329c3d8] Running [ -L /home/deploy/portfolio_database_rails/releases/20220717195109/vendor/bundle ] as deploy@192.168.86.12
+ DEBUG [1329c3d8] Command: [ -L /home/deploy/portfolio_database_rails/releases/20220717195109/vendor/bundle ]
+ DEBUG [1329c3d8] Finished in 0.047 seconds with exit status 1 (failed).
+ DEBUG [c8adfdf8] Running [ -d /home/deploy/portfolio_database_rails/releases/20220717195109/vendor/bundle ] as deploy@192.168.86.12
+ DEBUG [c8adfdf8] Command: [ -d /home/deploy/portfolio_database_rails/releases/20220717195109/vendor/bundle ]
+ DEBUG [c8adfdf8] Finished in 0.004 seconds with exit status 1 (failed).
+  INFO [a69bad77] Running /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/vendor/bundle /home/deploy/portfolio_database_rails/releases/20220717195109/vendor/bundle as deploy@192.168.86.12
+ DEBUG [a69bad77] Command: /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/vendor/bundle /home/deploy/portfolio_database_rails/releases/20220717195109/vendor/bundle
+  INFO [a69bad77] Finished in 0.005 seconds with exit status 0 (successful).
+ DEBUG [c96695d6] Running [ -L /home/deploy/portfolio_database_rails/releases/20220717195109/.bundle ] as deploy@192.168.86.12
+ DEBUG [c96695d6] Command: [ -L /home/deploy/portfolio_database_rails/releases/20220717195109/.bundle ]
+ DEBUG [c96695d6] Finished in 0.046 seconds with exit status 1 (failed).
+ DEBUG [94ea30fc] Running [ -d /home/deploy/portfolio_database_rails/releases/20220717195109/.bundle ] as deploy@192.168.86.12
+ DEBUG [94ea30fc] Command: [ -d /home/deploy/portfolio_database_rails/releases/20220717195109/.bundle ]
+ DEBUG [94ea30fc] Finished in 0.004 seconds with exit status 1 (failed).
+  INFO [d76d2b7a] Running /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/.bundle /home/deploy/portfolio_database_rails/releases/20220717195109/.bundle as deploy@192.168.86.12
+ DEBUG [d76d2b7a] Command: /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/.bundle /home/deploy/portfolio_database_rails/releases/20220717195109/.bundle
+  INFO [d76d2b7a] Finished in 0.005 seconds with exit status 0 (successful).
+ DEBUG [3b495dec] Running [ -L /home/deploy/portfolio_database_rails/releases/20220717195109/public/system ] as deploy@192.168.86.12
+ DEBUG [3b495dec] Command: [ -L /home/deploy/portfolio_database_rails/releases/20220717195109/public/system ]
+ DEBUG [3b495dec] Finished in 0.050 seconds with exit status 1 (failed).
+ DEBUG [b75668b8] Running [ -d /home/deploy/portfolio_database_rails/releases/20220717195109/public/system ] as deploy@192.168.86.12
+ DEBUG [b75668b8] Command: [ -d /home/deploy/portfolio_database_rails/releases/20220717195109/public/system ]
+ DEBUG [b75668b8] Finished in 0.004 seconds with exit status 1 (failed).
+  INFO [48ba44df] Running /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/public/system /home/deploy/portfolio_database_rails/releases/20220717195109/public/system as deploy@192.168.86.12
+ DEBUG [48ba44df] Command: /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/public/system /home/deploy/portfolio_database_rails/releases/20220717195109/public/system
+  INFO [48ba44df] Finished in 0.005 seconds with exit status 0 (successful).
+ DEBUG [fc82f7c9] Running [ -L /home/deploy/portfolio_database_rails/releases/20220717195109/public/uploads ] as deploy@192.168.86.12
+ DEBUG [fc82f7c9] Command: [ -L /home/deploy/portfolio_database_rails/releases/20220717195109/public/uploads ]
+ DEBUG [fc82f7c9] Finished in 0.046 seconds with exit status 1 (failed).
+ DEBUG [0971269d] Running [ -d /home/deploy/portfolio_database_rails/releases/20220717195109/public/uploads ] as deploy@192.168.86.12
+ DEBUG [0971269d] Command: [ -d /home/deploy/portfolio_database_rails/releases/20220717195109/public/uploads ]
+ DEBUG [0971269d] Finished in 0.004 seconds with exit status 1 (failed).
+  INFO [c10e9b62] Running /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/public/uploads /home/deploy/portfolio_database_rails/releases/20220717195109/public/uploads as deploy@192.168.86.12
+ DEBUG [c10e9b62] Command: /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/public/uploads /home/deploy/portfolio_database_rails/releases/20220717195109/public/uploads
+  INFO [c10e9b62] Finished in 0.005 seconds with exit status 0 (successful).
+ DEBUG [1c136703] Running if test ! -d /home/deploy/portfolio_database_rails/releases/20220717195109; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/releases/20220717195109'" 1>&2; false; fi as deploy@192.168.86.12
+ DEBUG [1c136703] Command: if test ! -d /home/deploy/portfolio_database_rails/releases/20220717195109; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/releases/20220717195109'" 1>&2; false; fi
+ DEBUG [1c136703] Finished in 0.046 seconds with exit status 0 (successful).
+  INFO [c89d96d3] Running ~/.rvm/bin/rvm default do bundle config --local deployment true as deploy@192.168.86.12
+ DEBUG [c89d96d3] Command: cd /home/deploy/portfolio_database_rails/releases/20220717195109 && ~/.rvm/bin/rvm default do bundle config --local deployment true
+  INFO [c89d96d3] Finished in 0.616 seconds with exit status 0 (successful).
+  INFO [81ad6b4e] Running ~/.rvm/bin/rvm default do bundle config --local path /home/deploy/portfolio_database_rails/shared/bundle as deploy@192.168.86.12
+ DEBUG [81ad6b4e] Command: cd /home/deploy/portfolio_database_rails/releases/20220717195109 && ~/.rvm/bin/rvm default do bundle config --local path /home/deploy/portfolio_database_rails/shared/bundle
+  INFO [81ad6b4e] Finished in 0.619 seconds with exit status 0 (successful).
+  INFO [04b183a9] Running ~/.rvm/bin/rvm default do bundle config --local without development:test as deploy@192.168.86.12
+ DEBUG [04b183a9] Command: cd /home/deploy/portfolio_database_rails/releases/20220717195109 && ~/.rvm/bin/rvm default do bundle config --local without development:test
+  INFO [04b183a9] Finished in 0.618 seconds with exit status 0 (successful).
+ DEBUG [a8e83c62] Running if test ! -d /home/deploy/portfolio_database_rails/releases/20220717195109; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/releases/20220717195109'" 1>&2; false; fi as deploy@192.168.86.12
+ DEBUG [a8e83c62] Command: if test ! -d /home/deploy/portfolio_database_rails/releases/20220717195109; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/releases/20220717195109'" 1>&2; false; fi
+ DEBUG [a8e83c62] Finished in 0.004 seconds with exit status 0 (successful).
+ DEBUG [bb0216b7] Running ~/.rvm/bin/rvm default do bundle check as deploy@192.168.86.12
+ DEBUG [bb0216b7] Command: cd /home/deploy/portfolio_database_rails/releases/20220717195109 && ~/.rvm/bin/rvm default do bundle check
+ DEBUG [bb0216b7] 	The Gemfile's dependencies are satisfied
+ DEBUG [bb0216b7] Finished in 0.716 seconds with exit status 0 (successful).
+  INFO The Gemfile's dependencies are satisfied, skipping installation
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [b2642388] Running if test ! -d /home/deploy/portfolio_database_rails/releases/20220717195109; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/releases/20220717195109'" 1>&2; false; fi as deploy@192.168.86.12
+ DEBUG [b2642388] Command: if test ! -d /home/deploy/portfolio_database_rails/releases/20220717195109; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/releases/20220717195109'" 1>&2; false; fi
+ DEBUG [b2642388] Finished in 0.046 seconds with exit status 0 (successful).
+  INFO [e23d5807] Running ~/.rvm/bin/rvm default do bundle exec rake db:migrate as deploy@192.168.86.12
+ DEBUG [e23d5807] Command: cd /home/deploy/portfolio_database_rails/releases/20220717195109 && ( export RAILS_ENV="production" ; ~/.rvm/bin/rvm default do bundle exec rake db:migrate )
+ DEBUG [e23d5807] 	rake aborted!
+ArgumentError: Missing `secret_key_base` for 'production' environment, set this string with `bin/rails credentials:edit`
+ DEBUG [e23d5807] 	/home/deploy/portfolio_database_rails/shared/bundle/ruby/3.1.0/gems/railties-7.0.3.1/lib/rails/application.rb:581:in `validate_secret_key_base'
+/home/deploy/portfolio_database_rails/shared/bundle/ruby/3.1.0/gems/railties-7.0.3.1/lib/rails/application.rb:419:in `secret_key_base'
+/home/deploy/portfolio_database_rails/shared/bundle/ruby/3.1.0/gems/railties-7.0.3.1/lib/rails/application.rb:157:in `key_generator'
+/home/deploy/portfolio_database_rails/shared/bundle/ruby/3.1.0/gems/railties-7.0.3.1/lib/rails/application.rb:181:in `message_verifier'
+/home/deploy/portfolio_database_rails/shared/bundle/ruby/3.1.0/gems/activestorage-7.0.3.1/lib/active_storage/engine.rb:137:in `block (2 levels) in <class:Engine>'
+/home/deploy/portfolio_database_rails/shared/bundle/ruby/3.1.0/gems/activesupport-7.0.3.1/lib/active_support/lazy_load_hooks.rb:79:in `block in execute_hook'
+/home/deploy/portfolio_database_rails/shared/bundle/ruby/3.1.0/gems/activesupport-7.0.3.1/lib/active_support/lazy_load_hooks.rb:72:in `with_execution_control'
+/home/deploy/portfolio_database_rails/shared/bundle/ruby/3.1.0/gems/activesupport-7.0.3.1/lib/active_support/lazy_load_hooks.rb:77:in `execute_hook'
+/home/deploy/portfolio_database_rails/shared/bundle/ruby/3.1.0/gems/activesupport-7.0.3.1/lib/active_support/lazy_load_hooks.rb:63:in `block in run_load_hooks'
+/home/deploy/portfolio_database_rails/shared/bundle/ruby/3.1.0/gems/activesupport-7.0.3.1/lib/active_support/lazy_load_hooks.rb:62:in `each'
+/home/deploy/portfolio_database_rails/shared/bundle/ruby/3.1.0/gems/activesupport-7.0.3.1/lib/active_support/lazy_load_hooks.rb:62:in `run_load_hooks'
+/home/deploy/portfolio_database_rails/shared/bundle/ruby/3.1.0/gems/railties-7.0.3.1/lib/rails/application/finisher.rb:87:in `block in <module:Finisher>'
+/home/deploy/portfolio_database_rails/shared/bundle/ruby/3.1.0/gems/railties-7.0.3.1/lib/rails/initializable.rb:32:in `instance_exec'
+/home/deploy/portfolio_database_rails/shared/bundle/ruby/3.1.0/gems/railties-7.0.3.1/lib/rails/initializable.rb:32:in `run'
+/home/deploy/portfolio_database_rails/shared/bundle/ruby/3.1.0/gems/railties-7.0.3.1/lib/rails/initializable.rb:61:in `block in run_initializers'
+/home/deploy/portfolio_database_rails/shared/bundle/ruby/3.1.0/gems/railties-7.0.3.1/lib/rails/initializable.rb:60:in `run_initializers'
+/home/deploy/portfolio_database_rails/shared/bundle/ruby/3.1.0/gems/railties-7.0.3.1/lib/rails/application.rb:372:in `initialize!'
+/home/deploy/portfolio_database_rails/releases/20220717195109/config/environment.rb:5:in `<main>'
+/home/deploy/portfolio_database_rails/shared/bundle/ruby/3.1.0/gems/bootsnap-1.12.0/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:30:in `require'
+/home/deploy/portfolio_database_rails/shared/bundle/ruby/3.1.0/gems/bootsnap-1.12.0/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:30:in `require'
+/home/deploy/portfolio_database_rails/shared/bundle/ruby/3.1.0/gems/zeitwerk-2.6.0/lib/zeitwerk/kernel.rb:35:in `require'
+/home/deploy/portfolio_database_rails/shared/bundle/ruby/3.1.0/gems/railties-7.0.3.1/lib/rails/application.rb:348:in `require_environment!'
+/home/deploy/portfolio_database_rails/shared/bundle/ruby/3.1.0/gems/railties-7.0.3.1/lib/rails/application.rb:511:in `block in run_tasks_blocks'
+/home/deploy/portfolio_database_rails/shared/bundle/ruby/3.1.0/gems/rake-13.0.6/exe/rake:27:in `<top (required)>'
+/home/deploy/.rvm/rubies/ruby-3.1.2/bin/bundle:31:in `load'
+/home/deploy/.rvm/rubies/ruby-3.1.2/bin/bundle:31:in `<main>'
+/home/deploy/.rvm/gems/ruby-3.1.2/bin/ruby_executable_hooks:22:in `eval'
+/home/deploy/.rvm/gems/ruby-3.1.2/bin/ruby_executable_hooks:22:in `<main>'
+Tasks: TOP => db:migrate => db:load_config => environment
+(See full trace by running task with --trace)
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-07-17 19:55:03 +0000 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [29d9af58] Running [ -d ~/.rvm ] as deploy@192.168.86.12
+ DEBUG [29d9af58] Command: [ -d ~/.rvm ]
+ DEBUG [29d9af58] Finished in 2.886 seconds with exit status 0 (successful).
+ DEBUG [73f3192f] Running ~/.rvm/bin/rvm version as deploy@192.168.86.12
+ DEBUG [73f3192f] Command: ~/.rvm/bin/rvm version
+ DEBUG [73f3192f] 	rvm 1.29.12 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [73f3192f] Finished in 0.214 seconds with exit status 0 (successful).
+ DEBUG [855945b1] Running ~/.rvm/bin/rvm current as deploy@192.168.86.12
+ DEBUG [855945b1] Command: ~/.rvm/bin/rvm current
+ DEBUG [855945b1] 	ruby-3.1.2
+ DEBUG [855945b1] Finished in 0.247 seconds with exit status 0 (successful).
+ DEBUG [ba76e056] Running ~/.rvm/bin/rvm default do ruby --version as deploy@192.168.86.12
+ DEBUG [ba76e056] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [ba76e056] 	ruby 3.1.2p20 (2022-04-12 revision 4491bb740a) [x86_64-linux]
+ DEBUG [ba76e056] Finished in 0.354 seconds with exit status 0 (successful).
+  INFO [89b13d2c] Running /usr/bin/env mkdir -p /tmp as deploy@192.168.86.12
+ DEBUG [89b13d2c] Command: /usr/bin/env mkdir -p /tmp
+  INFO [89b13d2c] Finished in 0.006 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-0a1f726fec469f386de5.sh 0.0%
+  INFO Uploading /tmp/git-ssh-0a1f726fec469f386de5.sh 100.0%
+  INFO [e279fb9c] Running /usr/bin/env chmod 700 /tmp/git-ssh-0a1f726fec469f386de5.sh as deploy@192.168.86.12
+ DEBUG [e279fb9c] Command: /usr/bin/env chmod 700 /tmp/git-ssh-0a1f726fec469f386de5.sh
+  INFO [e279fb9c] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [4bf202d7] Running /usr/bin/env git ls-remote https://github.com/bengarlock/portfolio_database_rails HEAD as deploy@192.168.86.12
+ DEBUG [4bf202d7] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-0a1f726fec469f386de5.sh" ; /usr/bin/env git ls-remote https://github.com/bengarlock/portfolio_database_rails HEAD )
+ DEBUG [4bf202d7] 	16c1e85c4e3d527a39660cee3d8fcdc52c72b30c	HEAD
+  INFO [4bf202d7] Finished in 0.165 seconds with exit status 0 (successful).
+  INFO [c9a11a25] Running /usr/bin/env mkdir -p /home/deploy/portfolio_database_rails/shared /home/deploy/portfolio_database_rails/releases as deploy@192.168.86.12
+ DEBUG [c9a11a25] Command: /usr/bin/env mkdir -p /home/deploy/portfolio_database_rails/shared /home/deploy/portfolio_database_rails/releases
+  INFO [c9a11a25] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO [84f2aea7] Running /usr/bin/env mkdir -p /home/deploy/portfolio_database_rails/shared/log /home/deploy/portfolio_database_rails/shared/tmp/pids /home/deploy/portfolio_database_rails/shared/tmp/cache /home/deploy/portfolio_database_rails/shared/tmp/sockets /home/deploy/portfolio_database_rails/shared/vendor/bundle /home/deploy/portfolio_database_rails/shared/.bundle /home/deploy/portfolio_database_rails/shared/public/system /home/deploy/portfolio_database_rails/shared/public/uploads as deploy@192.168.86.12
+ DEBUG [84f2aea7] Command: /usr/bin/env mkdir -p /home/deploy/portfolio_database_rails/shared/log /home/deploy/portfolio_database_rails/shared/tmp/pids /home/deploy/portfolio_database_rails/shared/tmp/cache /home/deploy/portfolio_database_rails/shared/tmp/sockets /home/deploy/portfolio_database_rails/shared/vendor/bundle /home/deploy/portfolio_database_rails/shared/.bundle /home/deploy/portfolio_database_rails/shared/public/system /home/deploy/portfolio_database_rails/shared/public/uploads
+  INFO [84f2aea7] Finished in 0.005 seconds with exit status 0 (successful).
+ DEBUG [0ca6b896] Running [ -f /home/deploy/portfolio_database_rails/current/REVISION ] as deploy@192.168.86.12
+ DEBUG [0ca6b896] Command: [ -f /home/deploy/portfolio_database_rails/current/REVISION ]
+ DEBUG [0ca6b896] Finished in 0.046 seconds with exit status 1 (failed).
+ DEBUG [6cdfcd4f] Running [ -f /home/deploy/portfolio_database_rails/repo/HEAD ] as deploy@192.168.86.12
+ DEBUG [6cdfcd4f] Command: [ -f /home/deploy/portfolio_database_rails/repo/HEAD ]
+ DEBUG [6cdfcd4f] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/deploy/portfolio_database_rails/repo
+ DEBUG [c33b4219] Running if test ! -d /home/deploy/portfolio_database_rails/repo; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/repo'" 1>&2; false; fi as deploy@192.168.86.12
+ DEBUG [c33b4219] Command: if test ! -d /home/deploy/portfolio_database_rails/repo; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/repo'" 1>&2; false; fi
+ DEBUG [c33b4219] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [9606bcfa] Running /usr/bin/env git remote set-url origin https://github.com/bengarlock/portfolio_database_rails as deploy@192.168.86.12
+ DEBUG [9606bcfa] Command: cd /home/deploy/portfolio_database_rails/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-0a1f726fec469f386de5.sh" ; /usr/bin/env git remote set-url origin https://github.com/bengarlock/portfolio_database_rails )
+  INFO [9606bcfa] Finished in 0.011 seconds with exit status 0 (successful).
+  INFO [fd707dc7] Running /usr/bin/env git remote update --prune as deploy@192.168.86.12
+ DEBUG [fd707dc7] Command: cd /home/deploy/portfolio_database_rails/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-0a1f726fec469f386de5.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [fd707dc7] 	Fetching origin
+  INFO [fd707dc7] Finished in 0.195 seconds with exit status 0 (successful).
+ DEBUG [2bebdb76] Running if test ! -d /home/deploy/portfolio_database_rails/repo; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/repo'" 1>&2; false; fi as deploy@192.168.86.12
+ DEBUG [2bebdb76] Command: if test ! -d /home/deploy/portfolio_database_rails/repo; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/repo'" 1>&2; false; fi
+ DEBUG [2bebdb76] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [f5e451c4] Running /usr/bin/env mkdir -p /home/deploy/portfolio_database_rails/releases/20220717195507 as deploy@192.168.86.12
+ DEBUG [f5e451c4] Command: cd /home/deploy/portfolio_database_rails/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-0a1f726fec469f386de5.sh" ; /usr/bin/env mkdir -p /home/deploy/portfolio_database_rails/releases/20220717195507 )
+  INFO [f5e451c4] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [8c67c481] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/portfolio_database_rails/releases/20220717195507 as deploy@192.168.86.12
+ DEBUG [8c67c481] Command: cd /home/deploy/portfolio_database_rails/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-0a1f726fec469f386de5.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/portfolio_database_rails/releases/20220717195507 )
+  INFO [8c67c481] Finished in 0.055 seconds with exit status 0 (successful).
+ DEBUG [16039ce5] Running if test ! -d /home/deploy/portfolio_database_rails/repo; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/repo'" 1>&2; false; fi as deploy@192.168.86.12
+ DEBUG [16039ce5] Command: if test ! -d /home/deploy/portfolio_database_rails/repo; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/repo'" 1>&2; false; fi
+ DEBUG [16039ce5] Finished in 0.004 seconds with exit status 0 (successful).
+ DEBUG [8169b911] Running /usr/bin/env git rev-list --max-count=1 master as deploy@192.168.86.12
+ DEBUG [8169b911] Command: cd /home/deploy/portfolio_database_rails/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-0a1f726fec469f386de5.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [8169b911] 	16c1e85c4e3d527a39660cee3d8fcdc52c72b30c
+ DEBUG [8169b911] Finished in 0.007 seconds with exit status 0 (successful).
+ DEBUG [da7b156a] Running if test ! -d /home/deploy/portfolio_database_rails/releases/20220717195507; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/releases/20220717195507'" 1>&2; false; fi as deploy@192.168.86.12
+ DEBUG [da7b156a] Command: if test ! -d /home/deploy/portfolio_database_rails/releases/20220717195507; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/releases/20220717195507'" 1>&2; false; fi
+ DEBUG [da7b156a] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [9ade87dc] Running /usr/bin/env echo "16c1e85c4e3d527a39660cee3d8fcdc52c72b30c" > REVISION as deploy@192.168.86.12
+ DEBUG [9ade87dc] Command: cd /home/deploy/portfolio_database_rails/releases/20220717195507 && /usr/bin/env echo "16c1e85c4e3d527a39660cee3d8fcdc52c72b30c" > REVISION
+  INFO [9ade87dc] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [4e15d5e6] Running /usr/bin/env mkdir -p /home/deploy/portfolio_database_rails/releases/20220717195507 /home/deploy/portfolio_database_rails/releases/20220717195507/tmp /home/deploy/portfolio_database_rails/releases/20220717195507/vendor /home/deploy/portfolio_database_rails/releases/20220717195507/public as deploy@192.168.86.12
+ DEBUG [4e15d5e6] Command: /usr/bin/env mkdir -p /home/deploy/portfolio_database_rails/releases/20220717195507 /home/deploy/portfolio_database_rails/releases/20220717195507/tmp /home/deploy/portfolio_database_rails/releases/20220717195507/vendor /home/deploy/portfolio_database_rails/releases/20220717195507/public
+  INFO [4e15d5e6] Finished in 0.006 seconds with exit status 0 (successful).
+ DEBUG [beb0cc1f] Running [ -L /home/deploy/portfolio_database_rails/releases/20220717195507/log ] as deploy@192.168.86.12
+ DEBUG [beb0cc1f] Command: [ -L /home/deploy/portfolio_database_rails/releases/20220717195507/log ]
+ DEBUG [beb0cc1f] Finished in 0.004 seconds with exit status 1 (failed).
+ DEBUG [39e0a8a6] Running [ -d /home/deploy/portfolio_database_rails/releases/20220717195507/log ] as deploy@192.168.86.12
+ DEBUG [39e0a8a6] Command: [ -d /home/deploy/portfolio_database_rails/releases/20220717195507/log ]
+ DEBUG [39e0a8a6] Finished in 0.043 seconds with exit status 0 (successful).
+  INFO [8e86c96f] Running /usr/bin/env rm -rf /home/deploy/portfolio_database_rails/releases/20220717195507/log as deploy@192.168.86.12
+ DEBUG [8e86c96f] Command: /usr/bin/env rm -rf /home/deploy/portfolio_database_rails/releases/20220717195507/log
+  INFO [8e86c96f] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO [17bc6ca4] Running /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/log /home/deploy/portfolio_database_rails/releases/20220717195507/log as deploy@192.168.86.12
+ DEBUG [17bc6ca4] Command: /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/log /home/deploy/portfolio_database_rails/releases/20220717195507/log
+  INFO [17bc6ca4] Finished in 0.005 seconds with exit status 0 (successful).
+ DEBUG [4f436372] Running [ -L /home/deploy/portfolio_database_rails/releases/20220717195507/tmp/pids ] as deploy@192.168.86.12
+ DEBUG [4f436372] Command: [ -L /home/deploy/portfolio_database_rails/releases/20220717195507/tmp/pids ]
+ DEBUG [4f436372] Finished in 0.004 seconds with exit status 1 (failed).
+ DEBUG [40b060e7] Running [ -d /home/deploy/portfolio_database_rails/releases/20220717195507/tmp/pids ] as deploy@192.168.86.12
+ DEBUG [40b060e7] Command: [ -d /home/deploy/portfolio_database_rails/releases/20220717195507/tmp/pids ]
+ DEBUG [40b060e7] Finished in 0.044 seconds with exit status 0 (successful).
+  INFO [eaf7f7e5] Running /usr/bin/env rm -rf /home/deploy/portfolio_database_rails/releases/20220717195507/tmp/pids as deploy@192.168.86.12
+ DEBUG [eaf7f7e5] Command: /usr/bin/env rm -rf /home/deploy/portfolio_database_rails/releases/20220717195507/tmp/pids
+  INFO [eaf7f7e5] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO [08e02d41] Running /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/tmp/pids /home/deploy/portfolio_database_rails/releases/20220717195507/tmp/pids as deploy@192.168.86.12
+ DEBUG [08e02d41] Command: /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/tmp/pids /home/deploy/portfolio_database_rails/releases/20220717195507/tmp/pids
+  INFO [08e02d41] Finished in 0.005 seconds with exit status 0 (successful).
+ DEBUG [693ce5ec] Running [ -L /home/deploy/portfolio_database_rails/releases/20220717195507/tmp/cache ] as deploy@192.168.86.12
+ DEBUG [693ce5ec] Command: [ -L /home/deploy/portfolio_database_rails/releases/20220717195507/tmp/cache ]
+ DEBUG [693ce5ec] Finished in 0.004 seconds with exit status 1 (failed).
+ DEBUG [b48e5b07] Running [ -d /home/deploy/portfolio_database_rails/releases/20220717195507/tmp/cache ] as deploy@192.168.86.12
+ DEBUG [b48e5b07] Command: [ -d /home/deploy/portfolio_database_rails/releases/20220717195507/tmp/cache ]
+ DEBUG [b48e5b07] Finished in 0.044 seconds with exit status 1 (failed).
+  INFO [f8fe2521] Running /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/tmp/cache /home/deploy/portfolio_database_rails/releases/20220717195507/tmp/cache as deploy@192.168.86.12
+ DEBUG [f8fe2521] Command: /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/tmp/cache /home/deploy/portfolio_database_rails/releases/20220717195507/tmp/cache
+  INFO [f8fe2521] Finished in 0.005 seconds with exit status 0 (successful).
+ DEBUG [cbb8b10b] Running [ -L /home/deploy/portfolio_database_rails/releases/20220717195507/tmp/sockets ] as deploy@192.168.86.12
+ DEBUG [cbb8b10b] Command: [ -L /home/deploy/portfolio_database_rails/releases/20220717195507/tmp/sockets ]
+ DEBUG [cbb8b10b] Finished in 0.004 seconds with exit status 1 (failed).
+ DEBUG [337f5daa] Running [ -d /home/deploy/portfolio_database_rails/releases/20220717195507/tmp/sockets ] as deploy@192.168.86.12
+ DEBUG [337f5daa] Command: [ -d /home/deploy/portfolio_database_rails/releases/20220717195507/tmp/sockets ]
+ DEBUG [337f5daa] Finished in 0.004 seconds with exit status 1 (failed).
+  INFO [16312b5c] Running /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/tmp/sockets /home/deploy/portfolio_database_rails/releases/20220717195507/tmp/sockets as deploy@192.168.86.12
+ DEBUG [16312b5c] Command: /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/tmp/sockets /home/deploy/portfolio_database_rails/releases/20220717195507/tmp/sockets
+  INFO [16312b5c] Finished in 0.005 seconds with exit status 0 (successful).
+ DEBUG [00ee3bd5] Running [ -L /home/deploy/portfolio_database_rails/releases/20220717195507/vendor/bundle ] as deploy@192.168.86.12
+ DEBUG [00ee3bd5] Command: [ -L /home/deploy/portfolio_database_rails/releases/20220717195507/vendor/bundle ]
+ DEBUG [00ee3bd5] Finished in 0.004 seconds with exit status 1 (failed).
+ DEBUG [bb2e33be] Running [ -d /home/deploy/portfolio_database_rails/releases/20220717195507/vendor/bundle ] as deploy@192.168.86.12
+ DEBUG [bb2e33be] Command: [ -d /home/deploy/portfolio_database_rails/releases/20220717195507/vendor/bundle ]
+ DEBUG [bb2e33be] Finished in 0.044 seconds with exit status 1 (failed).
+  INFO [610a2a45] Running /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/vendor/bundle /home/deploy/portfolio_database_rails/releases/20220717195507/vendor/bundle as deploy@192.168.86.12
+ DEBUG [610a2a45] Command: /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/vendor/bundle /home/deploy/portfolio_database_rails/releases/20220717195507/vendor/bundle
+  INFO [610a2a45] Finished in 0.005 seconds with exit status 0 (successful).
+ DEBUG [2e81fbc1] Running [ -L /home/deploy/portfolio_database_rails/releases/20220717195507/.bundle ] as deploy@192.168.86.12
+ DEBUG [2e81fbc1] Command: [ -L /home/deploy/portfolio_database_rails/releases/20220717195507/.bundle ]
+ DEBUG [2e81fbc1] Finished in 0.004 seconds with exit status 1 (failed).
+ DEBUG [f1a246fb] Running [ -d /home/deploy/portfolio_database_rails/releases/20220717195507/.bundle ] as deploy@192.168.86.12
+ DEBUG [f1a246fb] Command: [ -d /home/deploy/portfolio_database_rails/releases/20220717195507/.bundle ]
+ DEBUG [f1a246fb] Finished in 0.004 seconds with exit status 1 (failed).
+  INFO [def1e635] Running /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/.bundle /home/deploy/portfolio_database_rails/releases/20220717195507/.bundle as deploy@192.168.86.12
+ DEBUG [def1e635] Command: /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/.bundle /home/deploy/portfolio_database_rails/releases/20220717195507/.bundle
+  INFO [def1e635] Finished in 0.005 seconds with exit status 0 (successful).
+ DEBUG [95493b02] Running [ -L /home/deploy/portfolio_database_rails/releases/20220717195507/public/system ] as deploy@192.168.86.12
+ DEBUG [95493b02] Command: [ -L /home/deploy/portfolio_database_rails/releases/20220717195507/public/system ]
+ DEBUG [95493b02] Finished in 0.004 seconds with exit status 1 (failed).
+ DEBUG [c1408ad0] Running [ -d /home/deploy/portfolio_database_rails/releases/20220717195507/public/system ] as deploy@192.168.86.12
+ DEBUG [c1408ad0] Command: [ -d /home/deploy/portfolio_database_rails/releases/20220717195507/public/system ]
+ DEBUG [c1408ad0] Finished in 0.044 seconds with exit status 1 (failed).
+  INFO [9337e1b6] Running /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/public/system /home/deploy/portfolio_database_rails/releases/20220717195507/public/system as deploy@192.168.86.12
+ DEBUG [9337e1b6] Command: /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/public/system /home/deploy/portfolio_database_rails/releases/20220717195507/public/system
+  INFO [9337e1b6] Finished in 0.005 seconds with exit status 0 (successful).
+ DEBUG [f246c647] Running [ -L /home/deploy/portfolio_database_rails/releases/20220717195507/public/uploads ] as deploy@192.168.86.12
+ DEBUG [f246c647] Command: [ -L /home/deploy/portfolio_database_rails/releases/20220717195507/public/uploads ]
+ DEBUG [f246c647] Finished in 0.004 seconds with exit status 1 (failed).
+ DEBUG [77a8eacb] Running [ -d /home/deploy/portfolio_database_rails/releases/20220717195507/public/uploads ] as deploy@192.168.86.12
+ DEBUG [77a8eacb] Command: [ -d /home/deploy/portfolio_database_rails/releases/20220717195507/public/uploads ]
+ DEBUG [77a8eacb] Finished in 0.004 seconds with exit status 1 (failed).
+  INFO [f661cdc2] Running /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/public/uploads /home/deploy/portfolio_database_rails/releases/20220717195507/public/uploads as deploy@192.168.86.12
+ DEBUG [f661cdc2] Command: /usr/bin/env ln -s /home/deploy/portfolio_database_rails/shared/public/uploads /home/deploy/portfolio_database_rails/releases/20220717195507/public/uploads
+  INFO [f661cdc2] Finished in 0.006 seconds with exit status 0 (successful).
+ DEBUG [cb88e3ab] Running if test ! -d /home/deploy/portfolio_database_rails/releases/20220717195507; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/releases/20220717195507'" 1>&2; false; fi as deploy@192.168.86.12
+ DEBUG [cb88e3ab] Command: if test ! -d /home/deploy/portfolio_database_rails/releases/20220717195507; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/releases/20220717195507'" 1>&2; false; fi
+ DEBUG [cb88e3ab] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [02f325f0] Running ~/.rvm/bin/rvm default do bundle config --local deployment true as deploy@192.168.86.12
+ DEBUG [02f325f0] Command: cd /home/deploy/portfolio_database_rails/releases/20220717195507 && ~/.rvm/bin/rvm default do bundle config --local deployment true
+  INFO [02f325f0] Finished in 0.658 seconds with exit status 0 (successful).
+  INFO [477759c7] Running ~/.rvm/bin/rvm default do bundle config --local path /home/deploy/portfolio_database_rails/shared/bundle as deploy@192.168.86.12
+ DEBUG [477759c7] Command: cd /home/deploy/portfolio_database_rails/releases/20220717195507 && ~/.rvm/bin/rvm default do bundle config --local path /home/deploy/portfolio_database_rails/shared/bundle
+  INFO [477759c7] Finished in 0.618 seconds with exit status 0 (successful).
+  INFO [d0864821] Running ~/.rvm/bin/rvm default do bundle config --local without development:test as deploy@192.168.86.12
+ DEBUG [d0864821] Command: cd /home/deploy/portfolio_database_rails/releases/20220717195507 && ~/.rvm/bin/rvm default do bundle config --local without development:test
+  INFO [d0864821] Finished in 0.618 seconds with exit status 0 (successful).
+ DEBUG [7ca6c37e] Running if test ! -d /home/deploy/portfolio_database_rails/releases/20220717195507; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/releases/20220717195507'" 1>&2; false; fi as deploy@192.168.86.12
+ DEBUG [7ca6c37e] Command: if test ! -d /home/deploy/portfolio_database_rails/releases/20220717195507; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/releases/20220717195507'" 1>&2; false; fi
+ DEBUG [7ca6c37e] Finished in 0.004 seconds with exit status 0 (successful).
+ DEBUG [31bb0741] Running ~/.rvm/bin/rvm default do bundle check as deploy@192.168.86.12
+ DEBUG [31bb0741] Command: cd /home/deploy/portfolio_database_rails/releases/20220717195507 && ~/.rvm/bin/rvm default do bundle check
+ DEBUG [31bb0741] 	The Gemfile's dependencies are satisfied
+ DEBUG [31bb0741] Finished in 0.715 seconds with exit status 0 (successful).
+  INFO The Gemfile's dependencies are satisfied, skipping installation
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [362f6125] Running if test ! -d /home/deploy/portfolio_database_rails/releases/20220717195507; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/releases/20220717195507'" 1>&2; false; fi as deploy@192.168.86.12
+ DEBUG [362f6125] Command: if test ! -d /home/deploy/portfolio_database_rails/releases/20220717195507; then echo "Directory does not exist '/home/deploy/portfolio_database_rails/releases/20220717195507'" 1>&2; false; fi
+ DEBUG [362f6125] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [e4a3a62e] Running ~/.rvm/bin/rvm default do bundle exec rake db:migrate as deploy@192.168.86.12
+ DEBUG [e4a3a62e] Command: cd /home/deploy/portfolio_database_rails/releases/20220717195507 && ( export RAILS_ENV="production" ; ~/.rvm/bin/rvm default do bundle exec rake db:migrate )
+ DEBUG [e4a3a62e] 	rake aborted!
+ DEBUG [e4a3a62e] 	ArgumentError: Missing `secret_key_base` for 'production' environment, set this string with `bin/rails credentials:edit`
+ DEBUG [e4a3a62e] 	/home/deploy/portfolio_database_rails/shared/bundle/ruby/3.1.0/gems/railties-7.0.3.1/lib/rails/application.rb:581:in `validate_secret_key_base'
+/home/deploy/portfolio_database_rails/shared/bundle/ruby/3.1.0/gems/railties-7.0.3.1/lib/rails/application.rb:419:in `secret_key_base'
+/home/deploy/portfolio_database_rails/shared/bundle/ruby/3.1.0/gems/railties-7.0.3.1/lib/rails/application.rb:157:in `key_generator'
+/home/deploy/portfolio_database_rails/shared/bundle/ruby/3.1.0/gems/railties-7.0.3.1/lib/rails/application.rb:181:in `message_verifier'
+/home/deploy/portfolio_database_rails/shared/bundle/ruby/3.1.0/gems/activestorage-7.0.3.1/lib/active_storage/engine.rb:137:in `block (2 levels) in <class:Engine>'
+/home/deploy/portfolio_database_rails/shared/bundle/ruby/3.1.0/gems/activesupport-7.0.3.1/lib/active_support/lazy_load_hooks.rb:79:in `block in execute_hook'
+/home/deploy/portfolio_database_rails/shared/bundle/ruby/3.1.0/gems/activesupport-7.0.3.1/lib/active_support/lazy_load_hooks.rb:72:in `with_execution_control'
+/home/deploy/portfolio_database_rails/shared/bundle/ruby/3.1.0/gems/activesupport-7.0.3.1/lib/active_support/lazy_load_hooks.rb:77:in `execute_hook'
+/home/deploy/portfolio_database_rails/shared/bundle/ruby/3.1.0/gems/activesupport-7.0.3.1/lib/active_support/lazy_load_hooks.rb:63:in `block in run_load_hooks'
+/home/deploy/portfolio_database_rails/shared/bundle/ruby/3.1.0/gems/activesupport-7.0.3.1/lib/active_support/lazy_load_hooks.rb:62:in `each'
+/home/deploy/portfolio_database_rails/shared/bundle/ruby/3.1.0/gems/activesupport-7.0.3.1/lib/active_support/lazy_load_hooks.rb:62:in `run_load_hooks'
+/home/deploy/portfolio_database_rails/shared/bundle/ruby/3.1.0/gems/railties-7.0.3.1/lib/rails/application/finisher.rb:87:in `block in <module:Finisher>'
+/home/deploy/portfolio_database_rails/shared/bundle/ruby/3.1.0/gems/railties-7.0.3.1/lib/rails/initializable.rb:32:in `instance_exec'
+/home/deploy/portfolio_database_rails/shared/bundle/ruby/3.1.0/gems/railties-7.0.3.1/lib/rails/initializable.rb:32:in `run'
+/home/deploy/portfolio_database_rails/shared/bundle/ruby/3.1.0/gems/railties-7.0.3.1/lib/rails/initializable.rb:61:in `block in run_initializers'
+/home/deploy/portfolio_database_rails/shared/bundle/ruby/3.1.0/gems/railties-7.0.3.1/lib/rails/initializable.rb:60:in `run_initializers'
+/home/deploy/portfolio_database_rails/shared/bundle/ruby/3.1.0/gems/railties-7.0.3.1/lib/rails/application.rb:372:in `initialize!'
+/home/deploy/portfolio_database_rails/releases/20220717195507/config/environment.rb:5:in `<main>'
+/home/deploy/portfolio_database_rails/shared/bundle/ruby/3.1.0/gems/bootsnap-1.12.0/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:30:in `require'
+/home/deploy/portfolio_database_rails/shared/bundle/ruby/3.1.0/gems/bootsnap-1.12.0/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:30:in `require'
+/home/deploy/portfolio_database_rails/shared/bundle/ruby/3.1.0/gems/zeitwerk-2.6.0/lib/zeitwerk/kernel.rb:35:in `require'
+/home/deploy/portfolio_database_rails/shared/bundle/ruby/3.1.0/gems/railties-7.0.3.1/lib/rails/application.rb:348:in `require_environment!'
+/home/deploy/portfolio_database_rails/shared/bundle/ruby/3.1.0/gems/railties-7.0.3.1/lib/rails/application.rb:511:in `block in run_tasks_blocks'
+/home/deploy/portfolio_database_rails/shared/bundle/ruby/3.1.0/gems/rake-13.0.6/exe/rake:27:in `<top (required)>'
+/home/deploy/.rvm/rubies/ruby-3.1.2/bin/bundle:31:in `load'
+/home/deploy/.rvm/rubies/ruby-3.1.2/bin/bundle:31:in `<main>'
+/home/deploy/.rvm/gems/ruby-3.1.2/bin/ruby_executable_hooks:22:in `eval'
+/home/deploy/.rvm/gems/ruby-3.1.2/bin/ruby_executable_hooks:22:in `<main>'
+ DEBUG [e4a3a62e] 	Tasks: TOP => db:migrate => db:load_config => environment
+ DEBUG [e4a3a62e] 	(See full trace by running task with --trace)
