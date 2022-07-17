@@ -39,6 +39,8 @@ require "capistrano/scm/git"
 # require "capistrano/rails/assets"
 # require "capistrano/rails/migrations"
 # require "capistrano/passenger"
+#
+set :rvm1_map_bins, %w{rake gem bundle ruby}
 
 set :rbenv_type, :user
 set :rbenv_ruby, '3.1.2'
