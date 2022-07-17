@@ -37,9 +37,11 @@ gem "bootsnap", require: false
 # gem "rack-cors"
 #
 
-group :development do
-  gem "capistrano", "~> 3.10", require: false
-  gem "capistrano-rails", "~> 1.6", require: false
+group :development, :production do
+  gem 'capistrano', '~> 3.10', require: false
+  gem 'capistrano-bundler', require: false
+  gem 'capistrano-rails', require: false
+  gem 'capistrano-rbenv', github: 'capistrano/rbenv', require: false
 end
 
 
