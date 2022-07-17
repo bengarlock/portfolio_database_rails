@@ -44,6 +44,8 @@ group :development, :production do
   gem 'capistrano-rails', require: false
   gem 'capistrano-passenger', require: false
   gem 'capistrano-rbenv', github: 'capistrano/rbenv', require: false
+  gem 'capistrano-rvm'
+
 end
 
 
